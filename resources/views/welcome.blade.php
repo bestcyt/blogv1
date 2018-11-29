@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel-立志做一个棒棒的博客
                 </div>
 
                 <div class="links">
