@@ -9,6 +9,7 @@ class PageController extends Controller
 {
     //
     public function index(){
-        dd('welcome to back=');
+
+        return view('back.base');
     }
 }
