@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>H+ 后台主题UI框架 - 主页</title>
+    <title>bestcyt php 博客</title>
 
-    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
-    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <meta name="keywords" content="bestcyt php 博客">
+    <meta name="description" content="bestcyt php 博客">
 
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
@@ -57,6 +57,9 @@
                     </div>
                     <div class="logo-element">H+
                     </div>
+                </li>
+                <li>
+                    <a class="J_menuItem" href="#" data-index="0" id="clickMe">pajax</a>
                 </li>
                 <li>
                     <a href="#">
@@ -386,121 +389,98 @@
                         </div>
                     </form>
                 </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-envelope"></i> <span class="label label-warning">16</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-messages">
-                            <li class="m-t-xs">
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a7.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <small class="pull-right">46小时前</small>
-                                        <strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？
-                                        <br>
-                                        <small class="text-muted">3天前 2014.11.8</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="dropdown-messages-box">
-                                    <a href="profile.html" class="pull-left">
-                                        <img alt="image" class="img-circle" src="img/a4.jpg">
-                                    </a>
-                                    <div class="media-body ">
-                                        <small class="pull-right text-navy">25小时前</small>
-                                        <strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶
-                                        <br>
-                                        <small class="text-muted">昨天</small>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a class="J_menuItem" href="mailbox.html">
-                                        <i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell"></i> <span class="label label-primary">8</span>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="mailbox.html">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> 您有16条未读消息
-                                        <span class="pull-right text-muted small">4分钟前</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="profile.html">
-                                    <div>
-                                        <i class="fa fa-qq fa-fw"></i> 3条新回复
-                                        <span class="pull-right text-muted small">12分钟钱</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <div class="text-center link-block">
-                                    <a class="J_menuItem" href="notifications.html">
-                                        <strong>查看所有 </strong>
-                                        <i class="fa fa-angle-right"></i>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden-xs">
-                        <a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>
-                    </li>
-                    <li class="dropdown hidden-xs">
-                        <a class="right-sidebar-toggle" aria-expanded="false">
-                            <i class="fa fa-tasks"></i> 主题
-                        </a>
-                    </li>
-                </ul>
+                {{--<ul class="nav navbar-top-links navbar-right">--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">--}}
+                            {{--<i class="fa fa-envelope"></i> <span class="label label-warning">16</span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu dropdown-messages">--}}
+                            {{--<li class="m-t-xs">--}}
+                                {{--<div class="dropdown-messages-box">--}}
+                                    {{--<a href="profile.html" class="pull-left">--}}
+                                        {{--<img alt="image" class="img-circle" src="img/a7.jpg">--}}
+                                    {{--</a>--}}
+                                    {{--<div class="media-body">--}}
+                                        {{--<small class="pull-right">46小时前</small>--}}
+                                        {{--<strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？--}}
+                                        {{--<br>--}}
+                                        {{--<small class="text-muted">3天前 2014.11.8</small>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                            {{--<li class="divider"></li>--}}
+                            {{--<li>--}}
+                                {{--<div class="dropdown-messages-box">--}}
+                                    {{--<a href="profile.html" class="pull-left">--}}
+                                        {{--<img alt="image" class="img-circle" src="img/a4.jpg">--}}
+                                    {{--</a>--}}
+                                    {{--<div class="media-body ">--}}
+                                        {{--<small class="pull-right text-navy">25小时前</small>--}}
+                                        {{--<strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶--}}
+                                        {{--<br>--}}
+                                        {{--<small class="text-muted">昨天</small>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                            {{--<li class="divider"></li>--}}
+                            {{--<li>--}}
+                                {{--<div class="text-center link-block">--}}
+                                    {{--<a class="J_menuItem" href="mailbox.html">--}}
+                                        {{--<i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>--}}
+                                    {{--</a>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="dropdown">--}}
+                        {{--<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">--}}
+                            {{--<i class="fa fa-bell"></i> <span class="label label-primary">8</span>--}}
+                        {{--</a>--}}
+                        {{--<ul class="dropdown-menu dropdown-alerts">--}}
+                            {{--<li>--}}
+                                {{--<a href="mailbox.html">--}}
+                                    {{--<div>--}}
+                                        {{--<i class="fa fa-envelope fa-fw"></i> 您有16条未读消息--}}
+                                        {{--<span class="pull-right text-muted small">4分钟前</span>--}}
+                                    {{--</div>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="divider"></li>--}}
+                            {{--<li>--}}
+                                {{--<a href="profile.html">--}}
+                                    {{--<div>--}}
+                                        {{--<i class="fa fa-qq fa-fw"></i> 3条新回复--}}
+                                        {{--<span class="pull-right text-muted small">12分钟钱</span>--}}
+                                    {{--</div>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
+                            {{--<li class="divider"></li>--}}
+                            {{--<li>--}}
+                                {{--<div class="text-center link-block">--}}
+                                    {{--<a class="J_menuItem" href="notifications.html">--}}
+                                        {{--<strong>查看所有 </strong>--}}
+                                        {{--<i class="fa fa-angle-right"></i>--}}
+                                    {{--</a>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                        {{--</ul>--}}
+                    {{--</li>--}}
+                    {{--<li class="hidden-xs">--}}
+                        {{--<a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="dropdown hidden-xs">--}}
+                        {{--<a class="right-sidebar-toggle" aria-expanded="false">--}}
+                            {{--<i class="fa fa-tasks"></i> 主题--}}
+                        {{--</a>--}}
+                    {{--</li>--}}
+                {{--</ul>--}}
             </nav>
         </div>
         <div class="row content-tabs">
-            <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i>
-            </button>
-            <nav class="page-tabs J_menuTabs">
-                <div class="page-tabs-content">
-                    <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
-                </div>
-            </nav>
-            <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i>
-            </button>
-            <div class="btn-group roll-nav roll-right">
-                <button class="dropdown J_tabClose" data-toggle="dropdown">关闭操作<span class="caret"></span>
 
-                </button>
-                <ul role="menu" class="dropdown-menu dropdown-menu-right">
-                    <li class="J_tabShowActive"><a>定位当前选项卡</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
-                    </li>
-                    <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="login.html" class="roll-nav roll-right J_tabExit"><i class="fa fa fa-sign-out"></i> 退出</a>
         </div>
         <div class="row J_mainContent" id="content-main">
-            <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>
+            {{--<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>--}}
         </div>
         <div class="footer">
             <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
@@ -925,6 +905,17 @@
 <script src="js/hplus.min.js?v=4.1.0"></script>
 <script type="text/javascript" src="js/contabs.min.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+<script>
+    $(function(){
+        $('#clickMe').click(function(){
+            $.pjax({
+                url: '/test',
+                container: '#content-main'
+            });
+        });
+    });
+</script>
 </body>
 
 

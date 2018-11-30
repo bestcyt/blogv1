@@ -11,6 +11,9 @@
 |
 */
 Route::get('/', 'back\PageController@index');
+Route::get('/test', function (){
+    return 'asdfsdfd';
+});
 
 //Auth::routes();['namespace'=>'back','prefix'=>'back']
 Route::prefix('back')->group(function (){
