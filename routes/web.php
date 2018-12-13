@@ -21,6 +21,7 @@ Route::prefix('back')->group(function (){
     //后台统一back命名空间
     Route::namespace('back')->group(function (){
         Route::get('/', 'PageController@index');
+        //文章资源路由
         Route::resource('posts', 'PostsController', ['names' => [
             'index'   => 'posts.index',
             'create'  => 'posts.create',
@@ -29,6 +30,26 @@ Route::prefix('back')->group(function (){
             'edit'    => 'posts.edit',
             'update'  => 'posts.update',
             'destroy' => 'posts.destroy'
+        ]]);
+        //分类管理资源路由
+        Route::resource('sorts', 'SortsController', ['names' => [
+            'index'   => 'sorts.index',
+            'create'  => 'sorts.create',
+            'store'   => 'sorts.store',
+            'show'    => 'sorts.show',
+            'edit'    => 'sorts.edit',
+            'update'  => 'sorts.update',
+            'destroy' => 'sorts.destroy'
+        ]]);
+        //标签管理资源路由
+        Route::resource('labels', 'labelsController', ['names' => [
+            'index'   => 'labels.index',
+            'create'  => 'labels.create',
+            'store'   => 'labels.store',
+            'show'    => 'labels.show',
+            'edit'    => 'labels.edit',
+            'update'  => 'labels.update',
+            'destroy' => 'labels.destroy'
         ]]);
     });
 });

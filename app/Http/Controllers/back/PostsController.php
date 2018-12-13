@@ -4,9 +4,29 @@ namespace App\Http\Controllers\back;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Route;
 
 class PostsController extends Controller
 {
+    public $view_path;
+    public $view_data;
+
+    /*
+     * 区别是否pjax还是url刷新
+     */
+    public function __construct(Request $request)
+    {
+        //根据路由名称，来分配视图和那啥数据
+        $name = Route::currentRouteName();
+        if ($request->input('_pjax')){
+            $this->view_path = 'back.content.'.$name;
+        }else{
+            $this->view_path = 'back.content.jump';
+        }
+        $this->view_data = ['view'=>$name];
+
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -14,14 +34,7 @@ class PostsController extends Controller
      */
     public function index(Request $request)
     {
-        //
-        if ($request->input('_pjax')){
-
-            return view('back.content.posts.index');
-        }else{
-
-            return view('back.content-base.test',['view'=> 'posts.index' ]);
-        }
+        return view($this->view_path,$this->view_data);
     }
 
     /**
@@ -31,14 +44,7 @@ class PostsController extends Controller
      */
     public function create(Request $request)
     {
-        //
-        if ($request->input('_pjax')){
-
-            return view('back.content.posts.create');
-        }else{
-
-            return view('back.content-base.test',['view'=> 'posts.create' ]);
-        }
+        return view($this->view_path,$this->view_data);
     }
 
     /**
