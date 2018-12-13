@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
-class labelsControlelr extends Controller
+class labelsController extends Controller
 {
     public $view_path;
     public $view_data;

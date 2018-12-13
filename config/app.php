@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //Markdown？
+        YuanChao\Editor\EndaEditorServiceProvider::class
     ],
 
     /*
@@ -226,6 +228,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        //markdown
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
     ],
 
 ];
