@@ -61,7 +61,7 @@ class labelsController extends Controller
     {
         //保存上传的标签  , 增加验证
         label::create($request->except('_token'));
-        return view($this->view_init,$this->view_data);
+        return 'sotr ok ';
 //        return redirect()->route('labels.create');
     }
 

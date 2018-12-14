@@ -602,6 +602,14 @@
                 container: '#content-main'
             });
         });
+
+        //labels页面的
+        $(document).on('submit', '#formLabelCreate', function(event) {
+            console.log('formLabelCreate');
+            event.preventDefault();
+            $.pjax.submit(event, '#content-main');
+
+        })
     });
 </script>
 </body>
