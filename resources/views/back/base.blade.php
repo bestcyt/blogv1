@@ -16,15 +16,15 @@
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
-    <script src="/js/jquery.min.js?v=2.1.4"></script>
+    {{--<script src="/js/jquery.min.js?v=2.1.4"></script>--}}
+    <script src="https://cdn.bootcss.com/jquery/3.3.0/jquery.js"></script>
     <link rel="shortcut icon" href="favicon.ico">
     <link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="/css/animate.min.css" rel="stylesheet">
     <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
     <link rel="stylesheet" href="{{ asset('js/plugins/layui/css/layui.css') }}">
-
-
     <script src="{{ asset('/js/plugins/layui/layui.js') }} "></script>
 </head>
 
@@ -72,10 +72,17 @@
                 <li>
                     <a class="J_menuItem" href="sort" data-index="0" id="sort">分类管理</a>
                 </li>
-                <li>
-                    <a class="J_menuItem" href="label" data-index="0" id="label">标签管理</a>
+                <li class="active">
+                    <a href="#"><i class="fa fa-cutlery"></i> <span class="nav-label ">标签管理 </span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a class="J_menuItem" href="labelCreate" id="labelCreate">新增标签</a>
+                        </li>
+                        <li>
+                            <a class="J_menuItem" href="labelList" id="labelList">标签列表</a>
+                        </li>
+                    </ul>
                 </li>
-
                 <li>
                     <a class="J_menuItem" href="log" data-index="0" id="log">日志管理</a>
                 </li>
@@ -102,91 +109,6 @@
                         </div>
                     </form>
                 </div>
-                {{--<ul class="nav navbar-top-links navbar-right">--}}
-                    {{--<li class="dropdown">--}}
-                        {{--<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">--}}
-                            {{--<i class="fa fa-envelope"></i> <span class="label label-warning">16</span>--}}
-                        {{--</a>--}}
-                        {{--<ul class="dropdown-menu dropdown-messages">--}}
-                            {{--<li class="m-t-xs">--}}
-                                {{--<div class="dropdown-messages-box">--}}
-                                    {{--<a href="profile.html" class="pull-left">--}}
-                                        {{--<img alt="image" class="img-circle" src="/img/a7.jpg">--}}
-                                    {{--</a>--}}
-                                    {{--<div class="media-body">--}}
-                                        {{--<small class="pull-right">46小时前</small>--}}
-                                        {{--<strong>小四</strong> 这个在日本投降书上签字的军官，建国后一定是个不小的干部吧？--}}
-                                        {{--<br>--}}
-                                        {{--<small class="text-muted">3天前 2014.11.8</small>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</li>--}}
-                            {{--<li class="divider"></li>--}}
-                            {{--<li>--}}
-                                {{--<div class="dropdown-messages-box">--}}
-                                    {{--<a href="profile.html" class="pull-left">--}}
-                                        {{--<img alt="image" class="img-circle" src="/img/a4.jpg">--}}
-                                    {{--</a>--}}
-                                    {{--<div class="media-body ">--}}
-                                        {{--<small class="pull-right text-navy">25小时前</small>--}}
-                                        {{--<strong>国民岳父</strong> 如何看待“男子不满自己爱犬被称为狗，刺伤路人”？——这人比犬还凶--}}
-                                        {{--<br>--}}
-                                        {{--<small class="text-muted">昨天</small>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</li>--}}
-                            {{--<li class="divider"></li>--}}
-                            {{--<li>--}}
-                                {{--<div class="text-center link-block">--}}
-                                    {{--<a class="J_menuItem" href="mailbox.html">--}}
-                                        {{--<i class="fa fa-envelope"></i> <strong> 查看所有消息</strong>--}}
-                                    {{--</a>--}}
-                                {{--</div>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                    {{--<li class="dropdown">--}}
-                        {{--<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">--}}
-                            {{--<i class="fa fa-bell"></i> <span class="label label-primary">8</span>--}}
-                        {{--</a>--}}
-                        {{--<ul class="dropdown-menu dropdown-alerts">--}}
-                            {{--<li>--}}
-                                {{--<a href="mailbox.html">--}}
-                                    {{--<div>--}}
-                                        {{--<i class="fa fa-envelope fa-fw"></i> 您有16条未读消息--}}
-                                        {{--<span class="pull-right text-muted small">4分钟前</span>--}}
-                                    {{--</div>--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="divider"></li>--}}
-                            {{--<li>--}}
-                                {{--<a href="profile.html">--}}
-                                    {{--<div>--}}
-                                        {{--<i class="fa fa-qq fa-fw"></i> 3条新回复--}}
-                                        {{--<span class="pull-right text-muted small">12分钟钱</span>--}}
-                                    {{--</div>--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                            {{--<li class="divider"></li>--}}
-                            {{--<li>--}}
-                                {{--<div class="text-center link-block">--}}
-                                    {{--<a class="J_menuItem" href="notifications.html">--}}
-                                        {{--<strong>查看所有 </strong>--}}
-                                        {{--<i class="fa fa-angle-right"></i>--}}
-                                    {{--</a>--}}
-                                {{--</div>--}}
-                            {{--</li>--}}
-                        {{--</ul>--}}
-                    {{--</li>--}}
-                    {{--<li class="hidden-xs">--}}
-                        {{--<a href="index_v1.html" class="J_menuItem" data-index="0"><i class="fa fa-cart-arrow-down"></i> 购买</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="dropdown hidden-xs">--}}
-                        {{--<a class="right-sidebar-toggle" aria-expanded="false">--}}
-                            {{--<i class="fa fa-tasks"></i> 主题--}}
-                        {{--</a>--}}
-                    {{--</li>--}}
-                {{--</ul>--}}
             </nav>
         </div>
         <div class="row content-tabs">
@@ -221,7 +143,7 @@
             {{--<iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="index_v148b2.html?v=4.0" frameborder="0" data-id="index_v1.html" seamless></iframe>--}}
         </div>
         <div class="footer">
-            <div class="pull-right">&copy; 2014-2015 <a href="http://www.zi-han.net/" target="_blank">zihan's blog</a>
+            <div class="pull-right">&copy; 2018 <a href="http://blog.bestcyt.cn/" target="_blank">bestcyt blog</a>
             </div>
         </div>
     </div>
@@ -636,13 +558,18 @@
     </div>
 </div>
 
+<script src="/js/jquery.min.js?v=2.1.4"></script>
 <script src="/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/js/plugins/layer/layer.min.js"></script>
 <script src="/js/hplus.min.js?v=4.1.0"></script>
 <script type="text/javascript" src="/js/contabs.min.js"></script>
 <script src="/js/plugins/pace/pace.min.js"></script>
+
 <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+
+
 <script>
     $(function(){
         $('#postCreate').click(function(){
@@ -663,7 +590,13 @@
                 container: '#content-main'
             });
         });
-        $('#label').click(function(){
+        $('#labelCreate').click(function(){
+            $.pjax({
+                url: '/back/labels/create',
+                container: '#content-main'
+            });
+        });
+        $('#labelList').click(function(){
             $.pjax({
                 url: '/back/labels',
                 container: '#content-main'
