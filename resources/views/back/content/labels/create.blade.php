@@ -5,6 +5,7 @@
     <div class="layui-col-md2"></div>
 
     <div class="layui-col-md8 layui-form">
+        @include('flash::message')
         <form class="layui-form" action="{{ route('labels.store') }}" method="post" id="formLabelCreate">
             {{ csrf_field() }}
             <div class="layui-form-item">

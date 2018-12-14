@@ -27,7 +27,7 @@ class labelsController extends Controller
         }
         $this->view_data = ['view'=>$name];
 
-        $this->view_init = 'back.content.labels.create';
+        $this->view_init = 'back.content.labels.index';
     }
     /**
      * Display a listing of the resource.
@@ -61,7 +61,8 @@ class labelsController extends Controller
     {
         //保存上传的标签  , 增加验证
         label::create($request->except('_token'));
-        return 'sotr ok ';
+        flash('test')->success();
+        return view($this->view_init,$this->view_data);
 //        return redirect()->route('labels.create');
     }
 

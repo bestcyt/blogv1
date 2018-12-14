@@ -23,7 +23,7 @@
     <link href="/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="/css/animate.min.css" rel="stylesheet">
     <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
-
+    {{--laracast flash--}}
     <link rel="stylesheet" href="{{ asset('js/plugins/layui/css/layui.css') }}">
     <script src="{{ asset('/js/plugins/layui/layui.js') }} "></script>
 </head>
