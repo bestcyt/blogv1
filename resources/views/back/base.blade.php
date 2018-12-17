@@ -9,7 +9,8 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>bestcyt php 博客</title>
-
+    {{--csrftoken--}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="keywords" content="bestcyt php 博客">
     <meta name="description" content="bestcyt php 博客">
 
@@ -610,6 +611,9 @@
             $.pjax.submit(event, '#content-main');
 
         })
+
+        $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+
     });
 </script>
 </body>

@@ -229,7 +229,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         //markdown
-        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class
+        'EndaEditor' => YuanChao\Editor\Facade\EndaEditorFacade::class,
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
 ];

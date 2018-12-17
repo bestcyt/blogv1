@@ -19,6 +19,7 @@ Route::prefix('back')->group(function (){
     //后台注册登录路由
 //    Auth::routes();
     //后台统一back命名空间
+    Route::get('table','TestsController@index');
     Route::namespace('back')->group(function (){
         Route::get('/', 'PageController@index');
         //文章资源路由
@@ -51,6 +52,8 @@ Route::prefix('back')->group(function (){
             'update'  => 'labels.update',
             'destroy' => 'labels.destroy'
         ]]);
+        Route::get('getLabelsJson','labelsController@getLabelsJson');
     });
 });
+
 

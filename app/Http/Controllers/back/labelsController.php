@@ -40,6 +40,25 @@ class labelsController extends Controller
         return view($this->view_path,$this->view_data);
     }
 
+    /*
+     * 或许可以把这个抽出来
+     */
+    public function getLabelsJson(Request $request){
+        //layui的table 分页会传page和limit
+        $page = $request->input('page') ?? 1;
+        $limit = $request->input('limit') ?? 10;
+        $count = label::where('state',1)->count();
+        $data = label::paginate($limit, ['*'], '', $page)->toArray();
+        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
+        $data = $data['data'];
+        return response()->json([
+            'code' => 0,
+            'msg' => ' ',
+            'count' => $count,
+            'data' => $data
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -61,9 +80,8 @@ class labelsController extends Controller
     {
         //保存上传的标签  , 增加验证
         label::create($request->except('_token'));
-        flash('test')->success();
+        flash(config('res.label-store-success'))->success();
         return view($this->view_init,$this->view_data);
-//        return redirect()->route('labels.create');
     }
 
     /**
@@ -97,7 +115,7 @@ class labelsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return label::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
     }
 
     /**
