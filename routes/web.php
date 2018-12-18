@@ -15,7 +15,7 @@
 //Route::get('/test2','back\PageController@test2');
 
 //Auth::routes();['namespace'=>'back','prefix'=>'back']
-Route::prefix('back')->group(function (){
+Route::prefix('back')->middleware('getCommonInfo')->group(function (){
     //后台注册登录路由
 //    Auth::routes();
     //后台统一back命名空间

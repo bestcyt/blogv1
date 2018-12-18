@@ -1,4 +1,6 @@
 @include('flash::message')
+
+
 <table class="layui-hide" id="label-list"  lay-filter="label-list"></table>
 
 <script type="text/html" id="switchTpl">
@@ -21,7 +23,7 @@
                 ,{field:'desc', width:150, title: '描述', sort: true, edit: 'text'}
                 ,{field:'created_at', width:180, title: '创建时间', sort: true}
                 ,{field:'updated_at', width:180, title: '更新时间', sort: true}
-                ,{field:'state', title:'状态', width:150, templet: '#switchTpl', unresize: true}
+                ,{field:'state', title:'状态', width:100, templet: '#switchTpl', unresize: true}
             ]]
             ,page: true
         });

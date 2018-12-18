@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\back;
 
 use App\Models\label;
+use App\Tra\Poetry as Poetry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 class labelsController extends Controller
 {
+    use Poetry;
+
     public $view_path;
     public $view_data;
     public $view_init ;
@@ -28,6 +31,9 @@ class labelsController extends Controller
         $this->view_data = ['view'=>$name];
 
         $this->view_init = 'back.content.labels.index';
+
+        //获取诗词
+        $this->view_data['getPoetry'] = $this->getPoetry();
     }
     /**
      * Display a listing of the resource.
