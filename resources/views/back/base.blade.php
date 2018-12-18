@@ -25,8 +25,8 @@
     <link href="/css/animate.min.css" rel="stylesheet">
     <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
     {{--laracast flash--}}
-    <link rel="stylesheet" href="{{ asset('js/plugins/layui/css/layui.css') }}">
-    <script src="{{ asset('/js/plugins/layui/layui.js') }} "></script>
+    <link rel="stylesheet" href="{{ asset('/plugin/layui/css/layui.css') }}">
+    <script src="{{ asset('/plugin/layui/layui.js') }} "></script>
 </head>
 
 <body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">

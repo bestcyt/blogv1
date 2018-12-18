@@ -2,7 +2,7 @@
 <table class="layui-hide" id="label-list"  lay-filter="label-list"></table>
 
 <script type="text/html" id="switchTpl">
-    <input type="checkbox" name="state" value="{!! 1 !!}" lay-skin="switch" lay-text="开|关" lay-filter="state" >
+    <input type="checkbox" name="state" value="@{{ d.id }}" lay-skin="switch" lay-text="开|关" lay-filter="state"  @{{ d.state == 1 ? 'checked' : '' }}>
 </script>
 
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
@@ -54,8 +54,29 @@
         });
 
         //监听是否开启标签
-        form.on('switch(sexDemo)', function(obj){
-            layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
+        form.on('switch(state)', function(obj){
+            //ajax更新状态
+            //发送ajax请求改动
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url:"/back/labels/"+this.value,
+                data:{'_method':'put','field':this.name,'value':obj.elem.checked ? 1 :0},
+                type:'post',
+                success:function(re){
+                    console.log(re);
+                    if(re == 1){
+                        layer.msg('更新成功', {time: 1500});
+                    }else{
+                        layer.msg('更新失败败败败败败败败败...');
+                    }
+                }
+            },JSON);
+            console.log(this.name);
+            console.log(obj.elem.checked ? '1' :0);
+            console.log( obj.othis);
+//            layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
         });
     });
     $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
