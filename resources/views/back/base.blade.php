@@ -103,6 +103,7 @@
 <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
 {{--<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>--}}
 <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/plugin/layui/lay/modules/table.js"></script>
 {{--<script src="/js/hplus.min.js?v=4.1.0"></script>--}}
 
     {{--pjax不跳转，很奇怪，得研究下--}}
@@ -112,8 +113,6 @@
 <script src="/js/plugins/pace/pace.min.js"></script>
 
 <script>
-    $(function(){
-
         console.log('in $');
         layui.use('element', function(){
             console.log('in layui');
@@ -172,7 +171,6 @@
 
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
 
-    });
 //    //JavaScript代码区域
 
 </script>
