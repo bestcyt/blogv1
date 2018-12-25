@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\back;
 
+use App\Models\Sort;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
@@ -44,7 +45,12 @@ class SortsController extends Controller
      */
     public function create()
     {
-        //
+        $all_id = Sort::with('allChildrenCategorys')->where('parent_id',0)->first()->value('id');
+        $sorts = Sort::with('allChildrenCategorys')->find($all_id);
+        //加缓存
+        $re = $sorts->allChildrenCategorys;
+        dd($re);
+
     }
 
     /**

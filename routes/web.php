@@ -52,6 +52,16 @@ Route::prefix('back')->middleware('getCommonInfo')->group(function (){
             'update'  => 'labels.update',
             'destroy' => 'labels.destroy'
         ]]);
+        //分类管理资源路由
+        Route::resource('sorts', 'SortsController', ['names' => [
+            'index'   => 'sorts.index',
+            'create'  => 'sorts.create',
+            'store'   => 'sorts.store',
+            'show'    => 'sorts.show',
+            'edit'    => 'sorts.edit',
+            'update'  => 'sorts.update',
+            'destroy' => 'sorts.destroy'
+        ]]);
         Route::get('getLabelsJson','labelsController@getLabelsJson');
     });
 });

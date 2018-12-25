@@ -75,8 +75,8 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;">分类管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">新增分类</a></dd>
-                        <dd><a href="javascript:;">分类列表</a></dd>
+                        <dd><a href="sortCreate" id="sortCreate">新增分类</a></dd>
+                        <dd><a href="sortList" id="sortList">分类列表</a></dd>
                         <dd><a href="#">超链接</a></dd>
                     </dl>
                 </li>
@@ -160,6 +160,22 @@
                 container: '#content-main'
             });
         });
+
+        $(document).on('click','#sortCreate',function(event){
+            event.preventDefault();
+            $.pjax({
+                url: '/back/sorts/create',
+                container: '#content-main'
+            });
+        });
+        $(document).on('click','#sortList',function(event){
+            event.preventDefault();
+            $.pjax({
+                url: '/back/sorts',
+                container: '#content-main'
+            });
+        });
+
 
         //labels页面的
         $(document).on('submit', '#formLabelCreate', function(event) {
