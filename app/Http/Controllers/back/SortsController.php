@@ -5,6 +5,7 @@ namespace App\Http\Controllers\back;
 use App\Models\Sort;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
 class SortsController extends Controller
@@ -26,6 +27,25 @@ class SortsController extends Controller
         }
         $this->view_data = ['view'=>$name];
 
+    }
+
+    /*
+     * 或者可以抽象成一个单独的拿数据方法
+     */
+    public function getSortsJson(Request $request){
+        //layui的table 分页会传page和limit
+        $page = $request->input('page') ?? 1;
+        $limit = $request->input('limit') ?? 10;
+        $count = Cache::get('countLabels') ?? Sort::count();
+        $data_ = Sort::paginate($limit, ['*'], '', $page)->toArray();
+        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
+        $data = $data_['data'];
+        return response()->json([
+            'code' => 0,
+            'msg' => ' ',
+            'count' => $count,
+            'data' => $data,
+        ]);
     }
 
     /**
@@ -95,7 +115,7 @@ class SortsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return Sort::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
     }
 
     /**

@@ -63,6 +63,7 @@ Route::prefix('back')->middleware('getCommonInfo')->group(function (){
             'destroy' => 'sorts.destroy'
         ]]);
         Route::get('getLabelsJson','labelsController@getLabelsJson');
+        Route::get('getSortsJson','SortsController@getSortsJson');
     });
 });
 
