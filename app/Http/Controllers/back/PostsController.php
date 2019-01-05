@@ -18,6 +18,7 @@ class PostsController extends Controller
     {
         //根据路由名称，来分配视图和那啥数据
         $name = Route::currentRouteName();
+
         if ($request->input('_pjax')){
             $this->view_path = 'back.content.'.$name;
         }else{

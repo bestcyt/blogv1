@@ -59,7 +59,7 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">文章管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a  href="postCreate" id="postCreate">写点什么</a></dd>
+                        <dd><a  href="/back/posts/create" id="postCreate" data-pjax>写点什么</a></dd>
                         <dd><a href="postList"   id="postList">文章列表</a></dd>
                         <dd><a href="#">超链接</a></dd>
                     </dl>
@@ -113,6 +113,11 @@
 <script src="/js/plugins/pace/pace.min.js"></script>
 
 <script>
+
+    $(function () {
+
+//        $('#content-main').pjax('a[data-pjax]', '#content-main', {fragment: ('#content-main'), timeout: 8000});
+
         console.log('in $');
         layui.use('element', function(){
             console.log('in layui');
@@ -124,13 +129,15 @@
             event.preventDefault();
             $.pjax({
                 url: '/back/posts/create',
-                container: '#content-main'
+                container: '#content-main',
+                timeout: 8000,
+//                fragment: ('#content-main')
             });
         });
-
         $(document).on('click','#postList',function(event){
             event.preventDefault();
             $.pjax({
+                timeout: 8000,
                 url: '/back/posts',
                 container: '#content-main'
             });
@@ -140,7 +147,8 @@
             event.preventDefault();
             $.pjax({
                 url: '/back/sorts',
-                container: '#content-main'
+                container: '#content-main',
+                timeout: 8000,
             });
         });
 
@@ -148,7 +156,7 @@
             event.preventDefault();
             $.pjax({
                 url: '/back/labels/create',
-                container: '#content-main'
+                container: '#content-main',timeout: 8000,
             });
         });
 
@@ -157,7 +165,7 @@
 
             $.pjax({
                 url: '/back/labels',
-                container: '#content-main'
+                container: '#content-main',timeout: 8000,
             });
         });
 
@@ -165,14 +173,14 @@
             event.preventDefault();
             $.pjax({
                 url: '/back/sorts/create',
-                container: '#content-main'
+                container: '#content-main',timeout: 8000,
             });
         });
         $(document).on('click','#sortList',function(event){
             event.preventDefault();
             $.pjax({
                 url: '/back/sorts',
-                container: '#content-main'
+                container: '#content-main',timeout: 8000,
             });
         });
 
@@ -186,6 +194,8 @@
         });
 
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    })
+
 
 //    //JavaScript代码区域
 
