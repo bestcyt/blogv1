@@ -55,7 +55,7 @@ class labelsController extends Controller
         $page = $request->input('page') ?? 1;
         $limit = $request->input('limit') ?? 10;
         $count = Cache::get('countLabels') ?? label::count();
-        $data_ = label::paginate($limit, ['*'], '', $page)->toArray();
+        $data_ = label::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page)->toArray();
         //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
         $data = $data_['data'];
         return response()->json([

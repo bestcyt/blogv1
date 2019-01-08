@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers\back;
 
+use App\Models\label;
+use App\Models\post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Route;
 
 class PostsController extends Controller
 {
     public $view_path;
     public $view_data;
+    public $view_init;
 
     /*
      * 区别是否pjax还是url刷新
@@ -26,6 +30,7 @@ class PostsController extends Controller
         }
         $this->view_data = ['view'=>$name];
 
+        $this->view_init = 'back.content.posts.index';
     }
 
     /**
@@ -45,6 +50,11 @@ class PostsController extends Controller
      */
     public function create(Request $request)
     {
+        $labels = Cache::get('labels');
+        if(!$labels){
+            $labels = label::where('state','1')->get()->toArray();
+        }
+        $this->view_data['labels'] = $labels;
         return view($this->view_path,$this->view_data);
     }
 
@@ -56,8 +66,18 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        dd($request);
+        //@todo 业务层分离，待
+        $data['label_ids'] = implode(',',array_keys($request->input('labels')));
+        $data['sort_id'] = 1;
+        $data['post_name'] = $request->input('post_name');
+        $data['post_desc'] = $request->input('post_desc');
+        $data['info'] = $request->input('info');
+        $data['state'] = $request->input('state') ? 1 : 0;
+
+        post::insert($data);
+
+        flash(config('res.label-store-success'))->success();
+        return view($this->view_init,$this->view_data);
     }
 
     /**

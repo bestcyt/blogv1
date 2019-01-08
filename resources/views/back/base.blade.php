@@ -17,6 +17,8 @@
     <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('/plugin/layui/css/layui.css') }}">
+    <script src="{{ asset('/plugin/layui/layui.js') }} "></script>
+    <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
 
 </head>
 <body class="layui-layout-body">
@@ -61,7 +63,6 @@
                     <dl class="layui-nav-child">
                         <dd><a  href="/back/posts/create" id="postCreate" data-pjax>写点什么</a></dd>
                         <dd><a href="postList"   id="postList">文章列表</a></dd>
-                        <dd><a href="#">超链接</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -69,7 +70,6 @@
                     <dl class="layui-nav-child">
                         <dd><a  href="labelCreate" id="labelCreate">新增标签</a></dd>
                         <dd><a href="labelList" id="labelList">标签列表</a></dd>
-                        <dd><a href="#">超链接</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
@@ -77,7 +77,6 @@
                     <dl class="layui-nav-child">
                         <dd><a href="sortCreate" id="sortCreate">新增分类</a></dd>
                         <dd><a href="sortList" id="sortList">分类列表</a></dd>
-                        <dd><a href="#">超链接</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href="">日志管理</a></li>
@@ -99,8 +98,7 @@
     </div>
 </div>
 
-<script src="{{ asset('/plugin/layui/layui.js') }} "></script>
-<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.js"></script>
+
 {{--<script src="/js/plugins/metisMenu/jquery.metisMenu.js"></script>--}}
 <script src="/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="/plugin/layui/lay/modules/table.js"></script>
@@ -115,14 +113,9 @@
 <script>
 
     $(function () {
-
-//        $('#content-main').pjax('a[data-pjax]', '#content-main', {fragment: ('#content-main'), timeout: 8000});
-
-        console.log('in $');
         layui.use('element', function(){
             console.log('in layui');
             var element = layui.element;
-
         });
 
         $(document).on('click','#postCreate',function(event){
@@ -130,8 +123,7 @@
             $.pjax({
                 url: '/back/posts/create',
                 container: '#content-main',
-                timeout: 8000,
-//                fragment: ('#content-main')
+                timeout: 8000
             });
         });
         $(document).on('click','#postList',function(event){
@@ -184,14 +176,19 @@
             });
         });
 
+        //post form 页面的
+        $(document).on('submit', '#formPostCreate', function(event) {
+            event.preventDefault();
+            $.pjax.submit(event, '#content-main');
+        });
 
-        //labels页面的
+        //label form 页面的
         $(document).on('submit', '#formLabelCreate', function(event) {
             console.log('formLabelCreate');
             event.preventDefault();
             $.pjax.submit(event, '#content-main');
-
         });
+
 
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     })
