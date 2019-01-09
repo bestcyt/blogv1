@@ -4,6 +4,7 @@ namespace App\Http\Controllers\back;
 
 use App\Models\label;
 use App\Models\post;
+use App\Services\PostService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
@@ -13,79 +14,53 @@ class PostsController extends Controller
 {
     public $view_path;
     public $view_data;
-    public $view_init;
+    public $view_index;
+
+    public $PostService;
 
     /*
      * 区别是否pjax还是url刷新
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request,PostService $postService)
     {
+        //注入业务层 分层
+        $this->PostService = $postService;
         //根据路由名称，来分配视图和那啥数据
         $name = Route::currentRouteName();
-
         if ($request->input('_pjax')){
             $this->view_path = 'back.content.'.$name;
         }else{
             $this->view_path = 'back.content.jump';
         }
         $this->view_data = ['view'=>$name];
-
-        $this->view_init = 'back.content.posts.index';
+        $this->view_index = 'back.content.posts.index';
     }
 
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @todo 文章列表
      */
-    public function index(Request $request)
+    public function index()
     {
         return view($this->view_path,$this->view_data);
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @todo 文件创建
      */
-    public function create(Request $request)
+    public function create()
     {
-        $labels = Cache::get('labels');
-        if(!$labels){
-            $labels = label::where('state','1')->get()->toArray();
-        }
-        $this->view_data['labels'] = $labels;
+        //获取标签，缓存或数据库
+        $this->view_data['labels'] = $this->PostService->create();
         return view($this->view_path,$this->view_data);
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @todo 文章保存
      */
     public function store(Request $request)
     {
-        // @todo 业务层分离，待
-        //没有标签文章关系表，就直接处理标签，方便检索，添加缓存
-        $as = array_keys($request->input('labels'));
-        foreach ($as as &$a){
-            $a = '['.$a.']';
-        }
-        $data['label_ids'] = implode(',',$as);
-        $data['sort_id'] = 1;
-        $data['post_name'] = $request->input('post_name');
-        $data['post_desc'] = $request->input('post_desc');
-        $data['info'] = $request->input('info');
-        $data['state'] = $request->input('state') ? 1 : 0;
-        $data['created_at'] = date('Y-m-d H:m:s',time());
-        $data['updated_at'] = date('Y-m-d H:m:s',time());
-
-        post::insert($data);
-        Cache::put('countPosts',post::count());
-        flash(config('res.post-store-success'))->success();
-
-        return view($this->view_init,$this->view_data);
+        $this->PostService->store($request);
+        return view($this->view_index,$this->view_data);
     }
 
     /*
@@ -93,19 +68,7 @@ class PostsController extends Controller
     * 或许可以把这个抽出来
     */
     public function getPostsJson(Request $request){
-        //layui的table 分页会传page和limit
-        $page = $request->input('page') ?? 1;
-        $limit = $request->input('limit') ?? 10;
-        $count = Cache::get('countPosts') ?? post::count();
-        $data_ = post::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page)->toArray();
-        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
-        $data = $data_['data'];
-        return response()->json([
-            'code' => 0,
-            'msg' => ' ',
-            'count' => $count,
-            'data' => $data,
-        ]);
+        return $this->PostService->index($request);
     }
 
     /**
@@ -139,8 +102,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        return post::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
+        return $this->PostService->update($request,$id);
     }
 
 
