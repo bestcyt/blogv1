@@ -10,7 +10,6 @@ class post extends Model
     protected $table = 'posts';
 
 
-    public $timestamps = true;
 
     protected $connection = 'mysql';
 }

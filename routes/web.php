@@ -64,6 +64,7 @@ Route::prefix('back')->middleware('getCommonInfo')->group(function (){
         ]]);
         Route::get('getLabelsJson','labelsController@getLabelsJson');
         Route::get('getSortsJson','SortsController@getSortsJson');
+        Route::get('getPostsJson','PostsController@getPostsJson');
     });
 });
 

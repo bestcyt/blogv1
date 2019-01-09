@@ -66,18 +66,46 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //@todo 业务层分离，待
-        $data['label_ids'] = implode(',',array_keys($request->input('labels')));
+        // @todo 业务层分离，待
+        //没有标签文章关系表，就直接处理标签，方便检索，添加缓存
+        $as = array_keys($request->input('labels'));
+        foreach ($as as &$a){
+            $a = '['.$a.']';
+        }
+        $data['label_ids'] = implode(',',$as);
         $data['sort_id'] = 1;
         $data['post_name'] = $request->input('post_name');
         $data['post_desc'] = $request->input('post_desc');
         $data['info'] = $request->input('info');
         $data['state'] = $request->input('state') ? 1 : 0;
+        $data['created_at'] = date('Y-m-d H:m:s',time());
+        $data['updated_at'] = date('Y-m-d H:m:s',time());
 
         post::insert($data);
+        Cache::put('countPosts',post::count());
+        flash(config('res.post-store-success'))->success();
 
-        flash(config('res.label-store-success'))->success();
         return view($this->view_init,$this->view_data);
+    }
+
+    /*
+     * 统一获取数据
+    * 或许可以把这个抽出来
+    */
+    public function getPostsJson(Request $request){
+        //layui的table 分页会传page和limit
+        $page = $request->input('page') ?? 1;
+        $limit = $request->input('limit') ?? 10;
+        $count = Cache::get('countPosts') ?? post::count();
+        $data_ = post::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page)->toArray();
+        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
+        $data = $data_['data'];
+        return response()->json([
+            'code' => 0,
+            'msg' => ' ',
+            'count' => $count,
+            'data' => $data,
+        ]);
     }
 
     /**
@@ -111,8 +139,10 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        return post::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
     }
+
 
     /**
      * Remove the specified resource from storage.

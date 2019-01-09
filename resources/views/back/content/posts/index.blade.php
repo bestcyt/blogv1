@@ -1,7 +1,7 @@
 @include('flash::message')
 
 
-<table class="layui-hide" id="sort-list"  lay-filter="sort-list"></table>
+<table class="layui-hide" id="post-list"  lay-filter="post-list"></table>
 
 <script type="text/html" id="switchTpl">
     <input type="checkbox" name="state" value="@{{ d.id }}" lay-skin="switch" lay-text="开|关" lay-filter="state"  @{{ d.state == 1 ? 'checked' : '' }}>
@@ -15,14 +15,15 @@
 
             //table初始化数据
             table.render({
-                elem: '#sort-list'
-                ,url:'/back/getSortsJson'
+                elem: '#post-list'
+                ,url:'/back/getPostsJson'
                 ,cellMinWidth: 100 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {field:'id', width:80, title: 'ID', sort: true }
-                    ,{field:'parent_id', width:80, title: 'ID', sort: true }
-                    ,{field:'sort_name', width:100, title: '分类名称', edit: 'text'}
-                    ,{field:'desc', width:150, title: '描述', sort: true, edit: 'text'}
+//                    ,{field:'labels', width:80, title: '标签', sort: true }
+                    ,{field:'post_name', width:100, title: '文章名称', edit: 'text'}
+                    ,{field:'post_desc', width:150, title: '描述', sort: true, edit: 'text'}
+                    ,{field:'info', width:150, title: '内容', sort: true, edit: 'text'}
                     ,{field:'created_at', width:180, title: '创建时间', sort: true}
                     ,{field:'updated_at', width:180, title: '更新时间', sort: true}
                     ,{field:'state', title:'状态', width:100, templet: '#switchTpl', unresize: true}
@@ -31,7 +32,7 @@
             });
 
             //table编辑
-            table.on('edit(sort-list)', function(obj){
+            table.on('edit(post-list)', function(obj){
                 var value = obj.value //得到修改后的值
                     ,data = obj.data //得到所在行所有键值
                     ,field = obj.field; //得到字段
@@ -43,7 +44,7 @@
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    url:"/back/sorts/"+data.id,
+                    url:"/back/posts/"+data.id,
                     data:{'_method':'put','field':field,'value':value},
                     type:'post',
                     success:function(re){

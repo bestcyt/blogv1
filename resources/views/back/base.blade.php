@@ -27,15 +27,13 @@
         <div class="layui-logo">bestcyt博客后台管理</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item"><a href="{{ config('constant.blog_home') }}" target="_blank">博客首页</a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">其它系统</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
+                    <dd><a href="#">邮件管理</a></dd>
+                    <dd><a href="#">消息管理</a></dd>
+                    <dd><a href="#">授权管理</a></dd>
                 </dl>
             </li>
         </ul>
@@ -61,26 +59,35 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">文章管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a  href="/back/posts/create" id="postCreate" data-pjax>写点什么</a></dd>
-                        <dd><a href="postList"   id="postList">文章列表</a></dd>
+                        <dd><a href="#" id="postCreate" data-pjax>写点什么</a></dd>
+                        <dd><a href="#" id="postList">文章列表</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">标签管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a  href="labelCreate" id="labelCreate">新增标签</a></dd>
-                        <dd><a href="labelList" id="labelList">标签列表</a></dd>
+                        <dd><a  href="#" id="labelCreate">新增标签</a></dd>
+                        <dd><a href="#" id="labelList">标签列表</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;">分类管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="sortCreate" id="sortCreate">新增分类</a></dd>
-                        <dd><a href="sortList" id="sortList">分类列表</a></dd>
+                        <dd><a href="#" id="sortCreate">新增分类</a></dd>
+                        <dd><a href="#" id="sortList">分类列表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">日志管理</a></li>
-                <li class="layui-nav-item"><a href="">系统设置</a></li>
+                <li class="layui-nav-item"><a href="#" >日志查看</a></li>
+                <li class="layui-nav-item"><a href="#">系统设置</a></li>
+                <li class="layui-nav-item"><a href="#">用户管理(后期首页第三方登录)</a></li>
+                <li class="layui-nav-item"><a href="#">评论设置(审核评论)</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">邮件管理</a>
+                    <dl class="layui-nav-child">
+                        <dd><a  href="#" id="labelCreate">发送邮件(私人编辑发送)</a></dd>
+                        <dd><a href="#" id="labelList">队列邮件发送列表</a></dd>
+                    </dl>
+                </li>
             </ul>
         </div>
     </div>
