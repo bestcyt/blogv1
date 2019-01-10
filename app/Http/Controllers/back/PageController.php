@@ -10,10 +10,6 @@ class PageController extends Controller
     //
     public function index(){
 
-//        dd($_SERVER);
-//        if(){
-//
-//        }
         return view('back.base');
     }
 

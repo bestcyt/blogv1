@@ -21,6 +21,7 @@ Route::prefix('back')->middleware('getCommonInfo')->group(function (){
     //后台统一back命名空间
     Route::get('table','TestsController@index');
     Route::namespace('back')->group(function (){
+        //后台首页
         Route::get('/', 'PageController@index');
         //文章资源路由
         Route::resource('posts', 'PostsController', ['names' => [
@@ -62,6 +63,8 @@ Route::prefix('back')->middleware('getCommonInfo')->group(function (){
             'update'  => 'sorts.update',
             'destroy' => 'sorts.destroy'
         ]]);
+
+        //laytable获取json数据
         Route::get('getLabelsJson','labelsController@getLabelsJson');
         Route::get('getSortsJson','SortsController@getSortsJson');
         Route::get('getPostsJson','PostsController@getPostsJson');
