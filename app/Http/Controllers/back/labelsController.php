@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\back;
 
 use App\Models\label;
+use App\Services\LabelService;
 use App\Tra\Poetry as Poetry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,10 +18,12 @@ class labelsController extends Controller
     public $view_data;
     public $view_init ;
 
+    public $labelService ;
+
     /*
      * 区别是否pjax还是url刷新
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request , LabelService $labelService)
     {
         //根据路由名称，来分配视图和那啥数据
         $name = Route::currentRouteName();
@@ -35,6 +38,9 @@ class labelsController extends Controller
 
         //获取诗词
         $this->view_data['getPoetry'] = $this->getPoetry();
+
+        //注入labelservice
+        $this->labelService = $labelService;
     }
     /**
      * Display a listing of the resource.
@@ -52,18 +58,7 @@ class labelsController extends Controller
      */
     public function getLabelsJson(Request $request){
         //layui的table 分页会传page和limit
-        $page = $request->input('page') ?? 1;
-        $limit = $request->input('limit') ?? 10;
-        $count = Cache::get('countLabels') ?? label::count();
-        $data_ = label::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page)->toArray();
-        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
-        $data = $data_['data'];
-        return response()->json([
-            'code' => 0,
-            'msg' => ' ',
-            'count' => $count,
-            'data' => $data,
-        ]);
+        return $this->labelService->index($request);
     }
 
     /**
@@ -86,9 +81,7 @@ class labelsController extends Controller
     public function store(Request $request)
     {
         //保存上传的标签  , 增加验证
-        label::create($request->except('_token'));
-        Cache::put('countLabels',label::count());
-        flash(config('res.label-store-success'))->success();
+        $this->labelService->store($request);
         return view($this->view_init,$this->view_data);
     }
 
@@ -123,7 +116,8 @@ class labelsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return label::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
+
+        return $this->labelService->update($request,$id);
     }
 
     /**
