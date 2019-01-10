@@ -14,15 +14,21 @@
 //Route::get('/test','back\PageController@test');
 //Route::get('/test2','back\PageController@test2');
 
-//Auth::routes();['namespace'=>'back','prefix'=>'back']
-Route::prefix('back')->middleware('getCommonInfo')->group(function (){
+
+Route::prefix('back')->group(function (){
     //后台注册登录路由
-//    Auth::routes();
+    Auth::routes();
+    //后台首页
+    Route::get('/', function (){
+        echo 'home';
+    });
     //后台统一back命名空间
     Route::get('table','TestsController@index');
-    Route::namespace('back')->group(function (){
-        //后台首页
-        Route::get('/', 'PageController@index');
+    Route::namespace('back')->middleware(['getCommonInfo','auth'])->group(function (){
+
+//        Route::get('/{index?}', 'PageController@index'); //
+        Route::get('index', 'PageController@index');
+
         //文章资源路由
         Route::resource('posts', 'PostsController', ['names' => [
             'index'   => 'posts.index',

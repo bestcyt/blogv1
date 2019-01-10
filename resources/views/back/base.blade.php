@@ -40,15 +40,26 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
+                    <img src="https://source.unsplash.com/user/erondu/50x50" class="layui-nav-img">
+                    {{ Auth::user()->name ?? '浪' }}
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
+            <li class="layui-nav-item">
+                {{--<a href="">退朝</a>--}}
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                    退出登录
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </li>
         </ul>
     </div>
 
