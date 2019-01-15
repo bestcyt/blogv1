@@ -15,10 +15,7 @@
         <td>&nbsp;</td>
         <td align="right">&nbsp;</td>
     </tr>
-    <tr>
-        <td colspan="2" style="text-align: center"><h1 style="font-family: microsoft yahei;font-size: 24px;padding:5px 0 0 10px; "><span style=" color: #35ad79;">行程介绍</span></h1>
-            <h3 style="font-family: microsoft yahei;font-size: 18px;padding:5px 0 0 10px; ">感谢您对德国开元旅游集团的支持和信任，根据多年从事为政府，商务机构及商务人员提供服务的经验，现按照您的要求将行程报价答复如下，请指正。 </h3></td>
-    </tr>
+
     <tr>
         <td colspan="2">&nbsp;</td>
     </tr>
