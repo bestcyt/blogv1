@@ -8,12 +8,6 @@
 {{--底部二维码表格--}}
 <table width="1000" border="0" cellspacing="0" cellpadding="0"  >
     <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr>
         <td valign="top" style="line-height:28px;"><p><strong>KaiYuan Information &amp;  Business GmbH&nbsp; </strong><br>
                 Erika-Mann-Str. 21, 80636 München<br>
                 Tel: 0049-89-38038800 <br>
