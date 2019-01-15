@@ -21,12 +21,7 @@
         <td width="140" valign="top"><strong>开元定制</strong><br>
             <img src="{{ config('team_trip.pdf.cdn_image_path').'images/3.png' }}" width="140" height="140" style="margin-top:8px;"></td>
     </tr>
-    <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </tr>
+
 </table>
 
 </body>
