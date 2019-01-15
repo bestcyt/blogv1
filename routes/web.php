@@ -77,4 +77,10 @@ Route::prefix('back')->group(function (){
     });
 });
 
+Route::get('/team-trip/header',function (){
+    return view('header');
+})->name('pdf.header');
+Route::get('/team-trip/footer',function (){
+    return view('footer');
+})->name('pdf.footer');
 
