@@ -8,8 +8,8 @@
 {{--头--}}
 <table width="1000" border="0" cellspacing="0" cellpadding="0">
     <tr>
-        <td><img src="{{ config('team_trip.pdf.cdn_image_path').'images/logo.png' }}" width="226" height="95"></td>
-        <td align="right"><img src="{{ config('team_trip.pdf.cdn_image_path').'images/logo_r.png' }}" width="428" height="95"></td>
+        <td><img src="https://cdn.kaytrip.com/kaytrip/gongyi/xingcheng/images/logo.png" width="226" height="95"></td>
+        <td align="right"><img src="https://cdn.kaytrip.com/kaytrip/gongyi/xingcheng/images/logo_r.png" width="428" height="95"></td>
     </tr>
     <tr>
         <td>&nbsp;</td>
