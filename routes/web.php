@@ -14,18 +14,19 @@
 //Route::get('/test','back\PageController@test');
 //Route::get('/test2','back\PageController@test2');
 
-
+/*
+ * @todo 后台啦啦啦
+ */
 Route::prefix('back')->group(function (){
     //后台注册登录路由
     Auth::routes();
     //后台首页
     Route::get('/', function (){
-        echo 'home';
+        echo 'backhome';
     });
     //后台统一back命名空间
     Route::get('table','TestsController@index');
-    Route::namespace('back')->middleware(['getCommonInfo','auth'])->group(function (){
-
+    Route::namespace('Back')->middleware(['getCommonInfo','auth'])->group(function (){
 //        Route::get('/{index?}', 'PageController@index'); //
         Route::get('index', 'PageController@index');
 
@@ -76,6 +77,16 @@ Route::prefix('back')->group(function (){
         Route::get('getPostsJson','PostsController@getPostsJson');
     });
 });
+
+/*
+ * @todo 前台啦啦啦
+ * 不用登录，对接第三方登录laravel Socialite 并实现基于 Github，qq 的登录认证，登录后评论吧
+ */
+Route::namespace('Home')->group(function (){
+    Route::get('/','IndexController@index')->name('home.index');
+});
+
+
 
 Route::get('/team-trip/header',function (){
     return view('header');
