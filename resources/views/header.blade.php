@@ -8,8 +8,9 @@
 {{--头--}}
 <table width="1000" border="0" cellspacing="0" cellpadding="0">
     <tr>
-        <td><img src="https://cdn.kaytrip.com/kaytrip/gongyi/xingcheng/images/logo.png" width="226" height="95"></td>
-        <td align="right"><img src="https://cdn.kaytrip.com/kaytrip/gongyi/xingcheng/images/logo_r.png" width="428" height="95"></td>
+        {{--<td><img src="https://cdn.kaytrip.com/kaytrip/gongyi/xingcheng/images/logo.png" width="226" height="95"></td>--}}
+        <td>这是头头头</td>
+        <td align="right"></td>
     </tr>
     <tr>
         <td>&nbsp;</td>

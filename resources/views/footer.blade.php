@@ -8,17 +8,16 @@
 {{--底部二维码表格--}}
 <table width="1000" border="0" cellspacing="0" cellpadding="0"  >
     <tr>
-        <td valign="top" style="line-height:28px;"><p><strong>KaiYuan Information &amp;  Business GmbH&nbsp; </strong><br>
-                Erika-Mann-Str. 21, 80636 München<br>
-                Tel: 0049-89-38038800 <br>
-                Fax: 0049-89-416159030<br>
-                eMail:vip@kaiyuan.cn&nbsp;&nbsp;&nbsp;<br>
-                Website:http://www.kaytrip.com</p></td>
-        <td valign="top">    <strong id="test">开元旅游公众号</strong><br>
-            <img src="{{ config('team_trip.pdf.cdn_image_path').'images/1.png' }}" width="140" height="140" style="margin-top:8px;"></td>
-        <td valign="top">      <strong>开元网公众号</strong><br>
+        <td valign="top" style="line-height:28px;"><p>这是尾部</p></td>
+        <td valign="top">
+            {{--<strong id="test">开元旅游公众号</strong><br>--}}
+            <img src="{{ config('team_trip.pdf.cdn_image_path').'images/1.png' }}" width="140" height="140" style="margin-top:8px;">
+        </td>
+        <td valign="top">
+            {{--<strong>开元网公众号</strong><br>--}}
             <img src="{{ config('team_trip.pdf.cdn_image_path').'images/2.png' }}" width="140" height="140" style="margin-top:8px;"></td>
-        <td width="140" valign="top"><strong>开元定制</strong><br>
+        <td width="140" valign="top">
+            {{--<strong>开元定制</strong><br>--}}
             <img src="{{ config('team_trip.pdf.cdn_image_path').'images/3.png' }}" width="140" height="140" style="margin-top:8px;"></td>
     </tr>
 
