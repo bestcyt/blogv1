@@ -393,36 +393,13 @@
                                     <h3 class="widget-title m-t-none text-md">热门文章</h3>
                                     <ul class="list-group no-bg no-borders pull-in m-b-none">
                                         <li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/prshe-320g.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/prshe-320g.html" title="PR社小姐姐大合集 全都是可爱的小姐姐【320G】"> PR社小姐姐大合集 全都是可爱的小姐姐【320G】 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">82821</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/meizi1023.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/meizi1023.html" title="一般看见这种类型黑色内裤，我直接x了再说"> 一般看见这种类型黑色内裤，我直接x了再说 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">56240</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/taobaoneiyimaijiaxiu.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/taobaoneiyimaijiaxiu.html" title="最牛逼最极品的淘宝内衣买家秀大约13000张"> 最牛逼最极品的淘宝内衣买家秀大约13000张 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">43046</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/1000g.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/1000g.html" title="你该加块硬盘了，1000G+美女福利资源"> 你该加块硬盘了，1000G+美女福利资源 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">42780</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
                                             <a href="https://www.haorenka.cc/gif-5.html" class="pull-left thumb-sm m-r"></a>
                                             <div class="clear">
                                                 <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/gif-5.html" title="好人卡 精选GIF出处 第5期"> 好人卡 精选GIF出处 第5期 </a></h4>
                                                 <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">42717</span>
                     </span>
-                                                </small></div></li>         </ul>
+                                                </small></div></li>
+                                    </ul>
                                 </div>
                                 <!--最新评论-->
                                 <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
@@ -446,78 +423,6 @@
                                                 </small>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
-
-                                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6538" class="pull-left thumb-sm avatar m-r">
-                                            </a>
-                                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6538" class="text-muted">
-                                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                                <span class="sr-only"></span>-->
-                                            </a>
-                                            <div class="clear">
-                                                <div class="text-ellipsis">
-                                                    <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6538" title="小草帽"> 小草帽 </a>
-                                                </div>
-                                                <small class="text-muted">
-                      <span>
-                          身体被掏空，感谢分享~~                      </span>
-                                                </small>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-
-                                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6537" class="pull-left thumb-sm avatar m-r">
-                                            </a>
-                                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6537" class="text-muted">
-                                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                                <span class="sr-only"></span>-->
-                                            </a>
-                                            <div class="clear">
-                                                <div class="text-ellipsis">
-                                                    <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6537" title="胡大一"> 胡大一 </a>
-                                                </div>
-                                                <small class="text-muted">
-                      <span>
-                          老大可以申请友情链接吗？老大关注我一下哈。www.8u0.cn...                      </span>
-                                                </small>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-
-                                            <a href="https://www.haorenka.cc/jieya.html/comment-page-1#comment-6536" class="pull-left thumb-sm avatar m-r">
-                                            </a>
-                                            <a href="https://www.haorenka.cc/jieya.html/comment-page-1#comment-6536" class="text-muted">
-                                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                                <span class="sr-only"></span>-->
-                                            </a>
-                                            <div class="clear">
-                                                <div class="text-ellipsis">
-                                                    <a href="https://www.haorenka.cc/jieya.html/comment-page-1#comment-6536" title="66"> 66 </a>
-                                                </div>
-                                                <small class="text-muted">
-                      <span>
-                          现在有密码了吗                      </span>
-                                                </small>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item">
-
-                                            <a href="https://www.haorenka.cc/mumianmian.html/comment-page-1#comment-6535" class="pull-left thumb-sm avatar m-r">
-                                            </a>
-                                            <a href="https://www.haorenka.cc/mumianmian.html/comment-page-1#comment-6535" class="text-muted">
-                                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                                <span class="sr-only"></span>-->
-                                            </a>
-                                            <div class="clear">
-                                                <div class="text-ellipsis">
-                                                    <a href="https://www.haorenka.cc/mumianmian.html/comment-page-1#comment-6535" title="胡大一"> 胡大一 </a>
-                                                </div>
-                                                <small class="text-muted">
-                      <span>
-                          老大可以申请友情链接吗？老大关注我一下哈。www.8u0.cn...                      </span>
-                                                </small>
-                                            </div>
-                                        </li>
                                     </ul>
                                 </div>
                                 <!--随机文章-->
@@ -530,31 +435,8 @@
                                                 <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/20181111.html" title="双11必备神器：红包、领券、比价、历史价格查询"> 双11必备神器：红包、领券、比价、历史价格查询 </a></h4>
                                                 <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">8635</span>
                     </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/%E5%96%84%E7%94%A8%E6%90%9C%E7%B4%A2.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/%E5%96%84%E7%94%A8%E6%90%9C%E7%B4%A2.html" title="善用搜索：更聪明的寻找想要的资源"> 善用搜索：更聪明的寻找想要的资源 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3023</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/20190111.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/20190111.html" title="你该加块硬盘了 第二波 万套套图分包下载"> 你该加块硬盘了 第二波 万套套图分包下载 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">13185</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/xiameijiang-happy-together.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/xiameijiang-happy-together.html" title="一款Steam上关于夏美酱的国产恋爱游戏内置的福利视频"> 一款Steam上关于夏美酱的国产恋爱游戏内置的福利视频 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">12787</span>
-                    </span>
-                                                </small></div></li><li class="list-group-item">
-                                            <a href="https://www.haorenka.cc/iqiyiwannengbofangqi.html" class="pull-left thumb-sm m-r"></a>
-                                            <div class="clear">
-                                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/iqiyiwannengbofangqi.html" title="爱奇艺万能播放器 绿色修改 &amp; 高速百度云下载"> 爱奇艺万能播放器 绿色修改 &amp; 高速百度云下载 </a></h4>
-                                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">6315</span>
-                    </span>
-                                                </small></div></li>            </ul>
+                                                </small></div></li>
+                                    </ul>
                                 </div>
                             </div>
                         </section>
