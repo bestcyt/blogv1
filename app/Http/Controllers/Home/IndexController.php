@@ -14,6 +14,6 @@ class IndexController extends Controller
     //
     public function index(){
 
-        return 'asdfasdf';
+        return view('home.home');
     }
 }
