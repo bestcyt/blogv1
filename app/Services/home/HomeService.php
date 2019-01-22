@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\home;
 
 
+use App\Models\post;
 use Illuminate\Http\Request;
 
 /**
@@ -13,12 +14,19 @@ use Illuminate\Http\Request;
  */
 class HomeService
 {
+    public $postModel;
+
+    public function __construct(post $post)
+    {
+        $this->postModel = $post;
+    }
 
     /*
      * @todo 首页获取文章列表
      */
     public function index(Request $request){
-
+        $posts = $this->postModel->getIndexPosts();
+        return $posts;
     }
 
     /*

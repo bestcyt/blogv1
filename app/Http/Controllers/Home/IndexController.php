@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Services\HomeService;
+use App\Services\home\HomeService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,14 +12,16 @@ class IndexController extends Controller
      * TODO trait，博客首页，pjax，好人卡
      *
      */
-    public function __construct(HomeService $homeService){
+    public $homeService;
 
+    public function __construct(HomeService $homeService){
+        $this->homeService = $homeService;
     }
 
     //
-    public function index(){
+    public function index(Request $request){
 
-
-        return view('home.home');
+        $posts = $this->homeService->index($request);
+        return view('home.content-list',['posts'=>$posts]);
     }
 }

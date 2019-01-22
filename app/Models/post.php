@@ -35,4 +35,14 @@ class post extends Model
     public function getPostsCount(){
         return self::count();
     }
+
+    /*
+     * @todo 获取首页文章
+     */
+    public function getIndexPosts(){
+
+        return self::where([
+            ['state','=',1]
+        ])->get();
+    }
 }
