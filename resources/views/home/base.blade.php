@@ -269,7 +269,7 @@
         /* 鼠标特效 */
         var a_idx = 0;
         $("body").click(function(e) {
-            var a = new Array("豆豆", "豆豆", "豆豆", "豆豆", "豆豆", "豆豆", "笨豬" ,"笨豬", "笨豬", "笨豬", "笨豬", "笨豬");
+            var a = new Array("豆豆",  "笨豬");
             var $i = $("<span />").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;
             var x = e.pageX,
@@ -295,7 +295,8 @@
     })
 </script>
 
+{{-- 点击的pjax 解决了就全部解决了兄弟，在看看原来的--}}
 
 </body>
-</html><!--html end-->
-<!-- / footer -->
+</html>
+
