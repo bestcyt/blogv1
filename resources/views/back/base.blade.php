@@ -66,7 +66,7 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+            <ul class="layui-nav layui-nav-tree">
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="" href="javascript:;">文章管理</a>
                     <dl class="layui-nav-child">
@@ -74,7 +74,7 @@
                         <dd><a href="#" id="postList">文章列表</a></dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">标签管理</a>
                     <dl class="layui-nav-child">
                         <dd><a  href="#" id="labelCreate">新增标签</a></dd>
@@ -82,7 +82,7 @@
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">分类管理</a>
+                    <a href="javascript:;">分类弃用</a>
                     <dl class="layui-nav-child">
                         <dd><a href="#" id="sortCreate">新增分类</a></dd>
                         <dd><a href="#" id="sortList">分类列表</a></dd>

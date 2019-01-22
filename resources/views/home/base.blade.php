@@ -325,7 +325,7 @@
                                 <div class="index-post-img-small post-feature index-img-small">
                                     <a href="#">
                                         <div class="item-thumb-small lazy" data-original="https://www.baidu.com/img/bd_logo1.png?where=super"
-                                             {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
+                                                {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
                                         ></div>
                                     </a>
                                 </div>
@@ -341,17 +341,17 @@
 
                             {{--文章單個可以拿來循環--}}
                             {{--<div class="panel-small">--}}
-                                {{--<div class="index-post-img-small post-feature index-img-small">--}}
-                                    {{--<a href="https://www.haorenka.cc/proxyee-down.html">--}}
-                                        {{--<div class="item-thumb-small lazy" data-original="https://ws1.sinaimg.cn/large/007oPOSbly1fwv8u66crvj31hc0q141o.jpg" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"></div>--}}
-                                    {{--</a>--}}
-                                {{--</div><div class="post-meta wrapper-lg">--}}
-                                    {{--<h2 class="m-t-none index-post-title"><a href="https://www.haorenka.cc/proxyee-down.html">又一个百度网盘下载神器Proxyee-down 3.32</a></h2><p class="summary l-h-2x text-muted">2018-11-13 更新百度云扩展升级至0.34，修复了下载失败的问题。目前百度彻底限制了不登录账号下载的接口，现在一定要登录账号下载了，请知悉！如果升...</p><div class="line line-lg b-b b-light"></div>--}}
-                                    {{--<div class="text-muted post-item-foot-icon">--}}
-                                        {{--<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个好人&nbsp;</a></span>--}}
+                            {{--<div class="index-post-img-small post-feature index-img-small">--}}
+                            {{--<a href="https://www.haorenka.cc/proxyee-down.html">--}}
+                            {{--<div class="item-thumb-small lazy" data-original="https://ws1.sinaimg.cn/large/007oPOSbly1fwv8u66crvj31hc0q141o.jpg" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"></div>--}}
+                            {{--</a>--}}
+                            {{--</div><div class="post-meta wrapper-lg">--}}
+                            {{--<h2 class="m-t-none index-post-title"><a href="https://www.haorenka.cc/proxyee-down.html">又一个百度网盘下载神器Proxyee-down 3.32</a></h2><p class="summary l-h-2x text-muted">2018-11-13 更新百度云扩展升级至0.34，修复了下载失败的问题。目前百度彻底限制了不登录账号下载的接口，现在一定要登录账号下载了，请知悉！如果升...</p><div class="line line-lg b-b b-light"></div>--}}
+                            {{--<div class="text-muted post-item-foot-icon">--}}
+                            {{--<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个好人&nbsp;</a></span>--}}
 
-                                        {{--<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 11 月 03 日</span><a href="https://www.haorenka.cc/proxyee-down.html#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;19 条评论</a></div><!--text-muted-->--}}
-                                {{--</div><!--post-meta wrapper-lg-->--}}
+                            {{--<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 11 月 03 日</span><a href="https://www.haorenka.cc/proxyee-down.html#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;19 条评论</a></div><!--text-muted-->--}}
+                            {{--</div><!--post-meta wrapper-lg-->--}}
                             {{--</div><!--panel/panel-small-->--}}
 
                         </div>          <!--分页首页按钮-->
@@ -511,53 +511,53 @@
             &copy;&nbsp;2019 Copyright&nbsp;由 <a href="https://www.haorenka.cc/go/bandwagonhost/" target="_blank">搬瓦工</a> | <a target="blank" href="http://www.typecho.org">Typecho</a>  强力驱动    </div>
         <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
         {{--<script type="text/template" id="tmpl-customizer">--}}
-            {{--<div class="settings panel panel-default setting_body_panel" aria-hidden="true">--}}
-                {{--<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">--}}
-                    {{--<i class="fontello fontello-gear settings-icon"></i>--}}
-                {{--</button>--}}
-                {{--<div class="panel-heading">--}}
-                    {{--<button class="pull-right btn btn-xs btn-rounded btn-danger" name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>--}}
-                    {{--设置		</div>--}}
-                {{--<div class="setting_body">--}}
-                    {{--<div class="panel-body">--}}
-                        {{--<# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>--}}
-                            {{--<div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); #>>--}}
-                                {{--<label class="i-switch bg-info pull-right">--}}
-                                    {{--<input type="checkbox" name="{{ keys[i] }}" value="1"<# if ( data.defaults[keys[i]] ) print( ' checked="checked"' ); #> />--}}
-                                        {{--<i></i>--}}
-                                {{--</label>--}}
-                        {{--{{ data.sections.settings[keys[i]] }}--}}
-                    {{--</div>--}}
-                    {{--<# } #>--}}
-                {{--</div>--}}
-                {{--<div class="wrapper b-t b-light bg-light lter r-b">--}}
-                    {{--<div class="row row-sm">--}}
-                        {{--<div class="col-xs-6">--}}
-                            {{--<#--}}
-                                    {{--_.each( data.sections.colors, function( color, i ) {--}}
-                                    {{--var newColumnBefore = ( i % 7 ) === 6;--}}
-                                    {{--#>--}}
-                                {{--<label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">--}}
-                                    {{--<input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />--}}
-                                        {{--<span class="block bg-light clearfix pos-rlt">--}}
-								{{--<span class="active pos-abt w-full h-full bg-black-opacity text-center">--}}
-									{{--<i class="fontello fontello-check text-md text-white m-t-xs"></i>--}}
-								{{--</span>--}}
-								{{--<b class="{{ color.navbarHeader }} header"></b>--}}
-								{{--<b class="{{ color.navbarCollapse }} header"></b>--}}
-								{{--<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>--}}
-							{{--</span>--}}
-                                {{--</label>--}}
-                                {{--<#--}}
-                                        {{--if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )--}}
-                                {{--print( '</div><div class="col-xs-6">' );--}}
-                                    {{--} );--}}
-                                    {{--#>--}}
-                                {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+        {{--<div class="settings panel panel-default setting_body_panel" aria-hidden="true">--}}
+        {{--<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">--}}
+        {{--<i class="fontello fontello-gear settings-icon"></i>--}}
+        {{--</button>--}}
+        {{--<div class="panel-heading">--}}
+        {{--<button class="pull-right btn btn-xs btn-rounded btn-danger" name="reset" data-toggle="tooltip" data-placement="top" data-original-title="恢复默认值" >重置</button>--}}
+        {{--设置		</div>--}}
+        {{--<div class="setting_body">--}}
+        {{--<div class="panel-body">--}}
+        {{--<# for ( var keys = _.keys( data.sections.settings ), i = 0, name; keys.length > i; ++i ) { #>--}}
+        {{--<div<# if ( i !== ( keys.length - 1 ) ) print( ' class="m-b-sm"' ); #>>--}}
+        {{--<label class="i-switch bg-info pull-right">--}}
+        {{--<input type="checkbox" name="{{ keys[i] }}" value="1"<# if ( data.defaults[keys[i]] ) print( ' checked="checked"' ); #> />--}}
+        {{--<i></i>--}}
+        {{--</label>--}}
+        {{--{{ data.sections.settings[keys[i]] }}--}}
+        {{--</div>--}}
+        {{--<# } #>--}}
+        {{--</div>--}}
+        {{--<div class="wrapper b-t b-light bg-light lter r-b">--}}
+        {{--<div class="row row-sm">--}}
+        {{--<div class="col-xs-6">--}}
+        {{--<#--}}
+        {{--_.each( data.sections.colors, function( color, i ) {--}}
+        {{--var newColumnBefore = ( i % 7 ) === 6;--}}
+        {{--#>--}}
+        {{--<label class="i-checks block<# if ( !newColumnBefore ) print( ' m-b-sm' ); #>">--}}
+        {{--<input type="radio" name="color" value="{{ i }}"<# if ( data.defaults['color'] === i ) print( ' checked="checked"' ); #> />--}}
+        {{--<span class="block bg-light clearfix pos-rlt">--}}
+        {{--<span class="active pos-abt w-full h-full bg-black-opacity text-center">--}}
+        {{--<i class="fontello fontello-check text-md text-white m-t-xs"></i>--}}
+        {{--</span>--}}
+        {{--<b class="{{ color.navbarHeader }} header"></b>--}}
+        {{--<b class="{{ color.navbarCollapse }} header"></b>--}}
+        {{--<b class="{{ color.aside.replace( ' b-r', '' ) }}"></b>--}}
+        {{--</span>--}}
+        {{--</label>--}}
+        {{--<#--}}
+        {{--if ( newColumnBefore && ( i + 1 ) < data.sections.colors.length )--}}
+        {{--print( '</div><div class="col-xs-6">' );--}}
+        {{--} );--}}
+        {{--#>--}}
+        {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
+        {{--</div>--}}
         {{--</script>--}}
 
         <div class="topButton panel panel-default">
@@ -640,13 +640,12 @@
 
 </script>
 
-
-
 <!--CDN加载-->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+{{--pjax--}}
 <script src="{{ asset('haorenka/js/jquery.pjax.min.js') }}" type="text/javascript"></script>
+
 <script>
     $(document).pjax('a[href^="https://www.haorenka.cc/"]:not(a[target="_blank"], a[no-pjax])', {
         container: '#content',
@@ -754,7 +753,7 @@
             var $i = $("<span />").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;
             var x = e.pageX,
-                    y = e.pageY;
+                y = e.pageY;
             $i.css({
                 "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
                 "top": y - 20,
@@ -765,13 +764,13 @@
             });
             $("body").append($i);
             $i.animate({
-                        "top": y - 180,
-                        "opacity": 0
-                    },
-                    1500,
-                    function() {
-                        $i.remove();
-                    });
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
         });
     })
 </script>
