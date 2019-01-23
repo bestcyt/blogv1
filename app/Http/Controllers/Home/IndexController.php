@@ -41,9 +41,8 @@ class IndexController extends Controller
     public function show(Request $request){
 
         //还要对传的id进行验证，是否数字等等
-
         $this->view_data['post'] = $this->homeService->show($request);
-
+//        dd($this->view_path,$this->view_data);
         return view($this->view_path,$this->view_data);
 
     }

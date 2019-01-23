@@ -81,7 +81,10 @@
     @include('home.left')
 
     {{--content--}}
-    @yield('content')
+        <div id="content" class="app-content">
+            @yield('content')
+        </div>
+
 
     {{--底部--}}
     @include('home.footer')
@@ -167,36 +170,53 @@
 <script src="{{ asset('haorenka/js/jquery.pjax.min.js') }}" type="text/javascript"></script>
 
 <script>
-    $(document).pjax('a[href^="https://www.haorenka.cc/"]:not(a[target="_blank"], a[no-pjax])', {
-        container: '#content',
-        fragment: '#content',
-        timeout: 8000
-    }).on('pjax:send',function () {
-        $('#loading').removeClass('hide');
-    }).on('pjax:click', function() {
+//    $(document).pjax('a[href^="http://local.blog.bestcyt.cn"]:not(a[target="_blank"], a[no-pjax])', {
+//    $(document).pjax('[data-pjax] a, a[data-pjax]', {
+//        container: '#content',
+//        fragment: '#content',
+//        timeout: 80000
+//    }).on('pjax:send',function (event) {
+//        event.preventDefault();
+//        $('#loading').removeClass('hide');
+//    }).on('pjax:click', function(event) {
+//
+////        window['Page'].doPJAXClickAction();
+//
+//        $('body,html').animate({scrollTop:0},100);
+//        event.preventDefault();
+//        alert('asd');
+////        $.pjax({
+////            timeout: 8000,
+////            url: '/back/posts',
+////            container: '#content-main'
+////        });
+//    }).on('pjax:complete', function(event) {
+//        event.preventDefault();
+//        alert('111');
+////        window['Page'].doPJAXCompleteAction();
+//
+//
+//        $("img").lazyload({
+//            effect: "fadeIn",
+//            threshold: "200"
+//        });
+//        $(".lazy").lazyload({
+//            effect: "fadeIn",
+//            threshold: "200"
+//        });
+//        $('#loading').addClass('hide');
+//
+//    })
 
-        window['Page'].doPJAXClickAction();
+$(document).on('click','a[data-pjax]',function(event){
+    event.preventDefault();
+    $.pjax({
+        timeout: 80000,
+        url: $(this).attr('href'),
+        container: '#content'
+    });
+});
 
-        $('body,html').animate({scrollTop:0},100);
-
-
-    }).on('pjax:complete', function() {
-        window['Page'].doPJAXCompleteAction();
-
-
-        $("img").lazyload({
-            effect: "fadeIn",
-            threshold: "200"
-        });
-        $(".lazy").lazyload({
-            effect: "fadeIn",
-            threshold: "200"
-        });
-        $('#loading').addClass('hide');
-
-
-
-    })
 </script>
 
 

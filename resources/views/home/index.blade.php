@@ -1,9 +1,6 @@
 @extends('home.base')
 
 @section('content')
-
-    <div id="content" class="app-content">
-
         {{-- loading --}}
         <div id="loading" class="butterbar active hide">
             <span class="bar"></span>
@@ -38,8 +35,9 @@
                                             ></div>
                                         </a>
                                     </div>
+
                                     <div class="post-meta wrapper-lg">
-                                        <h2 class="m-t-none index-post-title"><a href="/post/{{ $post->id }}">{{ $post->post_name }}</a></h2>
+                                        <h2 class="m-t-none index-post-title"><a href="/post/{{ $post->id }}" data-pjax>{{ $post->post_name }}</a></h2>
                                         <p class="summary l-h-2x text-muted">{{ $post->post_desc }}</p><div class="line line-lg b-b b-light"></div>
                                         <div class="text-muted post-item-foot-icon">
                                             <i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个好人&nbsp;</a></span>
@@ -49,22 +47,8 @@
                                 </div>
                             @endforeach
 
-                            {{--文章單個可以拿來循環--}}
-                            {{--<div class="panel-small">--}}
-                            {{--<div class="index-post-img-small post-feature index-img-small">--}}
-                            {{--<a href="https://www.haorenka.cc/proxyee-down.html">--}}
-                            {{--<div class="item-thumb-small lazy" data-original="https://ws1.sinaimg.cn/large/007oPOSbly1fwv8u66crvj31hc0q141o.jpg" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"></div>--}}
-                            {{--</a>--}}
-                            {{--</div><div class="post-meta wrapper-lg">--}}
-                            {{--<h2 class="m-t-none index-post-title"><a href="https://www.haorenka.cc/proxyee-down.html">又一个百度网盘下载神器Proxyee-down 3.32</a></h2><p class="summary l-h-2x text-muted">2018-11-13 更新百度云扩展升级至0.34，修复了下载失败的问题。目前百度彻底限制了不登录账号下载的接口，现在一定要登录账号下载了，请知悉！如果升...</p><div class="line line-lg b-b b-light"></div>--}}
-                            {{--<div class="text-muted post-item-foot-icon">--}}
-                            {{--<i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个好人&nbsp;</a></span>--}}
-
-                            {{--<i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 11 月 03 日</span><a href="https://www.haorenka.cc/proxyee-down.html#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;19 条评论</a></div><!--text-muted-->--}}
-                            {{--</div><!--post-meta wrapper-lg-->--}}
-                            {{--</div><!--panel/panel-small-->--}}
-
-                        </div>          <!--分页首页按钮-->
+                        </div>
+                        <!--分页首页按钮-->
                         <nav class="text-center m-t-lg m-b-lg" role="navigation">
                             <ol class="page-navigator">
                                 <li class="prev"><a href="https://www.haorenka.cc/page/3/">
@@ -209,6 +193,4 @@
                 </aside>
             </div>
         </main>
-    </div>
-
 @endsection
