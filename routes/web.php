@@ -84,6 +84,7 @@ Route::prefix('back')->group(function (){
  */
 Route::namespace('Home')->group(function (){
     Route::get('/','IndexController@index')->name('home.index');
+    Route::get('/post/{id}','IndexController@show')->name('home.show');
 });
 
 

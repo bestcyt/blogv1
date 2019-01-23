@@ -25,15 +25,14 @@ class HomeService
      * @todo 首页获取文章列表
      */
     public function index(Request $request){
-        $posts = $this->postModel->getIndexPosts();
-        return $posts;
+        return $this->postModel->getIndexPosts();
     }
 
     /*
      * @todo pjax文章详情
      */
     public function show(Request $request){
-
+        return $this->postModel->getPostById($request->input('id'));
     }
 
 }

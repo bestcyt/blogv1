@@ -45,4 +45,11 @@ class post extends Model
             ['state','=',1]
         ])->get();
     }
+
+    /*
+     * 获取文章详情
+     */
+    public function getPostById($id){
+        return self::find($id);
+    }
 }

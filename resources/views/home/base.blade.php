@@ -292,6 +292,11 @@
                     $i.remove();
                 });
         });
+
+        console.log('aaa');
+        console.log('ff');
+        console.log('aagga');
+        console.log('gg');
     })
 </script>
 
