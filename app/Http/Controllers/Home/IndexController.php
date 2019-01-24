@@ -24,7 +24,7 @@ class IndexController extends Controller
     public function __construct(HomeService $homeService,Request $request){
         $this->homeService = $homeService;
         $this->view_path = Route::currentRouteName();
-        $this->view_data['isPjax'] = !empty($request->input('_pjax')) ?? false;
+        $this->view_data['isPjax'] = !empty($request->input('_pjax')) ? 1 : 2;
         $this->view_index = 'home.index';
     }
 
@@ -39,7 +39,7 @@ class IndexController extends Controller
      * @todo 返回文章详情
      */
     public function show(Request $request){
-
+//        dd($this->view_data);
         //还要对传的id进行验证，是否数字等等
         $this->view_data['post'] = $this->homeService->show($request);
 //        dd($this->view_path,$this->view_data);
