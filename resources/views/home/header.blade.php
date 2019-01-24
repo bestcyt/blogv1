@@ -10,7 +10,7 @@
         <!-- brand -->
         <a href="https://www.haorenka.cc/" class="navbar-brand text-lt">
             <i class="fontello fontello-home"></i>
-            <span class="hidden-folded m-l-xs">bestcyt</span>
+            <span class="hidden-folded m-l-xs">bestcyt-Blog</span>
         </a>
         <!-- / brand -->
     </div>
@@ -23,11 +23,8 @@
                 <i class="fontello fontello-dedent text icon-fw"></i>
                 <i class="fontello fontello-indent icon-fw text-active"></i>
             </a>
-
         </div>
         <!-- / buttons -->
-
-
         <!-- search form -->
         <form id="searchform1" class="searchform navbar-form navbar-form-sm navbar-left shift" method="post"
               role="search">

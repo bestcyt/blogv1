@@ -17,6 +17,7 @@ class ConstantService {
 
     /*
      * @todo 统一返回viewdata和viewpath
+     *
      */
     public function getViewAndPath(Request $request , $type){
         $re = [];

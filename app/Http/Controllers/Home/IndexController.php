@@ -26,16 +26,18 @@ class IndexController extends Controller
      * 区别是否pjax还是url刷新
     */
     public function __construct(HomeService $homeService ,ConstantService $constantService ,Request $request){
+        //注入业务层
         $this->homeService = $homeService;
         $this->constantService = $constantService;
-        $re = $this->constantService->getViewAndPath($request,'home');
-        $this->view = $re;
-        //后面可以优化成一个大的view ， 里面有index，path，data[]
+
+        //处理跳转地址
+        $this->view = $this->constantService->getViewAndPath($request,'home');
     }
 
     //首页
     public function index(Request $request){
         //还需要获取用户信息，标签云，热门文章，文字等等
+
         $this->view['posts'] = $this->homeService->index($request);
         return view($this->view['path'],$this->view);
     }
