@@ -34,7 +34,7 @@
     </header>
     <div class="wrapper-md" id="post-panel">
         <ol class="breadcrumb bg-white b-a" itemscope=""><li>
-                <a href="{{ env('APP_URL') }}" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip"><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
+                <a href="{{ env('APP_URL') }}" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip" ><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
             </li><li class="active">正文&nbsp;&nbsp;</li>
             <div style="float:right;">
                 分享到：
@@ -76,7 +76,7 @@
         <!--上一篇&下一篇-->
         <nav class="m-t-lg m-b-lg">
             <ul class="pager">
-                <li class="next"> <a href="https://www.haorenka.cc/20190103.html" title="2019年：谁有好玩的twitter推荐呢？" data-toggle="tooltip"> 下一篇 </a></li>   <li class="previous"> <a href="https://www.haorenka.cc/tiktok-jp.html" title="抖音日版：换个口味的妹子继续看" data-toggle="tooltip"> 上一篇 </a></li>
+                <li class="next"> <a href="#" title="待定" data-toggle="tooltip"> 下一篇 </a></li>   <li class="previous"> <a href="#" title="待定" data-toggle="tooltip"> 上一篇 </a></li>
             </ul>
         </nav>
         <!--评论-->

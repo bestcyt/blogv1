@@ -16,13 +16,13 @@
 
     <title>来自bestcyt的测试博客</title>
     <link rel="icon" type="image/ico" href="/favicon.ico">
-    <meta name="description" content="我只是一个好人" />
-    <meta name="keywords" content="好人卡,一个好人,福利资源" />
+    <meta name="description" content="我只是一个豆豆博客" />
+    <meta name="keywords" content="豆豆博客,一个豆豆博客" />
     <meta name="generator" content="Typecho 1.1/17.10.30" />
     <meta name="template" content="handsome" />
-    <link rel="alternate" type="application/rss+xml" title="好人卡 &raquo; RSS 2.0" href="https://www.haorenka.cc/feed/" />
-    <link rel="alternate" type="application/rdf+xml" title="好人卡 &raquo; RSS 1.0" href="https://www.haorenka.cc/feed/rss/" />
-    <link rel="alternate" type="application/atom+xml" title="好人卡 &raquo; ATOM 1.0" href="https://www.haorenka.cc/feed/atom/" />
+    <link rel="alternate" type="application/rss+xml" title="豆豆博客 &raquo; RSS 2.0" href="https://www.haorenka.cc/feed/" />
+    <link rel="alternate" type="application/rdf+xml" title="豆豆博客 &raquo; RSS 1.0" href="https://www.haorenka.cc/feed/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="豆豆博客 &raquo; ATOM 1.0" href="https://www.haorenka.cc/feed/atom/" />
 
     <!-- 第三方CDN加载CSS -->
     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -152,7 +152,7 @@
 
         OPERATION_NOTICE: '操作通知',
         SCREENSHOT_BEGIN: '正在生成当前页面截图……',
-        SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前卡片',
+        SCREENSHOT_NOTICE: '点击顶部下载按钮保存当前片',
         SCREENSHORT_ERROR: '由于图片跨域原因导致截图失败',
         SCREENSHORT_SUCCESS: '截图成功',
         MUSIC_NOTICE: '播放通知',

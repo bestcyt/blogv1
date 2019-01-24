@@ -10,7 +10,7 @@
             {{--文字--}}
             <header class="bg-light lter b-b wrapper-md">
                 <h1 class="m-n font-thin h3 text-black l-h">陈一锑</h1>
-                <small class="text-muted letterspacing indexWords">迷失的人迷失了，相逢的人会再相逢</small>
+                <small class="text-muted letterspacing indexWords">我从山中来，山风翻我书.</small>
             </header>
 
             {{--wrapper-md--}}

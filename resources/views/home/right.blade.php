@@ -16,7 +16,7 @@
                     <ul class="list-group no-bg no-borders pull-in m-b-none">
                         @foreach($hotPosts as $hotPost)
                             <li class="list-group-item">
-                                <a href="https://www.haorenka.cc/prshe-320g.html" class="pull-left thumb-sm m-r"></a>
+                                <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" class="pull-left thumb-sm m-r"></a>
                                 <div class="clear">
                                     <h4 class="h5 l-h">
                                         <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" title="{{ $hotPost->post_name }}" data-pjax>
@@ -37,134 +37,116 @@
                 <!--最新评论-->
                 <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
                     <h3 class="widget-title m-t-none text-md">最新评论</h3>
-                    <ul class="list-group no-borders pull-in auto m-b-none no-bg">
-                        <li class="list-group-item">
+                    @if(isset($isComment))
+                        <ul class="list-group no-borders pull-in auto m-b-none no-bg">
+                            <li class="list-group-item">
 
-                            <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" class="pull-left thumb-sm avatar m-r">
-                            </a>
-                            <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" class="text-muted">
-                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                <span class="sr-only"></span>-->
-                            </a>
-                            <div class="clear">
-                                <div class="text-ellipsis">
-                                    <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" title="嘿嘿"> 嘿嘿 </a>
-                                </div>
-                                <small class="text-muted">
+                                <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" class="pull-left thumb-sm avatar m-r">
+                                </a>
+                                <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" class="text-muted">
+                                    <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                                    <span class="sr-only"></span>-->
+                                </a>
+                                <div class="clear">
+                                    <div class="text-ellipsis">
+                                        <a href="https://www.haorenka.cc/tuwanjun.html/comment-page-1#comment-6638" title="嘿嘿"> 嘿嘿 </a>
+                                    </div>
+                                    <small class="text-muted">
                       <span>
                           太感谢了，谢谢φ(￣∇￣o)                      </span>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-
-                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" class="pull-left thumb-sm avatar m-r">
-                            </a>
-                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" class="text-muted">
-                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                <span class="sr-only"></span>-->
-                            </a>
-                            <div class="clear">
-                                <div class="text-ellipsis">
-                                    <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" title="菜鸟005"> 菜鸟005 </a>
+                                    </small>
                                 </div>
-                                <small class="text-muted">
+                            </li>
+                            <li class="list-group-item">
+
+                                <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" class="pull-left thumb-sm avatar m-r">
+                                </a>
+                                <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" class="text-muted">
+                                    <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                                    <span class="sr-only"></span>-->
+                                </a>
+                                <div class="clear">
+                                    <div class="text-ellipsis">
+                                        <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6637" title="菜鸟005"> 菜鸟005 </a>
+                                    </div>
+                                    <small class="text-muted">
                       <span>
                           为啥攻击你啊OωO                      </span>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-
-                            <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" class="pull-left thumb-sm avatar m-r">
-                            </a>
-                            <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" class="text-muted">
-                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                <span class="sr-only"></span>-->
-                            </a>
-                            <div class="clear">
-                                <div class="text-ellipsis">
-                                    <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" title="艾薇保底"> 艾薇保底 </a>
+                                    </small>
                                 </div>
-                                <small class="text-muted">
+                            </li>
+                            <li class="list-group-item">
+
+                                <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" class="pull-left thumb-sm avatar m-r">
+                                </a>
+                                <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" class="text-muted">
+                                    <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                                    <span class="sr-only"></span>-->
+                                </a>
+                                <div class="clear">
+                                    <div class="text-ellipsis">
+                                        <a href="https://www.haorenka.cc/gif-1.html/comment-page-1#comment-6635" title="艾薇保底"> 艾薇保底 </a>
+                                    </div>
+                                    <small class="text-muted">
                       <span>
                           倒数第五个资源链接thunder://QUFtYWduZXQ6...                      </span>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-
-                            <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" class="pull-left thumb-sm avatar m-r">
-                            </a>
-                            <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" class="text-muted">
-                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                <span class="sr-only"></span>-->
-                            </a>
-                            <div class="clear">
-                                <div class="text-ellipsis">
-                                    <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" title="coci"> coci </a>
+                                    </small>
                                 </div>
-                                <small class="text-muted">
+                            </li>
+                            <li class="list-group-item">
+
+                                <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" class="pull-left thumb-sm avatar m-r">
+                                </a>
+                                <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" class="text-muted">
+                                    <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                                    <span class="sr-only"></span>-->
+                                </a>
+                                <div class="clear">
+                                    <div class="text-ellipsis">
+                                        <a href="https://www.haorenka.cc/laoniangnaida.html/comment-page-1#comment-6630" title="coci"> coci </a>
+                                    </div>
+                                    <small class="text-muted">
                       <span>
                           该评论仅登录用户及评论双方可见                      </span>
-                                </small>
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-
-                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" class="pull-left thumb-sm avatar m-r">
-                            </a>
-                            <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" class="text-muted">
-                                <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
-                                <span class="sr-only"></span>-->
-                            </a>
-                            <div class="clear">
-                                <div class="text-ellipsis">
-                                    <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" title="key"> key </a>
+                                    </small>
                                 </div>
-                                <small class="text-muted">
+                            </li>
+                            <li class="list-group-item">
+
+                                <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" class="pull-left thumb-sm avatar m-r">
+                                </a>
+                                <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" class="text-muted">
+                                    <!--<i class="iconfont icon-comments-o text-muted pull-right m-t-sm text-sm" title="" aria-hidden="true" data-toggle="tooltip" data-placement="auto left"></i>
+                                    <span class="sr-only"></span>-->
+                                </a>
+                                <div class="clear">
+                                    <div class="text-ellipsis">
+                                        <a href="https://www.haorenka.cc/20190111.html/comment-page-1#comment-6629" title="key"> key </a>
+                                    </div>
+                                    <small class="text-muted">
                       <span>
                           最近身体有点棒，希望有一个大佬补一下                      </span>
-                                </small>
-                            </div>
-                        </li>
-                    </ul>
+                                    </small>
+                                </div>
+                            </li>
+                        </ul>
+                    @endif
                 </div>
                 <!--随机文章-->
                 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
                     <h3 class="widget-title m-t-none text-md">随机文章</h3>
                     <ul class="list-group no-bg no-borders pull-in">
-                        <li class="list-group-item">
-                            <a href="https://www.haorenka.cc/baiduganjingyun.html" class="pull-left thumb-sm m-r"></a>
+                        @foreach($hotPosts as $hotPost)
+                            <li class="list-group-item">
+                            <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" class="pull-left thumb-sm m-r"></a>
                             <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/baiduganjingyun.html" title="百度干净云：召唤大神版-破解限速"> 百度干净云：召唤大神版-破解限速 </a></h4>
+                                <h4 class="h5 l-h">
+                                    <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" title="{{ $hotPost->post_name }}" data-pjax> {{ $hotPost->post_name }} </a></h4>
                                 <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">852</span>
                     </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/laoniangnaida.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/laoniangnaida.html" title="微博营养不良博主推荐：老娘奶大"> 微博营养不良博主推荐：老娘奶大 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">5464</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/iqiyi-jd-vip.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/iqiyi-jd-vip.html" title="爱奇艺+京东plus年会员仅需89元"> 爱奇艺+京东plus年会员仅需89元 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">3372</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/tampermonkey-baidu-3-23.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/tampermonkey-baidu-3-23.html" title="当前可用的百度网盘油猴脚本版本"> 当前可用的百度网盘油猴脚本版本 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">775</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/torrent-search-engine.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/torrent-search-engine.html" title="【安卓】种子磁力搜索神器最新版-无法被超越的软件"> 【安卓】种子磁力搜索神器最新版-无法被超越的软件 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">4332</span>
-                    </span>
-                                </small></div></li>            </ul>
+                                </small></div></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </section>
