@@ -1,11 +1,9 @@
 @extends('home.base')
-
 @section('content')
         {{-- loading --}}
         <div class="col center-part">
             {{--公告位置--}}
-            <div class="alert alert-warning alert-block" style="
-              margin-bottom: 0px;">
+            <div class="alert alert-warning alert-block" style="margin-bottom: 0px;">
                 <button type="button" class="close" data-dismiss="alert">×</button><p><i class="fontello fontello-volume-up" aria-hidden="true"></i>&nbsp;
                     资源是有时效性，希望理解。</p>
             </div>
@@ -68,5 +66,5 @@
                 </style>
             </div>
         </div>
-
+    @include('home.right')
 @endsection

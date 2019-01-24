@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Services\ConstantService;
 use App\Services\home\HomeService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,37 +14,38 @@ class IndexController extends Controller
      * TODO trait，博客首页，pjax，好人卡
      *
      */
-
-    public $view_path;
-    public $view_data;
-    public $view_index;
+    public $view = [
+        'view',   //页面
+        'index',  //默认页面
+        'path',   //view 路径
+        'data',   //数据
+    ];
     public $homeService;
+    public $constantService;
     /*
      * 区别是否pjax还是url刷新
     */
-    public function __construct(HomeService $homeService,Request $request){
+    public function __construct(HomeService $homeService ,ConstantService $constantService ,Request $request){
         $this->homeService = $homeService;
-        $this->view_path = Route::currentRouteName();
-        $this->view_data['isPjax'] = !empty($request->input('_pjax')) ? 1 : 2;
-        $this->view_index = 'home.index';
+        $this->constantService = $constantService;
+        $re = $this->constantService->getViewAndPath($request,'home');
+        $this->view = $re;
+        //后面可以优化成一个大的view ， 里面有index，path，data[]
     }
 
     //首页
     public function index(Request $request){
         //还需要获取用户信息，标签云，热门文章，文字等等
-        $this->view_data['posts'] = $this->homeService->index($request);
-        return view($this->view_path,$this->view_data);
+        $this->view['posts'] = $this->homeService->index($request);
+        return view($this->view['path'],$this->view);
     }
 
     /*
      * @todo 返回文章详情
      */
     public function show(Request $request){
-//        dd($this->view_data);
         //还要对传的id进行验证，是否数字等等
-        $this->view_data['post'] = $this->homeService->show($request);
-//        dd($this->view_path,$this->view_data);
-        return view($this->view_path,$this->view_data);
-
+        $this->view['post'] = $this->homeService->show($request);
+        return view($this->view['path'],$this->view);
     }
 }
