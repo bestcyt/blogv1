@@ -45,9 +45,10 @@ class IndexController extends Controller
     /*
      * @todo 返回文章详情
      */
-    public function show(Request $request){
+    public function show($id){
         //还要对传的id进行验证，是否数字等等
-        $this->view['post'] = $this->homeService->show($request);
+        $this->view['post'] = $this->homeService->show($id);
+
         return view($this->view['path'],$this->view);
     }
 }

@@ -7,20 +7,20 @@
             height: 100%
         }
     </style>
-    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>一个好人</p><span>花生日记：真正0成本躺着赚钱</span></div><div
-                class="mdx-si-sum">本文主要适合学生党和想赚点外快的上班族。这个项目是一个朋友推荐的，我观望了大概1年，没办法，胆子小，网上骗术和一些...</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img
+    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>一个好人</p><span>{{ $post->post_name }}</span></div><div
+                class="mdx-si-sum">{{ $post->post_desc }}</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img
                         src="https://www.haorenka.cc/usr/themes/handsome/libs/GetCode.php?type=url&content=https://www.haorenka.cc/huashengriji.html"></div></div><div class="mdx-si-time">04<br><span
                     class="mdx-si-time-2">2019/01</span></div></div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->
 
     <header id="small_widgets" class="bg-light lter b-b wrapper-md">
-        <h1 class="entry-title m-n font-thin h3 text-black l-h">花生日记：真正0成本躺着赚钱<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
+        <h1 class="entry-title m-n font-thin h3 text-black l-h">{{ $post->post_name }}<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
 " aria-hidden="true"></i></a></h1>       <!--文章标题下面的小部件-->
         <ul  class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
             <!--作者-->
             <li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://www.haorenka.cc/author/1/" rel="author"> 一个好人</a></li>
             <!--发布时间-->
-            <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">2019 年 01 月 04 日</time></li>
+            <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">{{ $post->created_at }}</time></li>
             <!--浏览数-->
             <li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">11270&nbsp;次浏览</span></li>
             <!--评论数-->
@@ -57,22 +57,19 @@
                 <!--文章页面的头图-->
                 <!--文章内容-->
                 <div id="post-content" class="wrapper-lg">
-                    <div class="entry-content l-h-2x">
-                        <p>本文主要适合学生党和想赚点外快的上班族。</p><p>这个项目是一个朋友推荐的，我观望了大概1年，没办法，胆子小，网上骗术和一些风险项目实在是太多了，看到朋友确实赚钱了，才分享出来。</p><p>很多新手初步了解到淘客，都担心自己入场太晚了，分不到羹。这有点高看你自己的了，偌大的市场只要你用点心总会有一席之地的，研究好产品、了解趋势、敢于尝试，迅速占坑！</p><p>网赚圈子里有一句经典的话 “<strong>想要赚钱，你先找到会赚钱的人，然后每天去关注他，研究它的方法技巧，然后复制、粘贴、优化</strong>“！</p><p>网上有很多什么日赚500几千的，说实话，我是不信，花生日记好好做的话一个月一两千块钱是没有问题的，其实做什么都一样，不要太懒，好好推广，推广做的好了，以后才可以躺着赚钱。</p><p>在你还在想的时候，人家已经开始做了，这就是你和人家之间的区别！干就完了，说的再退一步来说，即使失败了，至少你获得了网赚的经验，根本就是零成本的事，你又损失什么了呢？</p><p><strong>提示：不要相信任何需要付费的网赚项目，绝大部分都是交的智商税。</strong></p><p>本文主要是对花生日记做一个简单的介绍。</p><h2>什么是花生日记？</h2><p>官方简介：花生日记是淘宝天猫优惠券集中营，是学生党、上班族、家庭主妇、宝妈、自由职业者等省钱首选，天天都能让你过双11的省钱还能赚钱的APP....</p><p>其实就是一个购物返利、分享给其他人赚取佣金的APP。</p><p>经常接触网络的人都知道，淘宝客在几年前非常火爆，很多牛人可以做到月收入百万以上，但是因为阿里的系统总是升级，导致很多推广方式和链接都会失效。直到花生日记的出现，打破了这个僵局。</p><h2>通过花生日记赚的是谁的钱</h2><p>淘宝商家为了冲销量，打造爆款，都会发布一些隐藏的优惠券和推广佣金。</p><p>简单来说钱都是需要推广的淘宝天猫商家付的。</p><h2>怎样通过花生日记赚钱</h2><p>花生日记本身就是一个淘客APP，低价购物的这么一个平台，自买可以省钱，推广可以赚推广佣金。</p><p>1、通过花生日记领券后在购买淘宝天猫商品，省到及赚到。</p><p>2、把有优惠券的商品分享给其他人购买，即可赚取佣金，没有人会拒绝省钱的，除非家里有矿。</p><p>3、分享自己的花生日记邀请码给其他人注册，邀请者购买，即可赚取佣金。</p><p><a href="https://www.haorenka.cc/go/aHR0cHM6Ly90LmNuL0VHTVJxdkc=" target="_blank" >20种快速招粉丝方法分享，让你每日暴增100粉丝！</a></p><p>当你和你的代理商分享每卖出一单，都可以获得约10~50%的佣金，另外你的代理商每卖出一单，你就可以获得5%的提成奖励，这意味着你的代理越多，你后面躺赚的越多！</p><p>有些人可能会想到，这不是拉人头吗？怎么跟传销一样，这个项目，是不需要任何投资的，而且消费的地方是在淘宝和天猫这些大平台，你平时买东西，多少钱就是多少钱，没有一分钱佣金，那么我们用了花生日记以后，平均每消费1000块钱，就有50-300不等的佣金，我们何乐而不为呢？</p><p>现在这个时代，每个月在淘宝花个千八百的太正常不过了。</p><p>如果你的朋友圈有500个人，推荐成功300人下载花生日记，不管是成为你的代理还是你的客户，他们每月只需要在这上面消费300元，一个月消费总金额是90000，按我们后台佣金比例，如果他们都是消费者你一个月可以赚取9000元，如果他们都是代理，你一个月可以赚取1800元。</p><h2>花生日记小总结</h2><p>花生日记适合推荐给什么人使用？<br>1、学生党，购物省钱和赚取零花钱。<br>2、上班族，上班挣得太少，来点外快。<br>3、休产假或其他原因在家的女性，女性本来就喜欢买买买，再加上女人都受不了优惠券啊打折啊，很适合。</p><p>通过花生日记推广，收入只会一个月比一个月多！</p><h2>花生日记怎样注册下载</h2><p>花生日记可以通过各大应用商店搜索下载，或者点下面下载链接和扫下方二维码。</p><p><strong>花生日记是通过邀请制注册的，不填写邀请码无法注册。</strong></p><p>通过本文邀请码注册，注册成功即可免费成为<strong>超级会员</strong>。</p><p>邀请码：<strong>IHTKMWO</strong></p><p>官方下载：<a href="https://www.haorenka.cc/go/aHR0cDovL2EuYXBwLnFxLmNvbS9vL3NpbXBsZS5qc3A|cGtnbmFtZT1jb20uamYubGtyaiZjb2RlPTI2ODA0NzAz" target="_blank" >花生日记</a></p><p>二维码：</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=" data-original="https://wx1.sinaimg.cn/large/007oPOSbly1fyuna4aa54j3078078gli.jpg" alt="花生日记" title="花生日记" /></p><h2>使用花生日记领优惠券省钱</h2><p><a href="https://www.haorenka.cc/20190110tmall.html" target="_blank" >【天猫年货节888元红包】速领</a></p><p>淘宝选好宝贝→长按宝贝标题复制→打开花生日记→自动识别领券→返回淘宝领券</p><p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=" data-original="https://ws3.sinaimg.cn/large/005BYqpgly1fyzd19ejong30b40kdtkg.jpg" alt="花生日记：真正0成本躺着赚钱" title="花生日记：真正0成本躺着赚钱" /></p><h2>使用花生日记赚钱</h2><p><a href="https://www.haorenka.cc/go/aHR0cHM6Ly90LmNuL0VHTVJxdkc=" target="_blank" >20种快速招粉丝方法分享，让你每日暴增100粉丝！</a></p>          </div>
-                    <!--文章下载面板-->
-                    <!--/文章下载面板-->
-                    <!--文章页脚的广告位-->
-                    <strong style="color: #FD6A5E;">【天猫年货节888元红包】</strong><a target="_blank" href="https://www.haorenka.cc/20190110tmall.html" style="border-bottom: solid 2px #eee;">速领</a>                          <!--文章的页脚部件：打赏和其他信息的输出-->
-
-                    <div class="show-foot">
-                        <div class="notebook">
-                            <i class="fontello fontello-clock-o"></i>
-                            <span>最后修改：2019 年 01 月 20 日 07 : 53  PM</span>
+                     <div class="entry-content l-h-2x">
+                        <p>本文主要适合学生党和想赚点外快的上班族。</p>
+                            {{ $post->info }}
+                        <div class="show-foot">
+                            <div class="notebook">
+                                <i class="fontello fontello-clock-o"></i>
+                                <span>最后修改：{{ $post->updated_at }}</span>
+                            </div>
+                            <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并注明转载地址"><span>© 著作权归作者所有</span>
+                            </div>
                         </div>
-                        <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并注明转载地址"><span>© 著作权归作者所有</span>
-                        </div>
-                    </div>
-                    <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text">1638</div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
+                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text">1638</div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
+                     </div>
                 </div>
             </article>
         </div>
@@ -91,7 +88,7 @@
             }
         </style>
 
-
+        @if(isset($ifComment))
         <div id="comments">
 
             <!--评论列表-->
@@ -282,6 +279,7 @@
                 </li><!--匹配`自定义评论的代码结构`下面的li标签-->
             </ol><nav class="text-center m-t-lg m-b-lg" role="navigation"></nav>
             <!--如果允许评论，会出现评论框和个人信息的填写-->
+
             <div id="respond-post-899" class="respond comment-respond">
 
                 <h4 id="reply-title" class="comment-reply-title m-t-lg m-b">发表评论                    <small class="cancel-comment-reply">
@@ -338,6 +336,7 @@
             </div>
 
         </div>
+            @endif
 
 
     </div>

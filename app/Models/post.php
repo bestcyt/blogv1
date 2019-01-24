@@ -29,6 +29,8 @@ class post extends Model
 //        return self::orderBy($order,$by)->paginate($page, ['*'], '', $limit);
     }
 
+
+
     /*
      * 获取文章数量
      */

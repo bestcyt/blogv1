@@ -178,7 +178,10 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //Markdown？
-        YuanChao\Editor\EndaEditorServiceProvider::class
+        YuanChao\Editor\EndaEditorServiceProvider::class,
+
+        //视图provider共享数据
+        \App\Providers\ViewShareServiceProvider::class,
     ],
 
     /*

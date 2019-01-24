@@ -31,8 +31,8 @@ class HomeService
     /*
      * @todo pjax文章详情
      */
-    public function show(Request $request){
-        return $this->postModel->getPostById($request->input('id'));
+    public function show($id){
+        return $this->postModel->getPostById($id);
     }
 
 }

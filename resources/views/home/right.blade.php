@@ -14,37 +14,25 @@
                 <div id="widget-tabs-4-hots" class="tab-pane  fade in wrapper-md active" role="tabpanel">
                     <h3 class="widget-title m-t-none text-md">热门文章</h3>
                     <ul class="list-group no-bg no-borders pull-in m-b-none">
-                        <li class="list-group-item">
-                            <a href="https://www.haorenka.cc/prshe-320g.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/prshe-320g.html" title="PR社小姐姐大合集 全都是可爱的小姐姐【320G】"> PR社小姐姐大合集 全都是可爱的小姐姐【320G】 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">91807</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/meizi1023.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/meizi1023.html" title="一般看见这种类型黑色内裤，我直接x了再说"> 一般看见这种类型黑色内裤，我直接x了再说 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">59835</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/1000g.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/1000g.html" title="你该加块硬盘了，1000G+美女福利资源"> 你该加块硬盘了，1000G+美女福利资源 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">49565</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/gif-5.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/gif-5.html" title="好人卡 精选GIF出处 第5期"> 好人卡 精选GIF出处 第5期 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">46443</span>
-                    </span>
-                                </small></div></li><li class="list-group-item">
-                            <a href="https://www.haorenka.cc/taobaoneiyimaijiaxiu.html" class="pull-left thumb-sm m-r"></a>
-                            <div class="clear">
-                                <h4 class="h5 l-h"> <a href="https://www.haorenka.cc/taobaoneiyimaijiaxiu.html" title="最牛逼最极品的淘宝内衣买家秀大约13000张"> 最牛逼最极品的淘宝内衣买家秀大约13000张 </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">45704</span>
-                    </span>
-                                </small></div></li>         </ul>
+                        @foreach($hotPosts as $hotPost)
+                            <li class="list-group-item">
+                                <a href="https://www.haorenka.cc/prshe-320g.html" class="pull-left thumb-sm m-r"></a>
+                                <div class="clear">
+                                    <h4 class="h5 l-h">
+                                        <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" title="{{ $hotPost->post_name }}" data-pjax>
+                                            {{ $hotPost->post_name }} </a>
+                                    </h4>
+                                    <small class="text-muted post-head-icon">
+                                        <span class="meta-date">
+                                            <i class="fontello fontello-eye" aria-hidden="true"></i>
+                                            <span class="sr-only">浏览次数:</span>
+                                            <span class="meta-value">91807</span>
+                                        </span>
+                                    </small>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
                 <!--最新评论-->
                 <div id="widget-tabs-4-comments" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">

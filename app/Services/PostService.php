@@ -85,6 +85,13 @@ class PostService {
         flash(config('res.post-store-success'))->success();
     }
 
+    /*
+     * @todo 右侧热门文章
+     */
+    public function getRightHotPosts(){
+        return $this->PostModel->getIndexPosts();
+    }
+
 
 
 }
