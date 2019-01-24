@@ -4,6 +4,7 @@ namespace App\Http\Controllers\back;
 
 use App\Models\label;
 use App\Models\post;
+use App\Services\ConstantService;
 use App\Services\PostService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,28 +13,26 @@ use Illuminate\Support\Facades\Route;
 
 class PostsController extends Controller
 {
-    public $view_path;
-    public $view_data;
-    public $view_index;
+    public $view = [
+        'view',   //页面  xxxx.xxx
+        'index',  //默认页面 vvv.iindex
+        'path',   //view 路径  xccc.cccc.ccc.cc
+        'data',   //数据
+    ];
+    public $postService;
+    public $constantService;
 
-    public $PostService;
 
     /*
      * 区别是否pjax还是url刷新
      */
-    public function __construct(Request $request,PostService $postService)
+    public function __construct(Request $request,PostService $postService ,ConstantService $constantService)
     {
         //注入业务层 分层
-        $this->PostService = $postService;
+        $this->postService = $postService;
+        $this->constantService = $constantService;
         //根据路由名称，来分配视图和那啥数据
-        $name = Route::currentRouteName();
-        if ($request->input('_pjax')){
-            $this->view_path = 'back.content.'.$name;
-        }else{
-            $this->view_path = 'back.content.jump';
-        }
-        $this->view_data = ['view'=>$name];
-        $this->view_index = 'back.content.posts.index';
+        $this->view = $this->constantService->getViewAndPath($request,'back');
     }
 
     /**
@@ -41,7 +40,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view($this->view_path,$this->view_data);
+        return view($this->view['path'],$this->view);
     }
 
     /**
@@ -50,8 +49,8 @@ class PostsController extends Controller
     public function create()
     {
         //获取标签，缓存或数据库
-        $this->view_data['labels'] = $this->PostService->create();
-        return view($this->view_path,$this->view_data);
+        $this->view['labels'] = $this->postService->create();
+        return view($this->view['path'],$this->view);
     }
 
     /**
@@ -59,8 +58,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->PostService->store($request);
-        return view($this->view_index,$this->view_data);
+        $this->postService->store($request);
+        return view($this->view['path'],$this->view);
     }
 
     /*
@@ -68,7 +67,7 @@ class PostsController extends Controller
     * 或许可以把这个抽出来
     */
     public function getPostsJson(Request $request){
-        return $this->PostService->index($request);
+        return $this->postService->index($request);
     }
 
     /**
@@ -102,7 +101,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->PostService->update($request,$id);
+        return $this->postService->update($request,$id);
     }
 
 

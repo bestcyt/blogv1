@@ -21,14 +21,12 @@ Route::prefix('back')->group(function (){
     //后台注册登录路由
     Auth::routes();
     //后台首页
-    Route::get('/', function (){
-        echo 'backhome';
-    });
+//    Route::geback/labels
     //后台统一back命名空间
     Route::get('table','TestsController@index');
     Route::namespace('Back')->middleware(['getCommonInfo','auth'])->group(function (){
-//        Route::get('/{index?}', 'PageController@index'); //
-        Route::get('index', 'PageController@index');
+//        Route::get('/index', 'PageController@index'); //
+//        Route::get('/{index?}', 'PageController@index');
 
         //文章资源路由
         Route::resource('posts', 'PostsController', ['names' => [
@@ -75,6 +73,9 @@ Route::prefix('back')->group(function (){
         Route::get('getLabelsJson','labelsController@getLabelsJson');
         Route::get('getSortsJson','SortsController@getSortsJson');
         Route::get('getPostsJson','PostsController@getPostsJson');
+
+        //必须放下面，不然会导致路由紊乱，pjax失效
+        Route::get('/{index?}', 'PageController@index');
     });
 });
 

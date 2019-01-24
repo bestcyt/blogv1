@@ -19,14 +19,19 @@ class ConstantService {
      * @todo 统一返回viewdata和viewpath
      */
     public function getViewAndPath(Request $request , $type){
-        if (!in_array($type,['home','back'])){
-            $type = 'home';
-        }
+        $re = [];
         $routeName   = Route::currentRouteName();
-        $re['view']  =$routeName;
-        $re['index'] = $type.'.index';
-        $re['path']  = $request->input('_pjax') ? $routeName : $type.'.jump';
-
+        if ($type == 'home'){
+            $re['view']  =$routeName;
+            $re['index'] = $type.'.index';
+            $re['path']  = $request->input('_pjax') ? $routeName : $type.'.jump';
+        }
+        if ($type == 'back'){
+            $controller = explode('.',$routeName)[0];
+            $re['view']  = 'back.content.'.$routeName;
+            $re['index'] = 'back.content.'.$controller.'.index';
+            $re['path']  = $request->input('_pjax') ? 'back.content.'.$routeName : 'back.content.jump';
+        }
         return $re;
     }
 

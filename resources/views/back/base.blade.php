@@ -131,6 +131,8 @@
 <script>
 
     $(function () {
+
+
         layui.use('element', function(){
             console.log('in layui');
             var element = layui.element;
@@ -147,7 +149,7 @@
         $(document).on('click','#postList',function(event){
             event.preventDefault();
             $.pjax({
-                timeout: 8000,
+                timeout: 80000,
                 url: '/back/posts',
                 container: '#content-main'
             });
@@ -174,8 +176,9 @@
             event.preventDefault();
 
             $.pjax({
+                timeout: 80000,
                 url: '/back/labels',
-                container: '#content-main',timeout: 8000,
+                container: '#content-main',
             });
         });
 

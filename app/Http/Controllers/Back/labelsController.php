@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\back;
 
 use App\Models\label;
+use App\Services\ConstantService;
 use App\Services\LabelService;
 use App\Tra\Poetry as Poetry;
 use Illuminate\Http\Request;
@@ -14,33 +15,28 @@ class labelsController extends Controller
 {
     use Poetry;
 
-    public $view_path;
-    public $view_data;
-    public $view_init ;
-
-    public $labelService ;
-
+    public $view = [
+        'view',   //页面  xxxx.xxx
+        'index',  //默认页面 vvv.iindex
+        'path',   //view 路径  xccc.cccc.ccc.cc
+        'data',   //数据
+    ];
+    public $labelService;
+    public $constantService;
     /*
      * 区别是否pjax还是url刷新
      */
-    public function __construct(Request $request , LabelService $labelService)
+    public function __construct(Request $request , LabelService $labelService ,ConstantService $constantService)
     {
-        //根据路由名称，来分配视图和那啥数据
-        $name = Route::currentRouteName();
-        if ($request->input('_pjax')){
-            $this->view_path = 'back.content.'.$name;
-        }else{
-            $this->view_path = 'back.content.jump';
-        }
-        $this->view_data = ['view'=>$name];
-
-        $this->view_init = 'back.content.labels.index';
-
-        //获取诗词
-        $this->view_data['getPoetry'] = $this->getPoetry();
-
         //注入labelservice
         $this->labelService = $labelService;
+        $this->constantService = $constantService;
+
+        //根据路由名称，获取view index path
+        $this->view = $this->constantService->getViewAndPath($request,'back');
+
+        //获取诗词
+//        $this->view_data['getPoetry'] = $this->getPoetry();
     }
     /**
      * Display a listing of the resource.
@@ -49,8 +45,7 @@ class labelsController extends Controller
      */
     public function index()
     {
-        //
-        return view($this->view_path,$this->view_data);
+        return view($this->view['path'],$this->view);
     }
 
     /*
@@ -68,8 +63,7 @@ class labelsController extends Controller
      */
     public function create()
     {
-        //
-        return view($this->view_path,$this->view_data);
+        return view($this->view['path'],$this->view);
     }
 
     /**
@@ -82,7 +76,7 @@ class labelsController extends Controller
     {
         //保存上传的标签  , 增加验证
         $this->labelService->store($request);
-        return view($this->view_init,$this->view_data);
+        return view($this->view['index'],$this->view);
     }
 
     /**

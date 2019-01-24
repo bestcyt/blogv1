@@ -7,5 +7,5 @@
 
 {{-- 注入内容哦 --}}
 @section('content')
-    @include('back.content.'.$view)
+    @include($view)
 @endsection
