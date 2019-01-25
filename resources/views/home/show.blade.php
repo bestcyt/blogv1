@@ -34,7 +34,7 @@
     </header>
     <div class="wrapper-md" id="post-panel">
         <ol class="breadcrumb bg-white b-a" itemscope=""><li>
-                <a href="{{ env('APP_URL') }}" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip" ><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
+                <a href="{{ env('APP_URL') }}" itemprop="breadcrumb" title="返回首页" data-toggle="tooltip" data-pjax><i class="fontello fontello-home" aria-hidden="true"></i>&nbsp;首页</a>
             </li><li class="active">正文&nbsp;&nbsp;</li>
             <div style="float:right;">
                 分享到：
