@@ -68,7 +68,8 @@
                             <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并注明转载地址"><span>© 著作权归作者所有</span>
                             </div>
                         </div>
-                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text">1638</div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
+                         {{--点赞--}}
+                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text"></div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
                      </div>
                 </div>
             </article>
