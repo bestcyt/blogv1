@@ -236,4 +236,6 @@ return [
         Barryvdh\Cors\ServiceProvider::class,
     ],
 
+    'editor'=>'phpstorm'
+
 ];

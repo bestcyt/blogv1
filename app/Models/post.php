@@ -45,7 +45,7 @@ class post extends Model
 
         return self::where([
             ['state','=',1]
-        ])->get();
+        ])->paginate(2);
     }
 
     /*

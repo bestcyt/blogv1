@@ -14,7 +14,7 @@
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <link rel="dns-prefetch" href="//www.imga.cc" />
 
-    <title>来自bestcyt的测试博客</title>
+    <title>bestcyt-Blog</title>
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <meta name="description" content="我只是一个豆豆博客" />
     <meta name="keywords" content="豆豆博客,一个豆豆博客" />
@@ -273,7 +273,7 @@ if ($.support.pjax) {
         /* 鼠标特效 */
         var a_idx = 0;
         $("body").click(function(e) {
-            var a = new Array("豆豆",  "笨豬");
+            var a = new Array("让我们",  "荡起双桨" , '小船儿' , '推开波浪');
             var $i = $("<span />").text(a[a_idx]);
             a_idx = (a_idx + 1) % a.length;
             var x = e.pageX,

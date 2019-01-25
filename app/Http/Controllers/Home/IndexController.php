@@ -12,10 +12,9 @@ class IndexController extends Controller
 {
     /*
      * TODO trait，博客首页，pjax，好人卡
-     *
      */
     public $view = [
-        'view',   //页面
+        'view',   //routename , home.xxxx
         'index',  //默认页面
         'path',   //view 路径
         'data',   //数据
@@ -29,16 +28,22 @@ class IndexController extends Controller
         //注入业务层
         $this->homeService = $homeService;
         $this->constantService = $constantService;
-
         //处理跳转地址
         $this->view = $this->constantService->getViewAndPath($request,'home');
     }
 
-    //首页
+    //暂时没啥用
     public function index(Request $request){
         //还需要获取用户信息，标签云，热门文章，文字等等
+        return view($this->view['path'],$this->view);
+    }
 
-        $this->view['posts'] = $this->homeService->index($request);
+    /*
+     * @todo 网站首页文章
+     */
+    public function posts(Request $request){
+        //withpath 自定义分页url 》http://xxx.xxx.xx/posts?page=1
+        $this->view['posts'] = $this->homeService->index($request)->withPath('posts');
         return view($this->view['path'],$this->view);
     }
 
@@ -46,9 +51,8 @@ class IndexController extends Controller
      * @todo 返回文章详情
      */
     public function show($id){
-        //还要对传的id进行验证，是否数字等等
+        //@todo 还要对传的id进行验证，是否数字等等
         $this->view['post'] = $this->homeService->show($id);
-
         return view($this->view['path'],$this->view);
     }
 }

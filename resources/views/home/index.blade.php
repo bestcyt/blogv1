@@ -4,12 +4,13 @@
         <div class="col center-part">
             {{--公告位置--}}
             <div class="alert alert-warning alert-block" style="margin-bottom: 0px;">
-                <button type="button" class="close" data-dismiss="alert">×</button><p><i class="fontello fontello-volume-up" aria-hidden="true"></i>&nbsp;
-                    资源是有时效性，希望理解。</p>
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <p><i class="fontello fontello-volume-up" aria-hidden="true"></i>&nbsp;
+                    一个小小的博客记录点点滴滴。</p>
             </div>
             {{--文字--}}
             <header class="bg-light lter b-b wrapper-md">
-                <h1 class="m-n font-thin h3 text-black l-h">陈一锑</h1>
+                <h1 class="m-n font-thin h3 text-black l-h">bestcyt</h1>
                 <small class="text-muted letterspacing indexWords">我从山中来，山风翻我书.</small>
             </header>
 
@@ -39,24 +40,26 @@
                     @endforeach
 
                 </div>
+
                 <!--分页首页按钮-->
                 <nav class="text-center m-t-lg m-b-lg" role="navigation">
-                    <ol class="page-navigator">
-                        <li class="prev"><a href="https://www.haorenka.cc/page/3/">
-                                <i class="fontello fontello-chevron-left"></i></a>
-                        </li>
-                        <li><a href="https://www.haorenka.cc/page/1/">1</a></li>
-                        <li><a href="https://www.haorenka.cc/page/2/">2</a></li>
-                        <li><a href="https://www.haorenka.cc/page/3/">3</a></li>
-                        <li class="current"><a href="https://www.haorenka.cc/page/4/">4</a></li>
-                        <li><a href="https://www.haorenka.cc/page/5/">5</a></li>
-                        <li><a href="https://www.haorenka.cc/page/6/">6</a></li>
-                        <li><a href="https://www.haorenka.cc/page/7/">7</a></li>
-                        <li><span>...</span></li>
-                        <li><a href="https://www.haorenka.cc/page/17/">17</a></li>
-                        <li class="next"><a href="https://www.haorenka.cc/page/5/"><i class="fontello fontello-chevron-right"></i></a>
-                        </li>
-                    </ol>
+                    {{ $posts->links() }}
+                    {{--<ol class="page-navigator">--}}
+                        {{--<li class="prev"><a href="https://www.haorenka.cc/page/3/">--}}
+                                {{--<i class="fontello fontello-chevron-left"></i></a>--}}
+                        {{--</li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/1/">1</a></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/2/">2</a></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/3/">3</a></li>--}}
+                        {{--<li class="current"><a href="https://www.haorenka.cc/page/4/">4</a></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/5/">5</a></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/6/">6</a></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/7/">7</a></li>--}}
+                        {{--<li><span>...</span></li>--}}
+                        {{--<li><a href="https://www.haorenka.cc/page/17/">17</a></li>--}}
+                        {{--<li class="next"><a href="https://www.haorenka.cc/page/5/"><i class="fontello fontello-chevron-right"></i></a>--}}
+                        {{--</li>--}}
+                    {{--</ol>--}}
                 </nav>
                 <style>
                     .page-navigator>li>a, .page-navigator>li>span{
