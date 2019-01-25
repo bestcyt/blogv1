@@ -59,7 +59,7 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         $this->postService->store($request);
-        return view($this->view['path'],$this->view);
+        return view($this->view['index'],$this->view);
     }
 
     /*
