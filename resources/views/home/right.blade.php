@@ -136,13 +136,13 @@
                 <div id="widget-tabs-4-random" class="tab-pane fade wrapper-md no-js-show" role="tabpanel">
                     <h3 class="widget-title m-t-none text-md">随机文章</h3>
                     <ul class="list-group no-bg no-borders pull-in">
-                        @foreach($hotPosts as $hotPost)
+                        @foreach($randPosts as $randPost)
                             <li class="list-group-item">
-                            <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" class="pull-left thumb-sm m-r"></a>
+                            <a href="{{ env('APP_URL').'/post/'.$randPost->id }}" class="pull-left thumb-sm m-r"></a>
                             <div class="clear">
                                 <h4 class="h5 l-h">
-                                    <a href="{{ env('APP_URL').'/post/'.$hotPost->id }}" title="{{ $hotPost->post_name }}" data-pjax> {{ $hotPost->post_name }} </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">852</span>
+                                    <a href="{{ env('APP_URL').'/post/'.$randPost->id }}" title="{{ $randPost->post_name }}" data-pjax> {{ $hotPost->post_name }} </a></h4>
+                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">*</span>
                     </span>
                                 </small></div></li>
                         @endforeach

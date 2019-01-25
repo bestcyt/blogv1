@@ -9,6 +9,7 @@ use App\Models\label;
 use App\Models\post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 class PostService {
 
@@ -89,9 +90,24 @@ class PostService {
      * @todo 右侧热门文章
      */
     public function getRightHotPosts(){
-        return $this->PostModel->getIndexPosts();
+        return DB::table('posts')
+            ->where([
+                ['state','=',1]
+            ])
+            ->orderBy('id','desc')
+            ->limit(4)
+            ->get();
     }
 
-
+    /*
+     * @todo 右侧随机文章
+     */
+    public function getRightRandPosts(){
+        return DB::table('posts')
+            ->whereRaw('id >= (SELECT FLOOR( MAX(id) * RAND()) FROM `posts` )')
+            ->orderBy('id')
+            ->limit(4)
+            ->get();
+    }
 
 }

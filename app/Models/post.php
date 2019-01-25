@@ -45,7 +45,7 @@ class post extends Model
 
         return self::where([
             ['state','=',1]
-        ])->paginate(2);
+        ])->orderBy('created_at','desc')->paginate(2);
     }
 
     /*

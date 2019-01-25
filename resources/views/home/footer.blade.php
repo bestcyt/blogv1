@@ -2,10 +2,9 @@
 <footer id="footer" class="app-footer" role="footer">
     <div class="wrapper b-t bg-light">
       <span class="pull-right hidden-xs">
-            <a target="blank" href="https://www.haorenka.cc/sitemap.xml">网站地图</a>
+            <a target="blank" href="#">网站地图</a>
       </span>
-        &copy;&nbsp;2019 Copyright&nbsp;由 <a href="https://www.haorenka.cc/go/bandwagonhost/" target="_blank">搬瓦工</a> | <a target="blank" href="http://www.typecho.org">Typecho</a>  强力驱动    </div>
-    <!--可以去除主题版权信息，最好保留版权信息或者添加主题信息到友链，谢谢你的理解-->
+        &copy;&nbsp;2019 Copyright&nbsp;由 <a href="{{ env('APP_URL') }}" data-pjax>bestcyt</a>   强力驱动    </div>
     {{--<script type="text/template" id="tmpl-customizer">--}}
     {{--<div class="settings panel panel-default setting_body_panel" aria-hidden="true">--}}
     {{--<button class="btn btn-default no-shadow pos-abt" data-toggle="tooltip" data-placement="left" data-original-title="设置" data-toggle-class=".settings=active, .settings-icon=animate-spin">--}}

@@ -6,6 +6,7 @@ use App\Services\ConstantService;
 use App\Services\home\HomeService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 class IndexController extends Controller
