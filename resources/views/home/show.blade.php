@@ -7,7 +7,7 @@
             height: 100%
         }
     </style>
-    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>一个好人</p><span>{{ $post->post_name }}</span></div><div
+    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>一个豆豆</p><span>{{ $post->post_name }}</span></div><div
                 class="mdx-si-sum">{{ $post->post_desc }}</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img
                         src="https://www.haorenka.cc/usr/themes/handsome/libs/GetCode.php?type=url&content=https://www.haorenka.cc/huashengriji.html"></div></div><div class="mdx-si-time">04<br><span
                     class="mdx-si-time-2">2019/01</span></div></div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->
@@ -18,7 +18,7 @@
         <ul  class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
             <!--作者-->
-            <li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://www.haorenka.cc/author/1/" rel="author"> 一个好人</a></li>
+            <li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://www.haorenka.cc/author/1/" rel="author"> 一个豆豆</a></li>
             <!--发布时间-->
             <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">{{ $post->created_at }}</time></li>
             <!--浏览数-->

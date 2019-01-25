@@ -31,7 +31,7 @@
                         <h2 class="m-t-none index-post-title"><a href="/post/{{ $post->id }}" data-pjax>{{ $post->post_name }}</a></h2>
                         <p class="summary l-h-2x text-muted">{{ $post->post_desc }}</p><div class="line line-lg b-b b-light"></div>
                         <div class="text-muted post-item-foot-icon">
-                            <i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个好人&nbsp;</a></span>
+                            <i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="https://www.haorenka.cc/author/1/">一个豆豆&nbsp;</a></span>
 
                             <i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;2018 年 11 月 07 日</span><a href="https://www.haorenka.cc/juheapp.html#comments" class="m-l-sm post-item-comment"><i class="iconfont icon-comments-o text-muted"></i>&nbsp;8 条评论</a></div><!--text-muted-->
                     </div>

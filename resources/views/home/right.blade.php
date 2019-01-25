@@ -155,13 +155,13 @@
             <h3 class="widget-title m-t-none text-md">博客信息</h3>
             <ul class="list-group">
                 <li class="list-group-item"> <i class="glyphicon glyphicon-file text-muted"></i> <span class="badge
-           pull-right">166</span>文章数目</li>
+           pull-right">@todo</span>文章数目</li>
                 <li class="list-group-item"> <i class="glyphicon glyphicon-comment text-muted"></i> <span class="badge
-           pull-right">3252</span>评论数目</li>
+           pull-right">@todo</span>评论数目</li>
                 <li class="list-group-item"> <i class="glyphicon glyphicon-equalizer text-muted"></i> <span class="badge
-           pull-right">1年131天</span>运行天数</li>
+           pull-right">@todo</span>运行天数</li>
                 <li class="list-group-item"> <i class="glyphicon glyphicon-refresh text-muted"></i> <span class="badge
-           pull-right">45 分钟前</span>最后更新</li>
+           pull-right">@todo</span>最后更新</li>
             </ul>
         </section>
         <!--文章的段落，类似laravelChina那种文章段落目录-->

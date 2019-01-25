@@ -75,13 +75,13 @@
                                 </a>
                             </li>
                             <!--循环输出分类-->
-                            <li><a href="{{ env('APP_URL') }}/laosiji/"><b class="badge pull-right">57</b><span>老司机</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/youxi/"><b class="badge pull-right">5</b><span>游戏鸡</span></a>
-                            </li><li><a href="{{ env('APP_URL') }}/liqi/"><b class="badge pull-right">38</b><span>神兵利器</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/kan/"><b class="badge pull-right">9</b><span>值得看</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/xiaojiejie/"><b class="badge pull-right">53</b><span>小姐姐</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/mai/"><b class="badge pull-right">4</b><span>值得买</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/gifchuchu/"><b class="badge pull-right">5</b><span>GIF出处</span></a></li>
+                            <li><a href="{{ env('APP_URL') }}"  data-pjax><b class="badge pull-right">999</b><span>待定</span></a></li>
+                            {{--<li><a href="{{ env('APP_URL') }}/youxi/"><b class="badge pull-right">5</b><span>游戏鸡</span></a>--}}
+                            {{--</li><li><a href="{{ env('APP_URL') }}/liqi/"><b class="badge pull-right">38</b><span>神兵利器</span></a></li>--}}
+                            {{--<li><a href="{{ env('APP_URL') }}/kan/"><b class="badge pull-right">9</b><span>值得看</span></a></li>--}}
+                            {{--<li><a href="{{ env('APP_URL') }}/xiaojiejie/"><b class="badge pull-right">53</b><span>小姐姐</span></a></li>--}}
+                            {{--<li><a href="{{ env('APP_URL') }}/mai/"><b class="badge pull-right">4</b><span>值得买</span></a></li>--}}
+                            {{--<li><a href="{{ env('APP_URL') }}/gifchuchu/"><b class="badge pull-right">5</b><span>GIF出处</span></a></li>--}}
                         </ul>
                     </li>
                     <!--独立页面pages-->
@@ -101,9 +101,9 @@
                                 </a>
                             </li><!--这个字段不会被显示出来-->
                             <!--循环输出独立页面-->
-                            <li><a href="{{ env('APP_URL') }}/archive.html"><span>文章归档</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/guestbook.html"><span>雁过留痕</span></a></li>
-                            <li><a href="{{ env('APP_URL') }}/cross.html"><span>时光</span></a></li>
+                            <li><a href="{{ env('APP_URL') }}" data-pjax><span>文章归档(待撸时间轴)</span></a></li>
+                            <li><a href="{{ env('APP_URL') }}" data-pjax><span>雁过留痕(待撸记录)</span></a></li>
+                            <li><a href="{{ env('APP_URL') }}" data-pjax><span>时光(待撸点滴)</span></a></li>
                         </ul>
                     </li>
                     <!--发布页-->
@@ -122,7 +122,7 @@
                                     <span>发布页</span>
                                 </a>
                             </li>
-                            <li><a target="blank" href="{{ env('APP_URL') }}">网址发布页</a></li>
+                            <li><a target="blank" href="{{ env('APP_URL') }}" data-pjax>网址发布页</a></li>
                         </ul>
                     </li>
                 </ul>

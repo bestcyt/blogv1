@@ -35,8 +35,9 @@
                     <ul id="search_tips_drop" class="dropdown-menu hide" style="display: block;top: 30px; left: 0px;">
                     </ul>
                     <span id="search_submit" class="transparent input-group-btn">
-                  <button  type="submit" class="transparent btn btn-sm"><i class="fontello fontello-search"></i></button>
-              </span>
+                  <button  type="button" onclick="alert('敬请期待')" class="transparent btn btn-sm"><i class="fontello fontello-search"></i></button>
+
+                    </span>
                 </div>
             </div>
         </form>
