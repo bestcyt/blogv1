@@ -44,7 +44,7 @@
         <a href="" style="display: none" id="searchUrl"></a>
         <!-- / search form -->
         <ul class="nav navbar-nav navbar-right">
-            <!--闲言碎语-->
+
             <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
                     <i class="fontello fontello-bell icon-fw"></i>

@@ -65,6 +65,9 @@
 
     <!--网站统计代码-->
     <script type="text/javascript" src="//js.users.51.la/19844429.js"></script>
+
+    <style type="text/css">html.bg{background:#EFEFEF}.cool-transparent .off-screen+* .app-content-body{background:#EFEFEF}#aside .wrapper:hover{background:url(https://www.ihewro.com/usr/uploads/time/5c471509637a3.gif);background-size:cover;color:#999;}@media (min-width:768px){.app-aside-fixed .aside-wrap{width:200px;}}@media (min-width:991px){.app-aside-fixed .aside-wrap{width:220px;}}.douban-list{object-fit:cover;}@media (max-width:340px){.item-thumb-small{min-height:108px;height:auto;}}.comment-content-true{display:block;}body{color:#777;}.bg-white{color:#777;}.nav-tabs-alt .nav-tabs>li.active>a{border-bottom-color:#000!important;}</style>
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
 </head>
 
 <body id="body">
