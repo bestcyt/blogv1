@@ -19,7 +19,7 @@ class AddVotesAndSeeToPostsTable extends Migration
             $table->integer('page_view')->comment('浏览量')->default(1);
             $table->integer('comments_num')->comment('评论数')->default(0);
             $table->integer('like_num')->comment('点赞数量')->default(0);
-            $table->integer('is_comment')->comment('是否允许评论,1为允许，2为不允许')->default(1);
+            $table->integer('is_comment')->comment('是否允许评论,1为允许，2为不允许')->default(0);
         });
     }
 

@@ -1,10 +1,9 @@
-
-<link href="http://local.blog.bestcyt.cn/plugin/layui/css/layui.css" rel="stylesheet">
+{{--<link href="http://local.blog.bestcyt.cn/plugin/layui/css/layui.css" rel="stylesheet">--}}
 <div class="layui-row layui-col-space10">
 
-    <div class="layui-col-md2"></div>
+    <div class="layui-col-md1"></div>
 
-    <div class="layui-col-md8 layui-form">
+    <div class="layui-col-md10">
         <form class="layui-form" action="{{ route('posts.store') }}" method="post" id="formPostCreate">
             {{ csrf_field() }}
             <div class="layui-form-item">
@@ -33,10 +32,18 @@
                     @endforeach
                 </div>
             </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">是否发布</label>
-                <div class="layui-input-block">
-                    <input type="checkbox" name="state" lay-skin="switch" lay-text="ON|OFF">
+            <div class="layui-form-item ">
+                <div class="layui-inline">
+                    <label class="layui-form-label">是否发布</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="state" lay-skin="switch" lay-text="ON|OFF">
+                    </div>
+                </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">是否评论</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="is_comment" lay-skin="switch" lay-text="ON|OFF">
+                    </div>
                 </div>
             </div>
             <div class="layui-form-item">
@@ -47,9 +54,10 @@
             </div>
         </form>
     </div>
-    <div class="layui-col-md2">
+    <div class="layui-col-md1">
     </div>
 </div>
+
 
 
 <script>
