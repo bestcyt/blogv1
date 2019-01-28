@@ -7,10 +7,11 @@
             height: 100%
         }
     </style>
-    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>一个豆豆</p><span>{{ $post->post_name }}</span></div><div
+    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>{{ $post->user->name }}</p><span>{{ $post->post_name }}</span></div><div
                 class="mdx-si-sum">{{ $post->post_desc }}</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img
                         src="https://www.haorenka.cc/usr/themes/handsome/libs/GetCode.php?type=url&content=https://www.haorenka.cc/huashengriji.html"></div></div><div class="mdx-si-time">04<br><span
-                    class="mdx-si-time-2">2019/01</span></div></div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->
+                    class="mdx-si-time-2">2019/01</span></div>
+    </div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->
 
     <header id="small_widgets" class="bg-light lter b-b wrapper-md">
         <h1 class="entry-title m-n font-thin h3 text-black l-h">{{ $post->post_name }}<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
@@ -18,18 +19,18 @@
         <ul  class="entry-meta text-muted list-inline m-b-none small
              post-head-icon">
             <!--作者-->
-            <li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="https://www.haorenka.cc/author/1/" rel="author"> 一个豆豆</a></li>
+            <li class="meta-author"><i class="fontello fontello-user" aria-hidden="true"></i><span class="sr-only">博主：</span> <a class="meta-value" href="#"> {{ $post->user->name }}</a></li>
             <!--发布时间-->
             <li class="meta-date"><i class="fontello fontello-clock-o" aria-hidden="true"></i>&nbsp;<span class="sr-only">发布时间：</span><time class="meta-value">{{ $post->created_at }}</time></li>
             <!--浏览数-->
-            <li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">11270&nbsp;次浏览</span></li>
+            <li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">{{ $post->page_view }}&nbsp;次浏览</span></li>
             <!--评论数-->
             <li class="meta-comments"><i class="iconfont icon-comments-o" aria-hidden="true"></i>&nbsp;<a
-                        class="meta-value" href="#comments">&nbsp;6 条评论</a></li>
+                        class="meta-value" href="#comments">&nbsp;{{ $post->comments_num }} 条评论</a></li>
             <!--文字数目-->
-            <li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">2150&nbsp;字数</span></li>
+            <li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">{{ $post->word_count }}&nbsp;字数</span></li>
             <!--分类-->
-            <li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="https://www.haorenka.cc/laosiji/">老司机</a></span></li>
+            <li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="https://www.haorenka.cc/laosiji/">{{ $post->sout_id }}</a></span></li>
         </ul>
     </header>
     <div class="wrapper-md" id="post-panel">
@@ -58,7 +59,6 @@
                 <!--文章内容-->
                 <div id="post-content" class="wrapper-lg">
                      <div class="entry-content l-h-2x">
-                        <p>本文主要适合学生党和想赚点外快的上班族。</p>
                             {{ $post->info }}
                         <div class="show-foot">
                             <div class="notebook">
