@@ -51,8 +51,12 @@
                         content: "/\00a0";
                     }
                 </style>
-                <a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.haorenka.cc/huashengriji.html&title=花生日记：真正0成本躺着赚钱&site=https://www.haorenka.cc/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="window.open(this.href, 'qzone-share', 'width=550,height=335');return false;"><i style ="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>
-                <a href="http://service.weibo.com/share/share.php?url=https://www.haorenka.cc/huashengriji.html&title=花生日记：真正0成本躺着赚钱" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="window.open(this.href, 'weibo-share', 'width=550,height=335');return false;"><i style ="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a>   <a id="generateShareImg" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="生成分享图"><i style ="font-size:13px;" class="fontello fontello-camera" aria-hidden="true"></i></a></div></ol>       <!--博客文章样式 begin with .blog-post-->
+                {{--<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.haorenka.cc/huashengriji.html&title=花生日记：真正0成本躺着赚钱&site=https://www.haorenka.cc/" itemprop="breadcrumb" target="_blank" title="" data-toggle="tooltip" data-original-title="分享到QQ空间" onclick="window.open(this.href, 'qzone-share', 'width=550,height=335');return false;"><i style ="font-size:15px;" class="iconfont icon-qzone" aria-hidden="true"></i></a>--}}
+                {{--<a href="http://service.weibo.com/share/share.php?url=https://www.haorenka.cc/huashengriji.html&title=花生日记：真正0成本躺着赚钱" target="_blank" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="分享到微博" onclick="window.open(this.href, 'weibo-share', 'width=550,height=335');return false;"><i style ="font-size:15px;" class="fontello fontello-weibo" aria-hidden="true"></i></a>   --}}
+                {{--<a id="generateShareImg" itemprop="breadcrumb" title="" data-toggle="tooltip" data-original-title="生成分享图">--}}
+                    {{--<i style ="font-size:13px;" class="fontello fontello-camera" aria-hidden="true"></i></a>--}}
+            </div>
+        </ol>       <!--博客文章样式 begin with .blog-post-->
         <div id="postpage" class="blog-post">
             <article class="panel">
                 <!--文章页面的头图-->
