@@ -71,6 +71,7 @@
 </head>
 
 <body id="body">
+
 <!-- aside -->
 <div id="alllayout" class="app app-aside-fixed container app-header-fixed">
     {{--header--}}
@@ -92,7 +93,6 @@
         </div>
     {{--底部--}}
     @include('home.footer')
-
 </div>
 
 {{--<link rel="stylesheet" type="text/css" href="https://www.haorenka.cc/usr/plugins/Like/css/style.css" />--}}
