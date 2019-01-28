@@ -8,10 +8,11 @@ class post extends Model
 {
     //
     protected $table = 'posts';
-
-
-
     protected $connection = 'mysql';
+
+    public function user(){
+        return $this->belongsTo('App\User')->withDefault();
+    }
 
     /*
      *  1.where条件 [ ['aa','=','1'] ] 或 [1]
@@ -29,8 +30,6 @@ class post extends Model
 //        return self::orderBy($order,$by)->paginate($page, ['*'], '', $limit);
     }
 
-
-
     /*
      * 获取文章数量
      */
@@ -43,9 +42,21 @@ class post extends Model
      */
     public function getIndexPosts(){
 
-        return self::where([
-            ['state','=',1]
+        return self::with('user')->where([
+            ['state','=',1],
+            ['is_top','=',0]
         ])->orderBy('created_at','desc')->paginate(2);
+    }
+
+    /*
+     * @todo 获取置顶文章，后面可以优化成传条件跟上面合并成一个方法
+     */
+    public function getTopPosts(){
+
+        return self::with('user')->where([
+            ['state','=',1],
+            ['is_top','=',1]
+        ])->orderBy('created_at','desc')->get();
     }
 
     /*

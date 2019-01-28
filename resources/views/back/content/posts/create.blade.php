@@ -45,6 +45,12 @@
                         <input type="checkbox" name="is_comment" lay-skin="switch" lay-text="ON|OFF">
                     </div>
                 </div>
+                <div class="layui-inline">
+                    <label class="layui-form-label">是否置顶</label>
+                    <div class="layui-input-block">
+                        <input type="checkbox" name="is_top" lay-skin="switch" lay-text="ON|OFF">
+                    </div>
+                </div>
             </div>
             <div class="layui-form-item">
                 <div class="layui-input-block">

@@ -44,7 +44,8 @@ class IndexController extends Controller
      */
     public function posts(Request $request){
         //withpath 自定义分页url 》http://xxx.xxx.xx/posts?page=1
-        $this->view['posts'] = $this->homeService->index($request)->withPath('posts');
+        $this->view['top_posts'] = $this->homeService->getTopPosts();
+        $this->view['posts']     = $this->homeService->index($request)->withPath('posts');
         return view($this->view['path'],$this->view);
     }
 

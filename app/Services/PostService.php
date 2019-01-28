@@ -8,6 +8,7 @@ namespace App\Services;
 use App\Models\label;
 use App\Models\post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
@@ -74,10 +75,13 @@ class PostService {
         }
         $data['label_ids'] = implode(',',$as);
         $data['sort_id'] = 1;
+        $data['user_id'] = Auth::id();
         $data['post_name'] = $request->input('post_name');
         $data['post_desc'] = $request->input('post_desc');
         $data['info'] = $request->input('info');
         $data['state'] = $request->input('state') ? 1 : 0;
+        $data['is_top'] = $request->input('is_top') ? 1 : 0;
+        $data['is_comment'] = $request->input('is_comment') ? 1 : 0;
         $data['created_at'] = date('Y-m-d H:m:s',time());
         $data['updated_at'] = date('Y-m-d H:m:s',time());
 

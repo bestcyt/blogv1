@@ -94,7 +94,7 @@
             }
         </style>
 
-        @if(isset($ifComment))
+        @if($post->is_comment == 1)
         <div id="comments">
 
             <!--评论列表-->

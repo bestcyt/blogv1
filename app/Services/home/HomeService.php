@@ -35,4 +35,11 @@ class HomeService
         return $this->postModel->getPostById($id);
     }
 
+    /*
+     * @todo 获取置顶文章
+     */
+    public function getTopPosts(){
+        return $this->postModel->getTopPosts();
+    }
+
 }
