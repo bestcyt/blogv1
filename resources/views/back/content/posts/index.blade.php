@@ -66,7 +66,7 @@
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    url:"/back/sorts/"+this.value,
+                    url:"/back/posts/"+this.value,
                     data:{'_method':'put','field':this.name,'value':obj.elem.checked ? 1 :0},
                     type:'post',
                     success:function(re){

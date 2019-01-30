@@ -28,6 +28,7 @@ class PostsController extends Controller
      */
     public function __construct(Request $request,PostService $postService ,ConstantService $constantService)
     {
+
         //注入业务层 分层
         $this->postService = $postService;
         $this->constantService = $constantService;
