@@ -205,17 +205,18 @@
 
         //label form 页面的
         $(document).on('submit', '#formLabelCreate', function(event) {
-            console.log('formLabelCreate');
             event.preventDefault();
             $.pjax.submit(event, '#content-main');
         });
 
+        //sort form 页面的
+        $(document).on('submit', '#formSortCreate', function(event) {
+            event.preventDefault();
+            $.pjax.submit(event, '#content-main');
+        });
 
         $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
     })
-
-
-//    //JavaScript代码区域
 
 </script>
 </body>

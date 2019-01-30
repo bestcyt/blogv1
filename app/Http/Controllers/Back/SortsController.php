@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\back;
 
 use App\Models\Sort;
+use App\Services\ConstantService;
+use App\Services\PostService;
+use App\Services\SortService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
@@ -10,42 +13,34 @@ use Illuminate\Support\Facades\Route;
 
 class SortsController extends Controller
 {
-    public $view_path;
-    public $view_data;
+    public $view = [
+        'view',   //页面  xxxx.xxx
+        'index',  //默认页面 vvv.iindex
+        'path',   //view 路径  xccc.cccc.ccc.cc
+        'data',   //数据
+    ];
+    public $sortService;
+    public $constantService;
 
     /*
      * 区别是否pjax还是url刷新
      */
-    public function __construct(Request $request)
+    public function __construct(Request $request, SortService $sortService , ConstantService $constantService)
     {
         //根据路由名称，来分配视图和那啥数据
-        $name = Route::currentRouteName();
-        if ($request->input('_pjax')){
-            $this->view_path = 'back.content.'.$name;
-        }else{
-            $this->view_path = 'back.content.jump';
-        }
-        $this->view_data = ['view'=>$name];
+        //注入业务层 分层
+        $this->sortService = $sortService;
+        $this->constantService = $constantService;
+        //根据路由名称，来分配视图和那啥数据
+        $this->view = $this->constantService->getViewAndPath($request,'back');
 
     }
 
     /*
-     * 或者可以抽象成一个单独的拿数据方法
+     * 获取列表json数据
      */
     public function getSortsJson(Request $request){
-        //layui的table 分页会传page和limit
-        $page = $request->input('page') ?? 1;
-        $limit = $request->input('limit') ?? 10;
-        $count = Cache::get('countLabels') ?? Sort::count();
-        $data_ = Sort::paginate($limit, ['*'], '', $page)->toArray();
-        //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
-        $data = $data_['data'];
-        return response()->json([
-            'code' => 0,
-            'msg' => ' ',
-            'count' => $count,
-            'data' => $data,
-        ]);
+        return $this->sortService->getSortsJson($request);
     }
 
     /**
@@ -55,7 +50,7 @@ class SortsController extends Controller
      */
     public function index(Request $request)
     {
-        return view($this->view_path,$this->view_data);
+        return view($this->view['path'],$this->view);
     }
 
     /**
@@ -65,12 +60,7 @@ class SortsController extends Controller
      */
     public function create()
     {
-        $all_id = Sort::with('allChildrenCategorys')->where('parent_id',0)->first()->value('id');
-        $sorts = Sort::with('allChildrenCategorys')->find($all_id);
-        //加缓存
-        $re = $sorts->allChildrenCategorys;
-        dd($re);
-
+        return view($this->view['path'],$this->view);
     }
 
     /**
@@ -81,7 +71,8 @@ class SortsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->sortService->store($request);
+        return view($this->view['index'],$this->view);
     }
 
     /**
@@ -115,7 +106,7 @@ class SortsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return Sort::where('id',$id)->update([$request->input('field')=>$request->input('value')]);
+        return $this->sortService->updateSort($request,$id);
     }
 
     /**

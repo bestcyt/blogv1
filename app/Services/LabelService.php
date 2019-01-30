@@ -43,5 +43,12 @@ class LabelService {
         return $this->LabelModel->updateLabel($update,$id);
     }
 
+    /*
+     * @todo 获取标签云视图数据
+     */
+    public function getLabels(){
+        return $this->LabelModel->getLabels([['state','=',1]]);
+    }
+
 
 }

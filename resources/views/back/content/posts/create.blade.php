@@ -25,6 +25,14 @@
                 </div>
             </div>
             <div class="layui-form-item">
+                <label class="layui-form-label">分类选择</label>
+                <div class="layui-input-block">
+                    @foreach($sorts as $sort)
+                        <input type="radio" name="sorts" value="{{ $sort['id'] }}" title="{{ $sort['sort_name'] }}">
+                    @endforeach
+                </div>
+            </div>
+            <div class="layui-form-item">
                 <label class="layui-form-label">标签选择</label>
                 <div class="layui-input-block">
                     @foreach($labels as $label)

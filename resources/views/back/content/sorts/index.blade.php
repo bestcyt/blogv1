@@ -11,7 +11,7 @@
 <script>
     $(function () {
         layui.use('table', function(){
-            var table = layui.table,form = layui.form;;
+            var table = layui.table,form = layui.form;
 
             //table初始化数据
             table.render({
@@ -20,7 +20,7 @@
                 ,cellMinWidth: 100 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {field:'id', width:50, title: 'ID', sort: true }
-                    ,{field:'parent_id', width:50, title: 'ID', sort: true }
+                    ,{field:'parent_id', width:80, title: '父id', sort: true }
                     ,{field:'sort_name', width:130, title: '分类名称', edit: 'text'}
                     ,{field:'desc', width:150, title: '描述', sort: true, edit: 'text'}
                     ,{field:'created_at', width:180, title: '创建时间', sort: true}
@@ -51,7 +51,7 @@
                         if(re == 1){
                             layer.msg('更新成功', {time: 1500});
                         }else{
-                            layer.msg('更新失败败败败败败败败败...');
+                            layer.msg('分类更新失败败败败败败败败败...');
                         }
                     }
                 },JSON);

@@ -7,6 +7,7 @@ namespace App\Services;
  */
 use App\Models\label;
 use App\Models\post;
+use App\Models\Sort;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
@@ -16,13 +17,15 @@ class PostService {
 
     public $PostModel;
     public $LabelModel;
+    public $SortModel;
 
     /*
      * @todo 构造方法注入模型对象
      */
-    public function __construct( post $post , label $label){
+    public function __construct( post $post , label $label ,Sort $sort){
         $this->PostModel = $post;
         $this->LabelModel = $label;
+        $this->SortModel = $sort;
     }
 
     /*
@@ -46,16 +49,33 @@ class PostService {
     }
 
     /*
-     * @todo 文章创建
+     * @todo 文章创建获取标签
      */
-    public function create(){
+    public function createGetLabels(){
         $labels = Cache::get('labels');
         if(!$labels){
             $labels = $this->LabelModel->getLabels([['state','1'
             ]])->toArray();
+            Cache::put('labels',$labels);
         }
+
         return $labels;
     }
+
+    /*
+     * @todo 文章创建获取分类
+     */
+    public function createGetSorts(){
+        $sorts = Cache::get('sorts');
+        if(!$sorts) {
+            $sorts = $this->SortModel->getSorts([
+                ['state', '=', 1]
+            ])->toArray();
+            Cache::put('sorts', $sorts);
+        }
+        return $sorts;
+    }
+
 
     /*
      * @todo 文章更新
@@ -74,7 +94,7 @@ class PostService {
             $a = '['.$a.']';
         }
         $data['label_ids'] = implode(',',$as);
-        $data['sort_id'] = 1;
+        $data['sort_id'] = $request->input('sorts');
         $data['user_id'] = Auth::id();
         $data['post_name'] = $request->input('post_name');
         $data['post_desc'] = $request->input('post_desc');

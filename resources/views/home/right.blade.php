@@ -164,6 +164,20 @@
            pull-right">@todo</span>最后更新</li>
             </ul>
         </section>
+
+        <section id="tag_cloud-2" class="widget widget_tag_cloud wrapper-md clear">
+            <h3 class="widget-title m-t-none text-md">标签云</h3>
+            <div class="tags l-h-2x">
+                @if(!empty($labels))
+                    @foreach($labels as $label)
+                        <a href="{{ env('APP_URL').'/label/'.$label->id }}" class="label bg-info" title="{{ $label->label_name }}" data-toggle="tooltip">{{ $label->label_name }}</a>
+                    @endforeach
+                @endif
+                {{--<a href="https://www.haorenka.cc/tag/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="label bg-info" title="该标签下有 24 篇文章" data-toggle="tooltip">百度网盘</a>--}}
+                {{--<a href="https://www.haorenka.cc/tag/pan-download/" class="label bg-info" title="该标签下有 1 篇文章" data-toggle="tooltip">pan download</a>--}}
+            </div>
+        </section>
+
         <!--文章的段落，类似laravelChina那种文章段落目录-->
         {{--<section id="tag_toc" class="widget widget_categories wrapper-md clear">--}}
             {{--<h3 class="widget-title m-t-none text-md">文章目录</h3>--}}

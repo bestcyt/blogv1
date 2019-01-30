@@ -39,6 +39,5 @@
             //更新表单渲染
             form.render();
         });
-
     })
 </script>

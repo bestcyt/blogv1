@@ -53,7 +53,11 @@
                         </a>
                     </li>
                     <!-- /主页 -->
-                    <li> <a target="_blank" href="/jieya.html" class ="auto"><i class="fontello fontello-unlock-alt icon text-md"></i><span>解压密码</span></a></li><li> <a target="_blank" href="/tougaoshenqing.html" class ="auto"><i class="fontello fontello-pencil icon text-md"></i><span>投稿</span></a></li>                              <li class="line dk"></li>
+                    <li> <a target="_blank" href="/jieya.html" class ="auto">
+                            <i class="fontello fontello-unlock-alt icon text-md"></i><span>解压密码</span></a></li>
+                    <li> <a target="_blank" href="/tougaoshenqing.html" class ="auto">
+                            <i class="fontello fontello-pencil icon text-md"></i><span>投稿</span></a></li>
+                    <li class="line dk"></li>
                     <!--Components-->
                     <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                         <span>组成</span>
@@ -75,13 +79,11 @@
                                 </a>
                             </li>
                             <!--循环输出分类-->
-                            <li><a href="{{ env('APP_URL') }}"  data-pjax><b class="badge pull-right">999</b><span>待定</span></a></li>
-                            {{--<li><a href="{{ env('APP_URL') }}/youxi/"><b class="badge pull-right">5</b><span>游戏鸡</span></a>--}}
-                            {{--</li><li><a href="{{ env('APP_URL') }}/liqi/"><b class="badge pull-right">38</b><span>神兵利器</span></a></li>--}}
-                            {{--<li><a href="{{ env('APP_URL') }}/kan/"><b class="badge pull-right">9</b><span>值得看</span></a></li>--}}
-                            {{--<li><a href="{{ env('APP_URL') }}/xiaojiejie/"><b class="badge pull-right">53</b><span>小姐姐</span></a></li>--}}
-                            {{--<li><a href="{{ env('APP_URL') }}/mai/"><b class="badge pull-right">4</b><span>值得买</span></a></li>--}}
-                            {{--<li><a href="{{ env('APP_URL') }}/gifchuchu/"><b class="badge pull-right">5</b><span>GIF出处</span></a></li>--}}
+                            @if(!empty($sorts))
+                                @foreach($sorts as $sort)
+                                    <li><a href="{{ env('APP_URL') }}/sort/{{ $sort->id }}"  data-pjax><b class="badge pull-right">*</b><span>{{ $sort->sort_name }}</span></a></li>
+                                @endforeach
+                            @endif
                         </ul>
                     </li>
                     <!--独立页面pages-->

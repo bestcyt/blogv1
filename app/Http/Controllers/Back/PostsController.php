@@ -28,7 +28,6 @@ class PostsController extends Controller
      */
     public function __construct(Request $request,PostService $postService ,ConstantService $constantService)
     {
-
         //注入业务层 分层
         $this->postService = $postService;
         $this->constantService = $constantService;
@@ -45,12 +44,13 @@ class PostsController extends Controller
     }
 
     /**
-     * @todo 文件创建
+     * @todo 文章创建
      */
     public function create()
     {
         //获取标签，缓存或数据库
-        $this->view['labels'] = $this->postService->create();
+        $this->view['labels'] = $this->postService->createGetLabels();
+        $this->view['sorts'] = $this->postService->createGetSorts();
         return view($this->view['path'],$this->view);
     }
 
