@@ -14,6 +14,16 @@
 //Route::get('/test','back\PageController@test');
 //Route::get('/test2','back\PageController@test2');
 
+Route::get('/image', function () {
+    return view('image');
+});
+
+Route::post('/image', function (\Illuminate\Http\Request $request) {
+    $domain = "http://" . config('filesystems.disks.upyun.domain');
+    $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/image', $request->file('image'));
+    return $domain . "/$file_path";
+});
+
 /*
  * @todo 后台啦啦啦
  */
@@ -101,4 +111,7 @@ Route::get('/team-trip/header',function (){
 Route::get('/team-trip/footer',function (){
     return view('footer');
 })->name('pdf.footer');
+
+
+
 

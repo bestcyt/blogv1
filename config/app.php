@@ -182,6 +182,9 @@ return [
 
         //视图provider共享数据
         \App\Providers\ViewShareServiceProvider::class,
+
+        //又拍云存储图片
+        JellyBool\Flysystem\Upyun\UpyunServiceProvider::class,
     ],
 
     /*
