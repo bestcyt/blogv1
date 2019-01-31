@@ -50,5 +50,20 @@ class LabelService {
         return $this->LabelModel->getLabels([['state','=',1]]);
     }
 
+    /*
+     * @todo 检测标签是否存在，并返回检索格式
+     */
+    public function checkLabel($labelId){
+        //验证labeldId是正常数字
+        if (!is_numeric($labelId)){
+            return false;
+        }
+        return $this->LabelModel->getLabelByWhere([
+            ['state','=',1],
+            ['id','=',$labelId],
+        ]);
+
+    }
+
 
 }

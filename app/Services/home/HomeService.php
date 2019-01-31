@@ -5,6 +5,7 @@ namespace App\Services\home;
 
 use App\Models\post;
 use App\Models\Sort;
+use App\Services\LabelService;
 use App\Services\SortService;
 use Illuminate\Http\Request;
 
@@ -18,18 +19,34 @@ class HomeService
 {
     public $postModel;
     public $sortService;
+    public $labelService;
 
-    public function __construct(post $post , SortService $sortService)
+    public function __construct(post $post , SortService $sortService , LabelService $labelService)
     {
         $this->sortService = $sortService;
+        $this->labelService = $labelService;
         $this->postModel = $post;
     }
 
     /*
      * @todo 首页获取文章列表
      */
-    public function getPosts($sortId = 0){
-        $where = $this->sortService->checkSort($sortId) ? [['sort_id','=',$sortId]] : [];
+    public function getPosts($sortOrLabelId){
+        $where = [];
+        // label/70
+        if (request()->path() != '/'){
+            switch (explode('/',request()->path())[0]){
+                case 'label':
+                    $where = $this->labelService->checkLabel($sortOrLabelId) ? [['label_ids','like',"[$sortOrLabelId]"]] : [];
+                    break;
+                case 'sort':
+                    $where = $this->sortService->checkSort($sortOrLabelId) ? [['sort_id','=',$sortOrLabelId]] : [];
+                    break;
+                default :
+                    $where = [];
+                    break;
+            }
+        }
         return $this->postModel->getIndexPosts($where);
     }
 

@@ -23,9 +23,10 @@
                     <div class="panel-small">
                         <div class="index-post-img-small post-feature index-img-small">
                             <a href="/post/{{ $post->id }}">
-                                <div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"
+                                <img src="{{ asset('panhu.jpg') }}">
+                                {{--<div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"--}}
                                         {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
-                                ></div>
+                                {{--></div>--}}
                             </a>
                         </div>
                         <div class="post-meta wrapper-lg">
@@ -45,9 +46,10 @@
                 <div class="panel-small">
                     <div class="index-post-img-small post-feature index-img-small">
                         <a href="/post/{{ $post->id }}">
-                            <div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"
+                            <img src="{{ asset('panhu.jpg') }}">
+                            {{--<div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"--}}
                                     {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
-                            ></div>
+                            {{--></div>--}}
                         </a>
                     </div>
                     <div class="post-meta wrapper-lg">

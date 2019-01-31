@@ -89,7 +89,9 @@ Route::namespace('Home')->group(function (){
     Route::get('/post/{id}','IndexController@show')->name('home.show');
 
     //分类的文章列表
-    Route::get('/sort/{sortId}','IndexController@posts')->name('home.posts');
+    Route::get('/sort/{sortOrLabelId}','IndexController@posts')->name('home.posts');
+    //标签的文章列表
+    Route::get('/label/{sortOrLabelId}','IndexController@posts')->name('home.posts');
 });
 
 

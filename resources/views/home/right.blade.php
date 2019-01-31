@@ -170,7 +170,7 @@
             <div class="tags l-h-2x">
                 @if(!empty($labels))
                     @foreach($labels as $label)
-                        <a href="{{ env('APP_URL').'/label/'.$label->id }}" class="label bg-info" title="{{ $label->label_name }}" data-toggle="tooltip">{{ $label->label_name }}</a>
+                        <a href="{{ env('APP_URL').'/label/'.$label->id }}" class="label bg-info" title="{{ $label->label_name }}" data-toggle="tooltip" data-pjax>{{ $label->label_name }}</a>
                     @endforeach
                 @endif
                 {{--<a href="https://www.haorenka.cc/tag/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/" class="label bg-info" title="该标签下有 24 篇文章" data-toggle="tooltip">百度网盘</a>--}}

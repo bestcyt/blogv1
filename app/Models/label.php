@@ -46,4 +46,11 @@ class label extends Model
     public function updateLabel(array $update,$id){
         return self::where('id',$id)->update($update);
     }
+
+    /*
+     * @todo 检索查询分类数据
+     */
+    public function getLabelByWhere($where){
+        return self::where($where)->first();
+    }
 }

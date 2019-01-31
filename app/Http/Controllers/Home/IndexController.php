@@ -48,12 +48,15 @@ class IndexController extends Controller
      * 分类id
      * withpath 自定义分页url ->withPath('posts')  》http://xxx.xxx.xx/posts?page=1
      */
-    public function posts($sortId = 0){
+    public function posts($sortOrLabelId = 0){
+        if (request()->path()){
+
+        }
         //置顶文章
         $this->view['top_posts'] = $this->homeService->getTopPosts();
 
         //有无分类的文章列表
-        $this->view['posts']     = $this->homeService->getPosts($sortId);
+        $this->view['posts']     = $this->homeService->getPosts($sortOrLabelId);
 
         return view($this->view['path'],$this->view);
     }

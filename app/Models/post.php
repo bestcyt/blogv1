@@ -40,7 +40,7 @@ class post extends Model
      * @todo 获取首页文章
      */
     public function getIndexPosts($where = []){
-        return self::with('user')->where($where)->orderBy('updated_at','desc')->paginate(2);
+        return self::with('user')->where($where)->orderBy('updated_at','desc')->paginate(5);
     }
 
     /*
