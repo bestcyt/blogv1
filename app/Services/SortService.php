@@ -108,4 +108,18 @@ class SortService {
             ['state','=',1]
         ]);
     }
+
+    /*
+     * @todo 检测分类是否存在
+     */
+    public function checkSort($sortId){
+        //验证sortid是正常数字
+        if (!is_numeric($sortId)){
+            return false;
+        }
+        return $this->SortModel->getSortByWhere([
+            ['state','=',1],
+            ['id','=',$sortId],
+        ]);
+    }
 }

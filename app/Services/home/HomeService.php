@@ -4,6 +4,8 @@ namespace App\Services\home;
 
 
 use App\Models\post;
+use App\Models\Sort;
+use App\Services\SortService;
 use Illuminate\Http\Request;
 
 /**
@@ -15,17 +17,20 @@ use Illuminate\Http\Request;
 class HomeService
 {
     public $postModel;
+    public $sortService;
 
-    public function __construct(post $post)
+    public function __construct(post $post , SortService $sortService)
     {
+        $this->sortService = $sortService;
         $this->postModel = $post;
     }
 
     /*
      * @todo 首页获取文章列表
      */
-    public function index(Request $request){
-        return $this->postModel->getIndexPosts();
+    public function getPosts($sortId = 0){
+        $where = $this->sortService->checkSort($sortId) ? [['sort_id','=',$sortId]] : [];
+        return $this->postModel->getIndexPosts($where);
     }
 
     /*
@@ -39,7 +44,12 @@ class HomeService
      * @todo 获取置顶文章
      */
     public function getTopPosts(){
-        return $this->postModel->getTopPosts();
+        return $this->postModel->getTopPosts(
+            [
+                ['state','=',1],
+                ['is_top','=',1]
+            ]
+        );
     }
 
 }

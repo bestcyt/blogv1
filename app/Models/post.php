@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class post extends Model
 {
-    //
     protected $table = 'posts';
     protected $connection = 'mysql';
 
@@ -40,23 +39,16 @@ class post extends Model
     /*
      * @todo 获取首页文章
      */
-    public function getIndexPosts(){
-
-        return self::with('user')->where([
-            ['state','=',1],
-            ['is_top','=',0]
-        ])->orderBy('created_at','desc')->paginate(2);
+    public function getIndexPosts($where = []){
+        return self::with('user')->where($where)->orderBy('updated_at','desc')->paginate(2);
     }
 
     /*
      * @todo 获取置顶文章，后面可以优化成传条件跟上面合并成一个方法
      */
-    public function getTopPosts(){
+    public function getTopPosts($where = []){
 
-        return self::with('user')->where([
-            ['state','=',1],
-            ['is_top','=',1]
-        ])->orderBy('created_at','desc')->get();
+        return self::with('user')->where($where)->orderBy('updated_at','desc')->get();
     }
 
     /*

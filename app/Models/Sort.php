@@ -41,4 +41,11 @@ class Sort extends Model
     public function getSorts($where){
         return self::where($where)->get();
     }
+
+    /*
+     * @todo 检索查询分类数据
+     */
+    public function getSortByWhere($where){
+        return self::where($where)->first();
+    }
 }

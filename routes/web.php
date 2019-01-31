@@ -89,9 +89,8 @@ Route::namespace('Home')->group(function (){
     Route::get('/post/{id}','IndexController@show')->name('home.show');
 
     //分类的文章列表
-    Route::get('/sort/{id}','IndexController@posts');
+    Route::get('/sort/{sortId}','IndexController@posts')->name('home.posts');
 });
-
 
 
 Route::get('/team-trip/header',function (){

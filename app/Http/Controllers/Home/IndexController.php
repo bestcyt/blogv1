@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\Sort;
 use App\Services\ConstantService;
 use App\Services\home\HomeService;
+use App\Services\SortService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
@@ -22,13 +24,15 @@ class IndexController extends Controller
     ];
     public $homeService;
     public $constantService;
+    public $sortService;
     /*
      * 区别是否pjax还是url刷新
     */
-    public function __construct(HomeService $homeService ,ConstantService $constantService ,Request $request){
+    public function __construct(HomeService $homeService ,ConstantService $constantService ,Request $request , SortService $sortService){
         //注入业务层
         $this->homeService = $homeService;
         $this->constantService = $constantService;
+        $this->sortService = $sortService;
         //处理跳转地址
         $this->view = $this->constantService->getViewAndPath($request,'home');
     }
@@ -41,12 +45,16 @@ class IndexController extends Controller
 
     /*
      * @todo 网站首页文章
+     * 分类id
+     * withpath 自定义分页url ->withPath('posts')  》http://xxx.xxx.xx/posts?page=1
      */
-    public function posts(Request $request,$id){
-        //withpath 自定义分页url 》http://xxx.xxx.xx/posts?page=1
-
+    public function posts($sortId = 0){
+        //置顶文章
         $this->view['top_posts'] = $this->homeService->getTopPosts();
-        $this->view['posts']     = $this->homeService->index($request)->withPath('posts');
+
+        //有无分类的文章列表
+        $this->view['posts']     = $this->homeService->getPosts($sortId);
+
         return view($this->view['path'],$this->view);
     }
 
