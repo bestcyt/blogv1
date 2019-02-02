@@ -21,7 +21,28 @@
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">内容</label>
                 <div class="layui-input-block">
-                    <textarea placeholder="请输入文章简述" class="layui-textarea" name="info"></textarea>
+                    <textarea placeholder="请输入文章简述" class="layui-textarea" name="aaa"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">富文本</label>
+                <div class="layui-input-block">
+                    <textarea id="demo" name="info" style="display: none;"></textarea>
+                    <script src="{{ asset('admin/vendors/layui/layui.js') }}"></script>
+                    <script>
+                        layui.use('layedit', function(){
+                            var layedit = layui.layedit;
+                            layedit.set({
+                                uploadImage: {
+                                    url: '{{ url('/image') }}' //接口url
+                                    ,type: 'post' //默认post
+                                }
+                            });
+                            layedit.build('demo',{
+                                height: 300
+                            }); //建立编辑器
+                        });
+                    </script>
                 </div>
             </div>
             <div class="layui-form-item">
