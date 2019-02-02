@@ -26,7 +26,7 @@
                                         <span class="meta-date">
                                             <i class="fontello fontello-eye" aria-hidden="true"></i>
                                             <span class="sr-only">浏览次数:</span>
-                                            <span class="meta-value">91807</span>
+                                            <span class="meta-value">{{ $hotPost->page_view }}</span>
                                         </span>
                                     </small>
                                 </div>
@@ -142,9 +142,13 @@
                             <div class="clear">
                                 <h4 class="h5 l-h">
                                     <a href="{{ env('APP_URL').'/post/'.$randPost->id }}" title="{{ $randPost->post_name }}" data-pjax> {{ $hotPost->post_name }} </a></h4>
-                                <small class="text-muted post-head-icon"><span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i> <span class="sr-only">浏览次数:</span> <span class="meta-value">*</span>
-                    </span>
-                                </small></div></li>
+                                <small class="text-muted post-head-icon">
+                                    <span class="meta-date"> <i class="fontello fontello-eye" aria-hidden="true"></i>
+                                        <span class="sr-only">浏览次数:</span> <span class="meta-value">{{ $randPost->page_view }}</span>
+                                    </span>
+                                </small>
+                            </div>
+                            </li>
                         @endforeach
                     </ul>
                 </div>

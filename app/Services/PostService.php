@@ -118,7 +118,7 @@ class PostService {
             ->where([
                 ['state','=',1]
             ])
-            ->orderBy('id','desc')
+            ->orderBy('page_view','desc')
             ->limit(4)
             ->get();
     }
@@ -128,6 +128,7 @@ class PostService {
      */
     public function getRightRandPosts(){
         return DB::table('posts')
+            ->where('state','=',1)
             ->whereRaw('id >= (SELECT FLOOR( MAX(id) * RAND()) FROM `posts` )')
             ->orderBy('id')
             ->limit(4)

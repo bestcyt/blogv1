@@ -55,6 +55,7 @@ class post extends Model
      * 获取文章详情
      */
     public function getPostById($id){
+        self::where('id',$id)->increment('page_view');
         return self::find($id);
     }
 }

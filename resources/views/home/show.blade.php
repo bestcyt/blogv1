@@ -25,12 +25,13 @@
             <!--浏览数-->
             <li class="meta-views"><i class="fontello fontello-eye" aria-hidden="true"></i>&nbsp;<span class="meta-value">{{ $post->page_view }}&nbsp;次浏览</span></li>
             <!--评论数-->
-            <li class="meta-comments"><i class="iconfont icon-comments-o" aria-hidden="true"></i>&nbsp;<a
-                        class="meta-value" href="#comments">&nbsp;{{ $post->comments_num }} 条评论</a></li>
+            <li class="meta-comments"><i class="iconfont icon-comments-o" aria-hidden="true"></i>&nbsp;
+                {{--<a class="meta-value" href="#comments">&nbsp;{{ $post->comments_num }} 条评论</a>--}}
+            </li>
             <!--文字数目-->
             <li class="meta-word"><i class="fontello fontello-pencil"></i>&nbsp;<span class="meta-value">{{ $post->word_count }}&nbsp;字数</span></li>
             <!--分类-->
-            <li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="https://www.haorenka.cc/laosiji/">{{ $post->sout_id }}</a></span></li>
+            {{--<li class="meta-categories"><i class="fontello fontello-tags" aria-hidden="true"></i> <span class="sr-only">分类：</span> <span class="meta-value"><a href="https://www.haorenka.cc/laosiji/">{{ $post->sout_id }}</a></span></li>--}}
         </ul>
     </header>
     <div class="wrapper-md" id="post-panel">

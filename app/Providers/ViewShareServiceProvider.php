@@ -21,6 +21,7 @@ class ViewShareServiceProvider extends ServiceProvider
         $hotPosts = $postService->getRightHotPosts(); //右侧视图热门文章 right.blade.php
         $randPosts = $postService->getRightRandPosts(); //右侧视图随机文章 right.blade.php
 
+//        dd($hotPosts);
         //分类数据
         $sorts = $sortService->getSorts();
 

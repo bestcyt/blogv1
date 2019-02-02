@@ -66,6 +66,7 @@ class IndexController extends Controller
      */
     public function show($id){
         //@todo 还要对传的id进行验证，是否数字等等
+
         $this->view['post'] = $this->homeService->show($id);
         return view($this->view['path'],$this->view);
     }

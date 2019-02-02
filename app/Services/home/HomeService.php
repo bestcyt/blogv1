@@ -54,6 +54,8 @@ class HomeService
      * @todo pjax文章详情
      */
     public function show($id){
+        //增加阅读量
+
         return $this->postModel->getPostById($id);
     }
 

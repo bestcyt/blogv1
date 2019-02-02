@@ -47,16 +47,16 @@
                     </li>
                     <!--主页-->
                     <li>
-                        <a href="{{ env('APP_URL') }}" class="auto">
+                        <a href="{{ env('APP_URL') }}" class="auto" data-pjax>
                             <i class="iconfont icon-zhuye icon text-md"></i>
                             <span>首页</span>
                         </a>
                     </li>
                     <!-- /主页 -->
-                    <li> <a target="_blank" href="/jieya.html" class ="auto">
-                            <i class="fontello fontello-unlock-alt icon text-md"></i><span>解压密码</span></a></li>
-                    <li> <a target="_blank" href="/tougaoshenqing.html" class ="auto">
-                            <i class="fontello fontello-pencil icon text-md"></i><span>投稿</span></a></li>
+                    <li> <a  href="#" class ="auto">
+                            <i class="fontello fontello-unlock-alt icon text-md"></i><span>待定</span></a></li>
+                    <li> <a href="#" class ="auto">
+                            <i class="fontello fontello-pencil icon text-md"></i><span>待定</span></a></li>
                     <li class="line dk"></li>
                     <!--Components-->
                     <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
@@ -136,13 +136,13 @@
         <div id="left_footer" class="footer wrapper-xs text-center nav-xs lt">
 
             <div class="col-xs-6 footer-stats">
-                <a target="_blank" class="tinav" href="{{ env('APP_URL') }}/feed/" title="" data-toggle="tooltip" data-placement="top" data-original-title="文章RSS地址">
+                <a  href="{{ env('APP_URL') }}" title="" data-toggle="tooltip" data-placement="top" data-original-title="待定" data-pjax>
                     <span class="block"><i class="fontello fontello-rss"></i></span>
                     <small class="text-muted">文章</small>
                 </a>
             </div>
             <div class="col-xs-6 footer-stats">
-                <a target="_blank" href="{{ env('APP_URL') }}/feed/comments/" title="" data-toggle="tooltip" data-placement="top" data-original-title="评论RSS地址">
+                <a  href="{{ env('APP_URL') }}" title="" data-toggle="tooltip" data-placement="top" data-original-title="待定" data-pjax>
                     <span class="block"><i class="fontello fontello-rss-square"></i></span>
                     <small class="text-muted">评论</small>
                 </a>
