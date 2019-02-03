@@ -18,11 +18,7 @@ Route::get('/image', function () {
     return view('image');
 });
 
-Route::post('/image', function (\Illuminate\Http\Request $request) {
-    $domain = "http://" . config('filesystems.disks.upyun.domain');
-    $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/image', $request->file('image'));
-    return $domain . "/$file_path";
-});
+
 
 /*
  * @todo 后台啦啦啦
@@ -35,6 +31,21 @@ Route::prefix('back')->group(function (){
     //后台统一back命名空间
     Route::get('table','TestsController@index');
     Route::namespace('Back')->middleware(['getCommonInfo','auth'])->group(function (){
+        //上传图片，需要后台登录资格
+        Route::post('/image', function (\Illuminate\Http\Request $request) {
+            $domain = "http://" . config('filesystems.disks.upyun.domain');
+            $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/', $request->file('file'));
+            $src = $domain . "/$file_path";
+            //$src = env('APP_URL').'/panhu.jpg';
+            return json_encode([
+                "code"=> $src ? 0 : 1 ,
+                "msg"=> $src ? '成功' : '失败' ,
+                "data"=> [
+                    'src' => $src,
+                    'title' => '',
+                ] ,
+            ]);
+        });
 //        Route::get('/index', 'PageController@index'); //
 //        Route::get('/{index?}', 'PageController@index');
 

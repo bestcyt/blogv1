@@ -64,7 +64,7 @@
                 <!--文章内容-->
                 <div id="post-content" class="wrapper-lg">
                      <div class="entry-content l-h-2x">
-                            {{ $post->info }}
+                            {!! $post->info !!}
                         <div class="show-foot">
                             <div class="notebook">
                                 <i class="fontello fontello-clock-o"></i>

@@ -1,5 +1,5 @@
 {{--<link href="http://local.blog.bestcyt.cn/plugin/layui/css/layui.css" rel="stylesheet">--}}
-<div class="layui-row layui-col-space10">
+<div class="layui-row">
 
     <div class="layui-col-md1"></div>
 
@@ -18,12 +18,7 @@
                     <textarea placeholder="请输入文章简述" class="layui-textarea" name="post_desc"></textarea>
                 </div>
             </div>
-            <div class="layui-form-item layui-form-text">
-                <label class="layui-form-label">内容</label>
-                <div class="layui-input-block">
-                    <textarea placeholder="请输入文章简述" class="layui-textarea" name="aaa"></textarea>
-                </div>
-            </div>
+
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">富文本</label>
                 <div class="layui-input-block">
@@ -34,7 +29,7 @@
                             var layedit = layui.layedit;
                             layedit.set({
                                 uploadImage: {
-                                    url: '{{ url('/image') }}' //接口url
+                                    url: '{{ url('/back/image') }}' //接口url
                                     ,type: 'post' //默认post
                                 }
                             });
