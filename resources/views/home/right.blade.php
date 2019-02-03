@@ -187,6 +187,7 @@
             <h3 class="widget-title m-t-none text-md">友情链接</h3>
             <ul class="list-group">
                 <li class="list-group-item"> <a href="https://www.baidu.com" title="baidu" target="_blank">百度</a></li>
+                <li class="list-group-item"> <a href="mandian.vip" title="慢点" target="_blank">慢点博客</a></li>
             </ul>
         </section>
 
