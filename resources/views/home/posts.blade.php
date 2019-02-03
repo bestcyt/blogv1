@@ -1,5 +1,3 @@
-
-{{--{-- loading --}}
 <div class="col center-part">
     {{--公告位置--}}
     <div class="alert alert-warning alert-block" style="margin-bottom: 0px;">
@@ -9,8 +7,8 @@
     </div>
     {{--文字--}}
     <header class="bg-light lter b-b wrapper-md">
-        <h1 class="m-n font-thin h3 text-black l-h">bestcyt</h1>
-        <small class="text-muted letterspacing indexWords">我从山中来，山风翻我书.</small>
+        <h1 class="m-n font-thin h3 text-black l-h">豆豆</h1>
+        <small class="text-muted letterspacing indexWords">我从山中来，山风翻我书~</small>
     </header>
 
     {{--wrapper-md--}}
@@ -22,8 +20,8 @@
                 @foreach($top_posts as $post)
                     <div class="panel-small">
                         <div class="index-post-img-small post-feature index-img-small">
-                            <a href="/post/{{ $post->id }}">
-                                <img src="{{ asset('panhu.jpg') }}">
+                            <a href="/post/{{ $post->id }}" title="{{ $post->post_name }}">
+                                <img src="{{ $post->image ?? 'http://upyun-cyt.b0.upaiyun.com/image/gjRhCNyjGQRedfzSE90PVlSONyMfCDBfKRHXgfgd.jpeg' }}" alt="{{ $post->post_name }}">
                                 {{--<div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"--}}
                                         {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
                                 {{--></div>--}}
@@ -45,15 +43,15 @@
             @foreach($posts as $post)
                 <div class="panel-small">
                     <div class="index-post-img-small post-feature index-img-small">
-                        <a href="/post/{{ $post->id }}">
-                            <img src="http://upyun-cyt.b0.upaiyun.com/image/gjRhCNyjGQRedfzSE90PVlSONyMfCDBfKRHXgfgd.jpeg">
+                        <a href="/post/{{ $post->id }}" title="{{ $post->post_name }}">
+                            <img src="{{ $post->image }}"  alt="{{ $post->post_name }}">
                             {{--<div class="item-thumb-small lazy" data-original="{{ asset('panhu.jpg') }}"--}}
                                     {{--style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMzggNzkuMTU5ODI0LCAyMDE2LzA5LzE0LTAxOjA5OjAxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+IEmuOgAAAA1JREFUCJljePfx038ACXMD0ZVlJAYAAAAASUVORK5CYII=)"--}}
                             {{--></div>--}}
                         </a>
                     </div>
-                    <div class="post-meta wrapper-lg">
-                        <h2 class="m-t-none index-post-title"><a href="/post/{{ $post->id }}" data-pjax>{{ $post->post_name }}</a></h2>
+                    <div class="post-meta wrapper-lg" >
+                        <h2 class="m-t-none index-post-title"><a href="/post/{{ $post->id }}" data-pjax title="{{ $post->post_name }}">{{ $post->post_name }}</a></h2>
                         <p class="summary l-h-2x text-muted">{{ $post->post_desc }}</p><div class="line line-lg b-b b-light"></div>
                         <div class="text-muted post-item-foot-icon">
                             <i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="#">{{ $post->user->name }}&nbsp;</a></span>

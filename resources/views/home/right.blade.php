@@ -182,6 +182,14 @@
             </div>
         </section>
 
+        <!--友情链接-->
+        <section id="categories-2" class="widget widget_categories wrapper-md clear">
+            <h3 class="widget-title m-t-none text-md">友情链接</h3>
+            <ul class="list-group">
+                <li class="list-group-item"> <a href="https://www.baidu.com" title="baidu" target="_blank">百度</a></li>
+            </ul>
+        </section>
+
         <!--文章的段落，类似laravelChina那种文章段落目录-->
         {{--<section id="tag_toc" class="widget widget_categories wrapper-md clear">--}}
             {{--<h3 class="widget-title m-t-none text-md">文章目录</h3>--}}

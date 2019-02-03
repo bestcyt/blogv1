@@ -18,7 +18,15 @@
                     <textarea placeholder="请输入文章简述" class="layui-textarea" name="post_desc"></textarea>
                 </div>
             </div>
-
+            <div class="layui-form-item layui-form-text">
+                <label class="layui-form-label">封面图</label>
+                <input type="hidden" name="image" value="" id="image">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn" id="test1">
+                        <i class="layui-icon">&#xe67c;</i>上传图片
+                    </button>
+                </div>
+            </div>
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">富文本</label>
                 <div class="layui-input-block">
@@ -95,6 +103,33 @@
             form.render();
         });
 
+        //封面图片上传
+        layui.use('upload', function(){
+            var upload = layui.upload;
+
+            //执行实例
+            var uploadInst = upload.render({
+                elem: '#test1' //绑定元素
+                ,url: '/back/image' //上传接口
+                ,before: function(obj){ //obj参数包含的信息，跟 choose回调完全一致，可参见上文。
+                    layer.load(); //上传loading
+                }
+                ,done: function(res){
+                    //上传完毕回调
+                    layer.closeAll('loading'); //关闭loading
+                    if(res.code == 0){
+                        $('#test1').html('<i class="layui-icon">&#xe67c;</i>上传成功');
+                        $('#image').val(res.data.src);
+                    }else {
+                        $('#test1').html('<i class="layui-icon">&#xe67c;</i>上传失败');
+                    }
+                }
+                ,error: function(){
+                    //请求异常回调
+                    layer.closeAll('loading'); //关闭loading
+                }
+            });
+        });
 
     })
 </script>

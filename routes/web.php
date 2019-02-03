@@ -18,8 +18,6 @@ Route::get('/image', function () {
     return view('image');
 });
 
-
-
 /*
  * @todo 后台啦啦啦
  */

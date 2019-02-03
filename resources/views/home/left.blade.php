@@ -7,7 +7,7 @@
                     <div ui-nav>
                         <a href="{{ env('APP_URL') }}">
                             <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                  <img src="https://source.unsplash.com/user/erondu/200x200" class="img-full">
+                  <img src="{{ asset('panhu.jpg') }}" class="img-full">
                 </span>
                         </a>
                     </div>

@@ -98,6 +98,7 @@ class PostService {
         $data['user_id'] = Auth::id();
         $data['post_name'] = $request->input('post_name');
         $data['post_desc'] = $request->input('post_desc');
+        $data['image'] = $request->input('image') ?? 'http://upyun-cyt.b0.upaiyun.com/image/gjRhCNyjGQRedfzSE90PVlSONyMfCDBfKRHXgfgd.jpeg';
         $data['info'] = $request->input('info');
         $data['state'] = $request->input('state') ? 1 : 0;
         $data['is_top'] = $request->input('is_top') ? 1 : 0;
