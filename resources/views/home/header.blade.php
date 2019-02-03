@@ -8,7 +8,7 @@
             <i class="fontello fontello-menu text-lg"></i>
         </button>
         <!-- brand -->
-        <a href="https://www.haorenka.cc/" class="navbar-brand text-lt">
+        <a href="{{ env('APP_URL') }}" class="navbar-brand text-lt" data-pjax>
             <i class="fontello fontello-home"></i>
             <span class="hidden-folded m-l-xs">bestcyt-Blog</span>
         </a>

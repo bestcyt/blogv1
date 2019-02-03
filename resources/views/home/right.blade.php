@@ -188,6 +188,7 @@
             <ul class="list-group">
                 <li class="list-group-item"> <a href="https://www.baidu.com" title="baidu" target="_blank">百度</a></li>
                 <li class="list-group-item"> <a href="http://mandian.vip" title="慢点" target="_blank">慢点博客</a></li>
+                <li class="list-group-item"> <a href="http://pkold.com" title="书生" target="_blank">百无一用是书生</a></li>
             </ul>
         </section>
 
