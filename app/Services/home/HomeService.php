@@ -47,6 +47,8 @@ class HomeService
                     break;
             }
         }
+        $where[] = ['state','=',1];
+        $where[] = ['is_top','=',0];
         return $this->postModel->getIndexPosts($where);
     }
 
