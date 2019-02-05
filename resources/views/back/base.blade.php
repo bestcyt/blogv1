@@ -103,11 +103,11 @@
         </div>
     </div>
 
-    <div class="layui-body">
-        {{--<!-- 内容主体区域 -->--}}
-        <div style="padding: 15px;" id="content-main" style="overflow-y: scroll;">
-            @yield('content')
-        </div>
+    <div class="layui-body" id="content-main" style="overflow-y: scroll;">
+
+        {{--内容主体区域--}}
+        @yield('content')
+
     </div>
 
     <div class="layui-footer">

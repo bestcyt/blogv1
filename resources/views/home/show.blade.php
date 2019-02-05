@@ -74,7 +74,7 @@
                             </div>
                         </div>
                          {{--点赞--}}
-                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text"></div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
+                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text">111</div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
                      </div>
                 </div>
             </article>
