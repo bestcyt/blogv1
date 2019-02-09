@@ -4,6 +4,7 @@ namespace App\Http;
 
 use App\Http\Middleware\EnableCrossRequestMiddleware;
 use App\Http\Middleware\GetCommonInfo;
+use App\Http\Middleware\RecordIp;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -24,6 +25,7 @@ class Kernel extends HttpKernel
         EnableCrossRequestMiddleware::class,
         \Barryvdh\Cors\HandleCors::class,
         GetCommonInfo::class,
+        RecordIp::class,
     ];
 
     /**
@@ -62,6 +64,7 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'recordIp' => RecordIp::class,
         'getCommonInfo' => GetCommonInfo::class,
     ];
 }

@@ -39,7 +39,8 @@ class IndexController extends Controller
 
     //暂时没啥用
     public function index(Request $request){
-        //还需要获取用户信息，标签云，热门文章，文字等等
+
+        //还需要获取用户信息，标签云，热门文章，文字等等, 用了师徒共享
         return view($this->view['path'],$this->view);
     }
 
@@ -49,9 +50,7 @@ class IndexController extends Controller
      * withpath 自定义分页url ->withPath('posts')  》http://xxx.xxx.xx/posts?page=1
      */
     public function posts($sortOrLabelId = 0){
-        if (request()->path()){
 
-        }
         //置顶文章
         $this->view['top_posts'] = $this->homeService->getTopPosts();
 

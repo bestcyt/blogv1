@@ -102,7 +102,7 @@ Route::prefix('back')->group(function (){
  * @todo 前台啦啦啦
  * 不用登录，对接第三方登录laravel Socialite 并实现基于 Github，qq 的登录认证，登录后评论吧
  */
-Route::namespace('Home')->group(function (){
+Route::namespace('Home')->middleware(['recordIp'])->group(function (){
     //文章列表与详情
     Route::get('/{posts?}','IndexController@posts')->name('home.posts');
     Route::get('/post/{id}','IndexController@show')->name('home.show');
