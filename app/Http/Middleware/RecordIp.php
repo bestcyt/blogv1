@@ -27,7 +27,9 @@ class RecordIp
         $this->viewlog->insert([
             'ip'=>$request->server('REMOTE_ADDR'),
             'type'=>1,
-            'info'=>$request->path()
+            'info'=>$request->path(),
+            'created_at'=>date('Y-m-d H:m:s',time()),
+            'updated_at'=>date('Y-m-d H:m:s',time()),
         ]);
         return $next($request);
     }

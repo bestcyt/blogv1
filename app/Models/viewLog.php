@@ -9,5 +9,7 @@ class viewLog extends Model
     //s
     protected $table = 'view_logs';
 
+    public $timestamps = false;
+
 
 }
