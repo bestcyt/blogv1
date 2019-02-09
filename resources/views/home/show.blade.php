@@ -7,11 +7,11 @@
             height: 100%
         }
     </style>
-    <div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>{{ $post->user->name }}</p><span>{{ $post->post_name }}</span></div><div
-                class="mdx-si-sum">{{ $post->post_desc }}</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img
-                        src="https://www.haorenka.cc/usr/themes/handsome/libs/GetCode.php?type=url&content=https://www.haorenka.cc/huashengriji.html"></div></div><div class="mdx-si-time">04<br><span
-                    class="mdx-si-time-2">2019/01</span></div>
-    </div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->
+    {{--<div class="mdx-share-img" id="mdx-share-img"><div class="mdx-si-head" style="background-image:url(https://www.haorenka.cc/usr/themes/handsome/assets/img/video.jpg)"><p>{{ $post->user->name }}</p><span>{{ $post->post_name }}</span></div><div--}}
+                {{--class="mdx-si-sum">{{ $post->post_desc }}</div><div class="mdx-si-box"><span>扫描右侧二维码阅读全文</span><div class="mdx-si-qr" id="mdx-si-qr"><img--}}
+                        {{--src="https://www.haorenka.cc/usr/themes/handsome/libs/GetCode.php?type=url&content=https://www.haorenka.cc/huashengriji.html"></div></div><div class="mdx-si-time">04<br><span--}}
+                    {{--class="mdx-si-time-2">2019/01</span></div>--}}
+    {{--</div>    <!--标题下的一排功能信息图标：作者/时间/浏览次数/评论数/分类-->--}}
 
     <header id="small_widgets" class="bg-light lter b-b wrapper-md">
         <h1 class="entry-title m-n font-thin h3 text-black l-h">{{ $post->post_name }}<a class="plus-font-size" data-toggle="tooltip" data-original-title="点击改变文章字体大小"><i class="glyphicon glyphicon-text-size
@@ -74,7 +74,25 @@
                             </div>
                         </div>
                          {{--点赞--}}
-                        <div class="post-like"><div href="javascript:;" class="fa-thumbs-up" data-pid="899"></div><div id="zan_text">111</div></div>             <!--/文章的页脚部件：打赏和其他信息的输出-->
+                        <div class="post-like">
+                            <div id="like" class="fa-thumbs-up" data-pid="{{ $post->id }}"></div>
+                            <div id="zan_text">{{ $post->like_num }}</div>
+                            <script>
+                                {{--点赞js--}}
+                                $(function () {
+                                    $('#like').on('click',function () {
+                                        var old_like_num = $('#zan_text').text();
+                                        var url = '/post-like?id='+$(this).attr('data-pid');
+                                        $.get(url, function(str){
+                                            if (str == 1){
+                                                $('#zan_text').text(Number(old_like_num) + Number(1));
+                                            }
+                                        });
+                                    })
+                                })
+
+                            </script>
+                        </div>
                      </div>
                 </div>
             </article>

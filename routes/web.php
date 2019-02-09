@@ -102,7 +102,12 @@ Route::prefix('back')->group(function (){
  * @todo 前台啦啦啦
  * 不用登录，对接第三方登录laravel Socialite 并实现基于 Github，qq 的登录认证，登录后评论吧
  */
+
+
+
 Route::namespace('Home')->middleware(['recordIp'])->group(function (){
+    Route::get('/post-like','IndexController@postLike');
+
     //文章列表与详情
     Route::get('/{posts?}','IndexController@posts')->name('home.posts');
     Route::get('/post/{id}','IndexController@show')->name('home.show');
@@ -111,15 +116,13 @@ Route::namespace('Home')->middleware(['recordIp'])->group(function (){
     Route::get('/sort/{sortOrLabelId}','IndexController@posts')->name('home.posts');
     //标签的文章列表
     Route::get('/label/{sortOrLabelId}','IndexController@posts')->name('home.posts');
+
+
 });
 
 
-Route::get('/team-trip/header',function (){
-    return view('header');
-})->name('pdf.header');
-Route::get('/team-trip/footer',function (){
-    return view('footer');
-})->name('pdf.footer');
+
+
 
 
 

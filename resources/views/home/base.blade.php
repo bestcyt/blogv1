@@ -300,12 +300,9 @@ if ($.support.pjax) {
                 });
         });
 
-        console.log('aaa');
-        console.log('ff');
-        console.log('aagga');
-        console.log('gg');
     })
 </script>
+
 
 {{-- 点击的pjax 解决了就全部解决了兄弟，在看看原来的--}}
 

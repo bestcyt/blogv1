@@ -73,4 +73,11 @@ class HomeService
         );
     }
 
+    /*
+     * @todo 点赞
+     */
+    public function postLike(Request $request){
+        return $this->postModel->where('id',$request->input('id'))->increment('like_num');
+    }
+
 }

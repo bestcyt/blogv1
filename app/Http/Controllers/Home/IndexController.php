@@ -69,4 +69,9 @@ class IndexController extends Controller
         $this->view['post'] = $this->homeService->show($id);
         return view($this->view['path'],$this->view);
     }
+
+    public function postLike(Request $request){
+
+        return $this->homeService->postLike($request);
+    }
 }

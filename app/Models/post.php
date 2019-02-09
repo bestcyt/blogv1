@@ -58,4 +58,5 @@ class post extends Model
         self::where('id',$id)->increment('page_view');
         return self::find($id);
     }
+
 }
