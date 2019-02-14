@@ -74,4 +74,11 @@ class IndexController extends Controller
 
         return $this->homeService->postLike($request);
     }
+
+    /*
+     * @todo love界面
+     */
+    public function love(){
+        return view('home.love');
+    }
 }

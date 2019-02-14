@@ -106,6 +106,7 @@ Route::prefix('back')->group(function (){
 
 
 Route::namespace('Home')->middleware(['recordIp'])->group(function (){
+    Route::get('/love','IndexController@love')->name('home.love');
     Route::get('/post-like','IndexController@postLike');
 
     //文章列表与详情
@@ -118,7 +119,10 @@ Route::namespace('Home')->middleware(['recordIp'])->group(function (){
     Route::get('/label/{sortOrLabelId}','IndexController@posts')->name('home.posts');
 
 
+
+
 });
+
 
 
 
