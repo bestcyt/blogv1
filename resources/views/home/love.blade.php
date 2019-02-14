@@ -576,7 +576,7 @@
     }());
     S.init();
 </script>
-//音乐可改
+
 <audio autoplay="autoplay" loop="loop">
     <source src="/pudding.mp3" type="audio/mpeg">
 </audio>
