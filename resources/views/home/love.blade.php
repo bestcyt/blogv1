@@ -36,6 +36,7 @@
             width: 100%;
         }
         .canvas {
+            width: 100%;
             margin: 0 auto;
             display: block;
         }
@@ -123,7 +124,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("豆豆|I'm|ZLOE|Nice|to|Meet|You|#countdown 3|#time");
+            S.UI.simulate("豆豆|Nice|to|Meet|You|#countdown 3|#time");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -157,7 +158,7 @@
                 requestFrame.call(window, this.loop.bind(this));
             },
             adjustCanvas: function () {
-                canvas.width = window.innerWidth - 100;
+                canvas.width = window.innerWidth - 50;
                 canvas.height = window.innerHeight - 30;
             },
             clearFrame: function () {
