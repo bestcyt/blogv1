@@ -89,7 +89,7 @@
 <body>
 <!--更改为你女朋友的头像-->
 <div class="cs">
-    <img src="/doudou.jpg" id="logo">
+    <img src="/doudou2.jpg" id="logo">
 </div>
 <canvas class="canvas" width="1820" height="905"></canvas>
 <p class="text" style="color: #ed3073;">
