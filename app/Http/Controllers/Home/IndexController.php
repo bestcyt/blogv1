@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\post;
 use App\Models\Sort;
 use App\Services\ConstantService;
 use App\Services\home\HomeService;

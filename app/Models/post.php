@@ -3,11 +3,31 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
 
 class post extends Model
 {
+
+    use Searchable;
+
     protected $table = 'posts';
     protected $connection = 'mysql';
+
+    public function searchableAs()
+    {
+        return 'posts_index';
+    }
+
+    public function toSearchableArray()
+    {
+        $posts = $array= $this->toArray();
+
+        $a = array_map(function ($item){
+//            return array($item['id'],$item['post_name'],$item['post_desc']);
+        },$array);
+
+        return $posts;
+    }
 
     public function user(){
         return $this->belongsTo('App\User')->withDefault();

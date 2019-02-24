@@ -185,6 +185,9 @@ return [
 
         //又拍云存储图片
         JellyBool\Flysystem\Upyun\UpyunServiceProvider::class,
+
+        //laravel scout 搜索
+        Laravel\Scout\ScoutServiceProvider::class,
     ],
 
     /*
