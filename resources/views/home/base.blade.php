@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--suppress ALL -->
-<html class="no-js bg" lang="zh-cmn-Hans">
+<html class="no-js bgg" lang="zh-cmn-Hans">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta charset="UTF-8">
@@ -43,7 +43,7 @@
 
     <style type="text/css">
 
-        html.bg {
+        html.bgg {
             background-image: linear-gradient(-20deg, #d0b782 20%, #a0cecf 80%);
         }
         .cool-transparent .off-screen+* .app-content-body {
