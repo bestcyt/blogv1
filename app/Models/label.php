@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class label extends Model
 {
     //
+    protected $table = 'labels';
     protected $fillable = ['label_name' , 'desc'];
 
     /*

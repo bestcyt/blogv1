@@ -34,7 +34,8 @@ Route::prefix('back')->group(function (){
             $domain = "http://" . config('filesystems.disks.upyun.domain');
             $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/', $request->file('file'));
             $src = $domain . "/$file_path";
-            //$src = env('APP_URL').'/panhu.jpg';
+            //$src = env('APP_URL').'/panhu.jpg';aaa
+            
             return json_encode([
                 "code"=> $src ? 0 : 1 ,
                 "msg"=> $src ? '成功' : '失败' ,
