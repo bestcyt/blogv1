@@ -32,7 +32,7 @@
                             <p class="summary l-h-2x text-muted">{{ $post->post_desc }}</p><div class="line line-lg b-b b-light"></div>
                             <div class="text-muted post-item-foot-icon">
                                 <i class="fontello fontello-user text-muted"></i><span class="m-r-sm">&nbsp;<a href="#">{{ $post->user->name }}&nbsp;</a></span>
-                                <i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;{{ $post->updated_at }}</span><a href="#" class="m-l-sm post-item-comment">
+                                <i class="fontello fontello-clock-o text-muted"></i><span class="m-r-sm">&nbsp;{{ $post->created_at }}</span><a href="#" class="m-l-sm post-item-comment">
                                     <i class="iconfont icon-comments-o text-muted"></i>&nbsp;{{ $post->comments_num }} 条评论</a>
                             </div>
                         </div>
