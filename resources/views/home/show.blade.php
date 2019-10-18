@@ -100,10 +100,10 @@
         <!--上一篇&下一篇-->
         <nav class="m-t-lg m-b-lg">
             <ul class="pager">
-                @if(\App\Models\post::find((int)($post->id + 1 )))
+                @if(\App\Models\Posts::find((int)($post->id + 1 )))
                     <li class="next"> <a href="{{ env('APP_URL') }}/post/{{ (int)($post->id + 1 ) }}" title="下一篇" data-toggle="tooltip" data-pjax> 下一篇 </a></li>
                 @endif
-                @if(\App\Models\post::find((int)($post->id - 1 )))
+                @if(\App\Models\Posts::find((int)($post->id - 1 )))
                     <li class="previous"> <a href="{{ env('APP_URL') }}/post/{{ (int)($post->id - 1 ) }}" title="上一篇" data-toggle="tooltip" data-pjax> 上一篇 </a></li>
                 @endif
             </ul>

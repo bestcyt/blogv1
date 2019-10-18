@@ -11,7 +11,7 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">标签名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="label_name" required  lay-verify="required" placeholder="请输入新标签" autocomplete="off" class="layui-input">
+                    <input type="text" name="name" required  lay-verify="required" placeholder="请输入新标签" autocomplete="off" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">

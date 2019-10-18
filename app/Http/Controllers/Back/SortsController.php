@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\back;
 
-use App\Models\Sort;
+use App\Models\Sorts;
 use App\Services\ConstantService;
 use App\Services\PostService;
 use App\Services\SortService;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 class SortsController extends Controller
@@ -33,7 +34,6 @@ class SortsController extends Controller
         $this->constantService = $constantService;
         //根据路由名称，来分配视图和那啥数据
         $this->view = $this->constantService->getViewAndPath($request,'back');
-
     }
 
     /*
@@ -60,6 +60,7 @@ class SortsController extends Controller
      */
     public function create()
     {
+        $this->view['sorts'] = $this->sortService->getSorts();//搞成一棵树
         return view($this->view['path'],$this->view);
     }
 

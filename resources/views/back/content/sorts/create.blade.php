@@ -11,9 +11,23 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">分类名</label>
                 <div class="layui-input-block">
-                    <input type="text" name="sort_name" required  lay-verify="required" placeholder="请输入新分类" autocomplete="off" class="layui-input">
+                    <input type="text" name="name" required  lay-verify="required" placeholder="请输入新分类" autocomplete="off" class="layui-input">
                 </div>
             </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">父级分类</label>
+                <div class="layui-input-block">
+                    <select name="parentId" lay-verify="" lay-search>
+                        <option value="0" selected>顶级</option>
+                        @if(count($sorts) > 0)
+                            @foreach($sorts as $sort)
+                                <option value="{{ $sort->id }}">{{ $sort->name }}</option>
+                            @endforeach
+                        @endif
+                    </select>
+                </div>
+            </div>
+
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">描述</label>
                 <div class="layui-input-block">

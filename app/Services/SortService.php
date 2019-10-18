@@ -5,23 +5,26 @@ namespace App\Services;
 /*
  * @todo 文章业务层，虽然没啥东西。。
  */
-use App\Models\label;
-use App\Models\post;
-use App\Models\Sort;
+use App\Models\Labels;
+use App\Models\Posts;
+use App\Models\Sorts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class SortService {
 
     public $SortModel;
+    public $PostModel;
 
     /*
      * @todo 构造方法注入模型对象
      */
-    public function __construct( Sort $sort){
+    public function __construct( Sorts $sort , Posts $post){
         $this->SortModel = $sort;
+        $this->PostModel = $post;
     }
 
     /*
@@ -45,18 +48,6 @@ class SortService {
     }
 
     /*
-     * @todo 文章创建
-     */
-    public function create(){
-        $labels = Cache::get('labels');
-        if(!$labels){
-            $labels = $this->LabelModel->getLabels([['state','1'
-            ]])->toArray();
-        }
-        return $labels;
-    }
-
-    /*
      * @todo 文章更新
      */
     public function update(Request $request,$id){
@@ -68,7 +59,7 @@ class SortService {
      */
     public function store(Request $request){
         $create = $request->except('_token');
-        $create['parent_id'] = 1;//暂时先都是顶底分类，因为有标签在
+        Log::info('$create',[$create]);
         $this->SortModel->createSort($create);
         flash(config('res.sort-store-success'))->success();
     }
@@ -81,8 +72,8 @@ class SortService {
         //layui的table 分页会传page和limit
         $page = $request->input('page') ?? 1;
         $limit = $request->input('limit') ?? 10;
-        $count = Cache::get('countLabels') ?? Sort::count();
-        $data_ = Sort::paginate($limit, ['*'], '', $page)->toArray();
+        $count = Cache::get('countLabels') ?? Sorts::count();
+        $data_ = Sorts::paginate($limit, ['*'], '', $page)->toArray();
         //toArray的数据带有总数啊余页数啊什么的，数据在data字段，回头业务层直接返回这个数据就好
         $data = $data_['data'];
         return response()->json([
@@ -105,7 +96,7 @@ class SortService {
      */
     public function getSorts(){
         return $this->SortModel->getSorts([
-            ['state','=',1]
+            ['status','=',1]
         ]);
     }
 
@@ -118,7 +109,7 @@ class SortService {
             return false;
         }
         return $this->SortModel->getSortByWhere([
-            ['state','=',1],
+            ['status','=',1],
             ['id','=',$sortId],
         ]);
     }

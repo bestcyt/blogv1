@@ -4,15 +4,16 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class Sort extends Model
+class Sorts extends Model
 {
     protected $table = 'sorts';
 
-    protected $fillable = ['sort_name', 'parent_id','desc'];
+    protected $fillable = ['name', 'parent_id','desc'];
     //
     public function childCategory() {
-        return $this->hasMany('App\Models\Sort', 'parent_id', 'id');
+        return $this->hasMany('App\Models\Sort', 'parentId', 'id');
     }
 
     public function allChildrenCategorys()
@@ -25,6 +26,14 @@ class Sort extends Model
      * $create - > array
      */
     public function createSort($create){
+        DB::insertGetId([
+            ''
+        ]);
+        if ($create['parentId'] == 0){
+            $create['parentId'] = '[0]';
+        }else{
+
+        }
         return self::create($create);
     }
 

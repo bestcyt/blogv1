@@ -31,11 +31,12 @@ Route::prefix('back')->group(function (){
     Route::namespace('Back')->middleware(['getCommonInfo','auth'])->group(function (){
         //上传图片，需要后台登录资格
         Route::post('/image', function (\Illuminate\Http\Request $request) {
-            $domain = "http://" . config('filesystems.disks.upyun.domain');
-            $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/', $request->file('file'));
-            $src = $domain . "/$file_path";
+//            $domain = "http://" . config('filesystems.disks.upyun.domain');
+//            $file_path = \Illuminate\Support\Facades\Storage::disk('upyun')->put('/', $request->file('file'));
+//            $src = $domain . "/$file_path";
             //$src = env('APP_URL').'/panhu.jpg';aaa
-            
+            $src = $request->file('file')->store('image');
+//            return $path;
             return json_encode([
                 "code"=> $src ? 0 : 1 ,
                 "msg"=> $src ? '成功' : '失败' ,
@@ -94,7 +95,7 @@ Route::prefix('back')->group(function (){
         Route::get('getSortsJson','SortsController@getSortsJson');
         Route::get('getPostsJson','PostsController@getPostsJson');
 
-        //必须放下面，不然会导致路由紊乱，pjax失效
+        //必须放下面，不然会导致路由紊乱，pjax失效PageController
         Route::get('/{index?}', 'PageController@index');
     });
 });

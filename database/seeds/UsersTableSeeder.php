@@ -12,7 +12,8 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         //
-        \Illuminate\Support\Facades\DB::table('users')->insert([
+        \Illuminate\Support\Facades\DB::table('users')
+            ->insert([
             'name' => 'bestcyt',
             'email' => '850160757@qq.com',
             'password' => bcrypt('cyt850160757'),

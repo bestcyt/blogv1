@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Models\label;
+use App\Models\Labels;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
@@ -10,7 +10,7 @@ class LabelService {
 
     public $LabelModel;
 
-    public function __construct(label $label){
+    public function __construct(Labels $label){
         $this->LabelModel = $label;
     }
 
@@ -47,7 +47,7 @@ class LabelService {
      * @todo 获取标签云视图数据
      */
     public function getLabels(){
-        return $this->LabelModel->getLabels([['state','=',1]]);
+        return $this->LabelModel->getLabels([['status','=',1]]);
     }
 
     /*

@@ -2,14 +2,14 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\viewLog;
+use App\Models\ViewLogs;
 use Closure;
 
 class RecordIp
 {
     public $viewlog;
 
-    public function __construct(viewLog $viewLog)
+    public function __construct(ViewLogs $viewLog)
     {
         $this->viewlog = $viewLog;
     }
@@ -23,14 +23,13 @@ class RecordIp
      */
     public function handle($request, Closure $next )
     {
-
-        $this->viewlog->insert([
-            'ip'=>$request->server('REMOTE_ADDR'),
-            'type'=>1,
-            'info'=>$request->path(),
-            'created_at'=>date('Y-m-d H:m:s',time()),
-            'updated_at'=>date('Y-m-d H:m:s',time()),
-        ]);
+//        $this->viewlog->insert([
+//            'ip'=>$request->server('REMOTE_ADDR'),
+//            'type'=>1,
+//            'info'=>$request->path(),
+//            'created_at'=>date('Y-m-d H:m:s',time()),
+//            'updated_at'=>date('Y-m-d H:m:s',time()),
+//        ]);
         return $next($request);
     }
 }

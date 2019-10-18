@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
-class label extends Model
+class Labels extends Model
 {
     //
     protected $table = 'labels';
-    protected $fillable = ['label_name' , 'desc'];
+    protected $fillable = ['name' , 'desc'];
 
     /*
      * @todo 获取labels列表

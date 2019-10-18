@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\back;
 
-use App\Models\label;
-use App\Models\post;
+use App\Models\Labels;
+use App\Models\Posts;
 use App\Services\ConstantService;
 use App\Services\PostService;
 use Illuminate\Http\Request;

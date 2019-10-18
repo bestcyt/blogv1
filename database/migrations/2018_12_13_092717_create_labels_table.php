@@ -15,8 +15,9 @@ class CreateLabelsTable extends Migration
     {
         Schema::create('labels', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('label_name', 20);
-            $table->string('desc');
+            $table->string('name', 20)->comment('标签名称');
+            $table->string('desc')->nullable();
+            $table->tinyInteger('status')->default(1)->comment('状态是否启用，1启用，2不启用，-1删除');
             $table->timestamps();
         });
     }

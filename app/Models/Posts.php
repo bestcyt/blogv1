@@ -5,29 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
-class post extends Model
+class Posts extends Model
 {
-
-    use Searchable;
-
     protected $table = 'posts';
-    protected $connection = 'mysql';
 
-    public function searchableAs()
-    {
-        return 'posts_index';
-    }
-
-    public function toSearchableArray()
-    {
-        $posts = $array= $this->toArray();
-
-        $a = array_map(function ($item){
-//            return array($item['id'],$item['post_name'],$item['post_desc']);
-        },$array);
-
-        return $posts;
-    }
 
     public function user(){
         return $this->belongsTo('App\User')->withDefault();
@@ -40,7 +21,7 @@ class post extends Model
      */
     public function getPosts(array $where,$order,$by, $page,$limit){
 
-        return post::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page);
+        return self::orderBy('created_at','desc')->paginate($limit, ['*'], '', $page);
 
 //        @todo 待改进条件等等
 //        if (count($where) != 0){

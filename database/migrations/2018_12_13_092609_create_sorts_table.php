@@ -15,9 +15,10 @@ class CreateSortsTable extends Migration
     {
         Schema::create('sorts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('sort_name', 20);
-            $table->integer('parent_id')->default(0)->unsigned();
-            $table->string('desc');
+            $table->string('name', 20)->comment('分类名称');
+            $table->integer('parentId')->comment('父级分类id')->default(0);
+            $table->string('desc')->nullable(true);
+            $table->tinyInteger('status')->comment('1启用，2不启用')->default(2);
             $table->timestamps();
         });
     }

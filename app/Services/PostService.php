@@ -5,9 +5,9 @@ namespace App\Services;
 /*
  * @todo 文章业务层，虽然没啥东西。。
  */
-use App\Models\label;
-use App\Models\post;
-use App\Models\Sort;
+use App\Models\Labels;
+use App\Models\Posts;
+use App\Models\Sorts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
@@ -22,7 +22,7 @@ class PostService {
     /*
      * @todo 构造方法注入模型对象
      */
-    public function __construct( post $post , label $label ,Sort $sort){
+    public function __construct( Posts $post , Labels $label ,Sorts $sort){
         $this->PostModel = $post;
         $this->LabelModel = $label;
         $this->SortModel = $sort;
@@ -54,7 +54,7 @@ class PostService {
     public function createGetLabels(){
         $labels = Cache::get('labels');
         if(!$labels){
-            $labels = $this->LabelModel->getLabels([['state','1'
+            $labels = $this->LabelModel->getLabels([['status','1'
             ]])->toArray();
             Cache::put('labels',$labels);
         }
@@ -69,7 +69,7 @@ class PostService {
         $sorts = Cache::get('sorts');
         if(!$sorts) {
             $sorts = $this->SortModel->getSorts([
-                ['state', '=', 1]
+                ['status', '=', 1]
             ])->toArray();
             Cache::put('sorts', $sorts);
         }
@@ -93,16 +93,16 @@ class PostService {
         foreach ($as as &$a){
             $a = '['.$a.']';
         }
-        $data['label_ids'] = implode(',',$as);
-        $data['sort_id'] = $request->input('sorts');
-        $data['user_id'] = Auth::id();
-        $data['post_name'] = $request->input('post_name');
-        $data['post_desc'] = $request->input('post_desc');
+        $data['labelIds'] = implode(',',$as);
+        $data['sortId'] = $request->input('sortId');
+        $data['userId'] = Auth::id();
+        $data['title'] = $request->input('title');
+        $data['desc'] = $request->input('desc');
         $data['image'] = $request->input('image') ?? 'http://upyun-cyt.b0.upaiyun.com/image/gjRhCNyjGQRedfzSE90PVlSONyMfCDBfKRHXgfgd.jpeg';
         $data['info'] = $request->input('info');
-        $data['state'] = $request->input('state') ? 1 : 0;
-        $data['is_top'] = $request->input('is_top') ? 1 : 0;
-        $data['is_comment'] = $request->input('is_comment') ? 1 : 0;
+        $data['status'] = $request->input('status') ? 1 : 2;
+        $data['isTop'] = $request->input('isTop') ? 1 : 2;
+        $data['isComment'] = $request->input('isComment') ? 1 : 2;
         $data['created_at'] = date('Y-m-d H:m:s',time());
         $data['updated_at'] = date('Y-m-d H:m:s',time());
 
@@ -117,9 +117,9 @@ class PostService {
     public function getRightHotPosts(){
         return DB::table('posts')
             ->where([
-                ['state','=',1]
+                ['status','=',1]
             ])
-            ->orderBy('page_view','desc')
+            ->orderBy('pageViewCount','desc')
             ->limit(4)
             ->get();
     }
@@ -129,7 +129,7 @@ class PostService {
      */
     public function getRightRandPosts(){
         return DB::table('posts')
-            ->where('state','=',1)
+            ->where('status','=',1)
             ->whereRaw('id >= (SELECT FLOOR( MAX(id) * RAND()) FROM `posts` )')
             ->orderBy('id')
             ->limit(4)

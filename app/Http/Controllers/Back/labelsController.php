@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\back;
 
-use App\Models\label;
+use App\Models\Labels;
 use App\Services\ConstantService;
 use App\Services\LabelService;
 use App\Tra\Poetry as Poetry;

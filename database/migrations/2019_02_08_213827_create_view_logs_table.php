@@ -13,10 +13,11 @@ class CreateViewLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('view_logs', function (Blueprint $table) {
+        Schema::create('viewLogs', function (Blueprint $table) {
             $table->increments('id');
-            $table->tinyInteger('type');
-            $table->string('ip');
+            $table->string('ip')->comment('来源ip');
+            $table->string('info')->comment('来源信息，根据ip');
+            $table->string('viewPath')->comment('看的啥');
             $table->timestamps();
         });
     }

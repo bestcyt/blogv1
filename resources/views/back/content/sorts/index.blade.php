@@ -4,7 +4,7 @@
 <table class="layui-hide" id="sort-list"  lay-filter="sort-list"></table>
 
 <script type="text/html" id="switchTpl">
-    <input type="checkbox" name="state" value="@{{ d.id }}" lay-skin="switch" lay-text="开|关" lay-filter="state"  @{{ d.state == 1 ? 'checked' : '' }}>
+    <input type="checkbox" name="status" value="@{{ d.id }}" lay-skin="switch" lay-text="开|关" lay-filter="status"  @{{ d.status == 1 ? 'checked' : '' }}>
 </script>
 
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
@@ -20,12 +20,12 @@
                 ,cellMinWidth: 100 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {field:'id', width:50, title: 'ID', sort: true }
-                    ,{field:'parent_id', width:80, title: '父id', sort: true }
-                    ,{field:'sort_name', width:130, title: '分类名称', edit: 'text'}
+                    ,{field:'parentId', width:80, title: '父id', sort: true }
+                    ,{field:'name', width:130, title: '分类名称', edit: 'text'}
                     ,{field:'desc', width:150, title: '描述', sort: true, edit: 'text'}
                     ,{field:'created_at', width:180, title: '创建时间', sort: true}
                     ,{field:'updated_at', width:180, title: '更新时间', sort: true}
-                    ,{field:'state', title:'状态', width:100, templet: '#switchTpl', unresize: true}
+                    ,{field:'status', title:'状态', width:100, templet: '#switchTpl', unresize: true}
                 ]]
                 ,page: true
             });
@@ -58,7 +58,7 @@
             });
 
             //监听是否开启标签
-            form.on('switch(state)', function(obj){
+            form.on('switch(status)', function(obj){
                 //ajax更新状态
                 //发送ajax请求改动
                 $.ajax({

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Home;
 
-use App\Models\post;
-use App\Models\Sort;
+use App\Models\Posts;
+use App\Models\Sorts;
 use App\Services\ConstantService;
 use App\Services\home\HomeService;
 use App\Services\SortService;
@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 class IndexController extends Controller
 {
     /*
-     * TODO trait，博客首页，pjax，好人卡
+     * TODO trait，博客首页，pjax
      */
     public $view = [
         'view',   //routename , home.xxxx

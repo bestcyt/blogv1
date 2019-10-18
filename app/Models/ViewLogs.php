@@ -4,10 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class viewLog extends Model
+class ViewLogs extends Model
 {
     //s
-    protected $table = 'view_logs';
+    protected $table = 'viewLogs';
 
     public $timestamps = false;
 

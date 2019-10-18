@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
-        "algolia/algoliasearch-client-php": "^2.2",
         "barryvdh/laravel-cors": "^0.11.2",
         "doctrine/dbal": "^2.9",
         "erusev/parsedown": "^1.7",

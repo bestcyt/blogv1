@@ -9,13 +9,13 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">标题</label>
                 <div class="layui-input-block">
-                    <input type="text" name="post_name" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">简述</label>
                 <div class="layui-input-block">
-                    <textarea placeholder="请输入文章简述" class="layui-textarea" name="post_desc"></textarea>
+                    <textarea placeholder="请输入文章简述" class="layui-textarea" name="desc"></textarea>
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">

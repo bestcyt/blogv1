@@ -3,8 +3,8 @@
 namespace App\Services\home;
 
 
-use App\Models\post;
-use App\Models\Sort;
+use App\Models\Posts;
+use App\Models\Sorts;
 use App\Services\LabelService;
 use App\Services\SortService;
 use Illuminate\Http\Request;
@@ -21,7 +21,7 @@ class HomeService
     public $sortService;
     public $labelService;
 
-    public function __construct(post $post , SortService $sortService , LabelService $labelService)
+    public function __construct(Posts $post , SortService $sortService , LabelService $labelService)
     {
         $this->sortService = $sortService;
         $this->labelService = $labelService;
@@ -37,18 +37,18 @@ class HomeService
         if (request()->path() != '/'){
             switch (explode('/',request()->path())[0]){
                 case 'label':
-                    $where = $this->labelService->checkLabel($sortOrLabelId) ? [['label_ids','like',"[$sortOrLabelId]"]] : [];
+                    $where = $this->labelService->checkLabel($sortOrLabelId) ? [['labelIds','like',"[$sortOrLabelId]"]] : [];
                     break;
                 case 'sort':
-                    $where = $this->sortService->checkSort($sortOrLabelId) ? [['sort_id','=',$sortOrLabelId]] : [];
+                    $where = $this->sortService->checkSort($sortOrLabelId) ? [['sortId','=',$sortOrLabelId]] : [];
                     break;
                 default :
                     $where = [];
                     break;
             }
         }
-        $where[] = ['state','=',1];
-        $where[] = ['is_top','=',0];
+        $where[] = ['status','=',1];
+        $where[] = ['isTop','=',2];
         return $this->postModel->getIndexPosts($where);
     }
 
@@ -67,8 +67,8 @@ class HomeService
     public function getTopPosts(){
         return $this->postModel->getTopPosts(
             [
-                ['state','=',1],
-                ['is_top','=',1]
+                ['status','=',1],
+                ['isTop','=',1]
             ]
         );
     }
@@ -77,7 +77,7 @@ class HomeService
      * @todo 点赞
      */
     public function postLike(Request $request){
-        return $this->postModel->where('id',$request->input('id'))->increment('like_num');
+        return $this->postModel->where('id',$request->input('id'))->increment('likeCount');
     }
 
 }
