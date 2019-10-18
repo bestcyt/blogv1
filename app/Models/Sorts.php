@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -26,15 +27,13 @@ class Sorts extends Model
      * $create - > array
      */
     public function createSort($create){
-        DB::insertGetId([
-            ''
-        ]);
-        if ($create['parentId'] == 0){
-            $create['parentId'] = '[0]';
-        }else{
 
-        }
-        return self::create($create);
+        $create['created_at'] = $create['updated_at'] =  Carbon::now()->toDateTimeString();
+        $sortId = DB::table('sorts')
+            ->insertGetId($create);
+        $sort = DB::table('sorts')->find($sortId);
+        DB::table('sorts')->where('id',$sort->id)->update(['parentIds'=>$sort->parentIds.$sortId.'-']);
+        return true;
     }
 
     /*

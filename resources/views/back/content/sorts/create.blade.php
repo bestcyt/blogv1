@@ -17,11 +17,11 @@
             <div class="layui-form-item">
                 <label class="layui-form-label">父级分类</label>
                 <div class="layui-input-block">
-                    <select name="parentId" lay-verify="" lay-search>
-                        <option value="0" selected>顶级</option>
+                    <select name="parentIds" lay-verify="" lay-search>
+                        <option value="0-" selected>顶级</option>
                         @if(count($sorts) > 0)
                             @foreach($sorts as $sort)
-                                <option value="{{ $sort->id }}">{{ $sort->name }}</option>
+                                <option value="{{ $sort->parentIds }}">{{ $sort->name }}</option>
                             @endforeach
                         @endif
                     </select>

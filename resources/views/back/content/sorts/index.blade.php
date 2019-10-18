@@ -20,7 +20,7 @@
                 ,cellMinWidth: 100 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
                 ,cols: [[
                     {field:'id', width:50, title: 'ID', sort: true }
-                    ,{field:'parentId', width:80, title: '父id', sort: true }
+                    ,{field:'parentIds', width:80, title: '父id', sort: true }
                     ,{field:'name', width:130, title: '分类名称', edit: 'text'}
                     ,{field:'desc', width:150, title: '描述', sort: true, edit: 'text'}
                     ,{field:'created_at', width:180, title: '创建时间', sort: true}
